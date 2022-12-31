@@ -1,3 +1,25 @@
+// CODEWARS TASK - JS - Sum Arrays
+// https://www.codewars.com/kata/53dc54212259ed3d4f00071c/javascript
+
+// Write a function that takes an array of numbers and returns the sum of
+// the numbers.The numbers can be negative or non - integer.If the array
+// does not contain any numbers then you should return 0.
+
+// START OF SOLUTION
+function sum(numbers) {
+  "use strict";
+  let sum = 0;
+  sum = numbers.length > 0 ? numbers.reduce(function (acc, number) { return acc + number; }) : 0;  
+  console.log(sum);
+
+  // OR BEST PRACTICES
+  // sum = numbers.reduce((acc, number) => acc + number, 0);
+  // console.log(sum); 
+};
+
+sum([]); // 0
+sum([1, 5.2, 4, 0, -1]); // 9.2
+// END OF SOLUTION
 
 
 
@@ -11,22 +33,22 @@
 // Return your answer as a number.
 
 // START OF SOLUTION
-function sumMix(x){
-  let sum = 0;
-  x.forEach(element => {  
-    if (element === undefined) {
-      element = 1;
-    }
+// function sumMix(x){
+//   let sum = 0;
+//   x.forEach(element => {  
+//     if (element === undefined) {
+//       element = 1;
+//     }
 
-    sum += Number(element);
-  });  
-  console.log(sum);  
-}
+//     sum += Number(element);
+//   });  
+//   console.log(sum);  
+// }
 
-sumMix([9, 3, undefined, '3'])                // 16
-sumMix([9, 3, '7', '3'])                      // 22
-sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7])     // 42
-sumMix(['3', 6, 6, 0, '5', 8, 5, '6', 2,'0']) // 41
+// sumMix([9, 3, undefined, '3'])                // 16
+// sumMix([9, 3, '7', '3'])                      // 22
+// sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7])     // 42
+// sumMix(['3', 6, 6, 0, '5', 8, 5, '6', 2,'0']) // 41
 // END OF SOLUTION
 
 
