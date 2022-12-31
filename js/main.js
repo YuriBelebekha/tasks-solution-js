@@ -1,3 +1,42 @@
+function template() {
+// CODEWARS TASK - JS -
+// 
+
+
+// START OF SOLUTION
+
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+}
+
+
+
+// CODEWARS TASK - JS - Double Char
+//https://www.codewars.com/kata/56b1f01c247c01db92000076/train/javascript
+
+// Given a string, you have to return a string in which each character
+// (case -sensitive) is repeated once.
+
+// START OF SOLUTION
+// function doubleChar(str) {  
+//   let doubleCharactersString = [];
+  
+//   str.split('').map(character => doubleCharactersString.push(character + character));
+//   console.log(doubleCharactersString.join(''));
+// }
+
+// doubleChar("abcd");       // "aabbccdd"
+// doubleChar("Adidas");     // "AAddiiddaass"
+// doubleChar("1337");       // "11333377");
+// doubleChar("illuminati"); // "iilllluummiinnaattii"
+// doubleChar("123456");     // "112233445566"
+// doubleChar("%^&*(");      // "%%^^&&**(("
+// END OF SOLUTION
+
+
+
+
 // CODEWARS TASK - JS - Sum Arrays
 // https://www.codewars.com/kata/53dc54212259ed3d4f00071c/javascript
 
@@ -6,21 +45,20 @@
 // does not contain any numbers then you should return 0.
 
 // START OF SOLUTION
-function sum(numbers) {
-  "use strict";
-  let sum = 0;
-  sum = numbers.length > 0 ? numbers.reduce(function (acc, number) { return acc + number; }) : 0;  
-  console.log(sum);
+// function sum(numbers) {
+//   "use strict";
+//   let sum = 0;
+//   sum = numbers.length > 0 ? numbers.reduce(function (acc, number) { return acc + number; }) : 0;  
+//   console.log(sum);
 
-  // OR BEST PRACTICES
-  // sum = numbers.reduce((acc, number) => acc + number, 0);
-  // console.log(sum); 
-};
+//   // OR BEST PRACTICES
+//   // sum = numbers.reduce((acc, number) => acc + number, 0);
+//   // console.log(sum); 
+// };
 
-sum([]); // 0
-sum([1, 5.2, 4, 0, -1]); // 9.2
+// sum([]); // 0
+// sum([1, 5.2, 4, 0, -1]); // 9.2
 // END OF SOLUTION
-
 
 
 
