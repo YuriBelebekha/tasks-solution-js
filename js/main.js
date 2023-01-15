@@ -10,6 +10,66 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 }
 
+// CODEWARS TASK - JS - Exes and Ohs
+// https://www.codewars.com/kata/55908aad6620c066bc00002a/javascript
+
+// Check to see if a string has the same amount of 'x's and 'o's.
+// The method must return a boolean and be case insensitive.
+// The string can contain any char.
+// XO("ooxx") => true
+// XO("xooxx") => false
+// XO("ooxXm") => true
+// XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+// XO("zzoo") => false
+
+// START OF SOLUTION
+// function XO(str) {
+//   const strLowerCase = str.toLowerCase();
+//   let arrayX = [];
+//   let arrayY = [];
+
+//   for (let i = 0; i < str.length; i += 1) {
+//     if (strLowerCase[i] === 'x') {
+//       arrayX.push(str[i]);
+//     };
+
+//     if (strLowerCase[i] ==='o') {
+//       arrayY.push(str[i]);
+//     };
+//   }
+
+//   console.log(arrayX.length === arrayY.length);    
+// }
+
+// XO("ooxx") // true
+// XO("xooxx") // false
+// XO("ooxXm") // true
+// XO("zpzpzpp") // true // when no 'x' and 'o' is present should return true
+// XO("zzoo") // false
+// END OF SOLUTION
+
+
+
+
+  // CODEWARS TASK - JS - Reversed Strings
+  // https://www.codewars.com/kata/5168bb5dfe9a00b126000018/train/javascript
+
+  // Complete the solution so that it reverses the string passed into it.
+  // 'world'  =>  'dlrow'
+  // 'word'   =>  'drow'
+
+  // START OF SOLUTION
+  // function solution(str){
+  //   console.log(str.split("").reverse().join(''));
+  // }
+
+  // solution('world');
+  // solution('word');
+  // solution('Glory to Ukraine');
+
+  // END OF SOLUTION
+  
+
 
 
 // CODEWARS TASK - JS - Area or Perimeter
@@ -21,20 +81,20 @@ function template() {
 // return its perimeter.
 
 // START OF SOLUTION
-const areaOrPerimeter = function(l , w) {
-  let result = 0;
+// const areaOrPerimeter = function(l , w) {
+//   let result = 0;
 
-  if (l === w) {
-    result = l * w;
-  } else {
-    result = l * 2 + w * 2;
-  }  
+//   if (l === w) {
+//     result = l * w;
+//   } else {
+//     result = l * 2 + w * 2;
+//   }  
   
-  console.log(result);
-};
+//   console.log(result);
+// };
 
-areaOrPerimeter(3, 3);  // 9
-areaOrPerimeter(6, 10); // 32
+// areaOrPerimeter(3, 3);  // 9
+// areaOrPerimeter(6, 10); // 32
 // END OF SOLUTION
 
 
