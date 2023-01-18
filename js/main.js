@@ -10,6 +10,60 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 }
 
+// CODEWARS TASK - JS - Count of positives / sum of negatives
+// https://www.codewars.com/kata/576bb71bbbcf0951d5000044/train/javascript
+
+// Given an array of integers.
+// Return an array, where the first element is the count of
+// positives numbers and the second element is sum of negative numbers.
+// 0 is neither positive nor negative.
+// If the input is an empty array or is null, return an empty array.
+// Example
+// For input[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15],
+// you should return [10, -65].
+
+// START OF SOLUTION
+countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]);
+countPositivesSumNegatives([0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14]);
+countPositivesSumNegatives([+0, +0]);
+countPositivesSumNegatives([]);
+countPositivesSumNegatives();
+
+function countPositivesSumNegatives(input) {  
+  let positiveNumbersArray = []
+  let emptyArray = [];
+  let negativesSum = 0;
+  let result = [];
+  
+  if (input === undefined || input === null) {
+    return console.log(emptyArray);
+  }
+  
+  input.forEach(number => {
+    if (number > 0) {
+      positiveNumbersArray.push(number);
+    }
+
+    if (number === 0) {
+      positiveNumbersArray.push();
+    }
+
+    if (number < 0) {
+      negativesSum += number;
+    }    
+  })
+
+  if (positiveNumbersArray.length > 0 && negativesSum < 0) {
+    result.push(positiveNumbersArray.length, negativesSum);
+    
+  }
+  console.log('result', result);
+}
+// END OF SOLUTION
+
+
+
+
 // CODEWARS TASK - JS - Exes and Ohs
 // https://www.codewars.com/kata/55908aad6620c066bc00002a/javascript
 
