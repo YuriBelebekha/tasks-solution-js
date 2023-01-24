@@ -10,6 +10,44 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 }
 
+
+
+
+// CODEWARS TASK - JS - Odd or Even?
+// https://www.codewars.com/kata/5949481f86420f59480000e7/train/javascript
+
+// Given a list of integers, determine whether the sum of its elements is odd or even.
+// Give your answer as a string matching "odd" or "even".
+// If the input array is empty consider it as: [0](array with a zero).
+
+// START OF SOLUTION
+// function oddOrEven(array) {
+//   let total = 0;
+
+//   for (let i = 0; i < array.length; i += 1) {
+//     total += array[i];
+//   }
+
+//   if (total % 2 === 0) {
+//     console.log('even');
+//   } else {
+//     console.log('odd');
+//   }  
+
+//   // OR
+
+//   // return arr.reduce((a,b) => a+b, 0) % 2 ? 'odd' : 'even';
+// }
+
+// oddOrEven([0]);
+// oddOrEven([0, 1, 4]);
+// oddOrEven([0, -1, -5]);
+// oddOrEven([]);
+// END OF SOLUTION
+
+
+
+
 // CODEWARS TASK - JS - Vowel Count
 // https://www.codewars.com/kata/54ff3102c1bad923760001f3/train/javascript
 
@@ -18,20 +56,20 @@ function template() {
 // The input string will only consist of lower case letters and/or spaces.
 
 // START OF SOLUTION
-function getCount(str) { 
-  const result = str.match(/[a,e,i,o,u]/gi) !== null
-    ? str.match(/[a,e,i,o,u]/gi).length
-    : 0;
+// function getCount(str) { 
+//   const result = str.match(/[a,e,i,o,u]/gi) !== null
+//     ? str.match(/[a,e,i,o,u]/gi).length
+//     : 0;
   
-  console.log(result);  
-}
+//   console.log(result);  
+// }
 
-getCount('abracadabra');
-getCount('bubasmith');
-getCount('caravan');
-getCount('bangladesh');
-getCount('Complete the solution so that it returns true');
-getCount('my pyx');
+// getCount('abracadabra');
+// getCount('bubasmith');
+// getCount('caravan');
+// getCount('bangladesh');
+// getCount('Complete the solution so that it returns true');
+// getCount('my pyx');
 // END OF SOLUTION
 
 
