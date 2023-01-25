@@ -28,27 +28,35 @@ function template() {
 // (-1, 2) --> 2 (-1 + 0 + 1 + 2 = 2)
 
 // START OF SOLUTION
-function getSum(a, b)
-{  
-  let total = 0;
+// function getSum(a, b) {  
+//   let total = 0;
 
-  if (a === b) {
-    console.log(a);
-  };
+//   if (a === b) {
+//     console.log(a);
+//   };
 
-  if (a < b) {
-    for (let i = a; i <= b; i += 1) {      
-      total += i;
-    }    
-    console.log(total);
-  };
+//   if (a < b) {
+//     for (let i = a; i <= b; i += 1) {      
+//       total += i;
+//     }    
+//     console.log(total);
+//   };
 
-  if (a > b) {
-    for (let i = b; i <= a; i += 1) {      
-      total += i;
-    }    
-    console.log(total);
-  };  
+//   if (a > b) {
+//     for (let i = b; i <= a; i += 1) {      
+//       total += i;
+//     }    
+//     console.log(total);
+//   };  
+// }
+
+// OR BEST & CLEVER SOLUTION
+
+const getSum = (a, b) => {
+  let min = Math.min(a, b),
+      max = Math.max(a, b);
+  const result = (max - min + 1) * (min + max) / 2;
+  console.log(result);
 }
 
 getSum(0, -1); // -1
