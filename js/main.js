@@ -12,6 +12,34 @@ function template() {
 
 
 
+
+// CODEWARS TASK - JS - Regex validate PIN code
+// https://www.codewars.com/kata/55f8a9c06c018a0d6e000132/train/javascript
+
+// ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot
+// contain anythingbut exactly 4 digits or exactly 6 digits.
+// If the function is passed a valid PIN string, return true, else return false.
+// Examples (Input --> Output)
+// "1234"   -->  true
+// "12345"  -->  false
+// "a234"   -->  false
+
+// START OF SOLUTION
+function validatePIN(pin) {
+  const re = /^(\d{4}|\d{6})$/;
+  const result = re.test(pin);
+  console.log('pin: ', pin, result);  
+}
+
+validatePIN("1234");
+validatePIN("12345");
+validatePIN("123456");
+validatePIN("a234");
+// END OF SOLUTION
+
+
+
+
 // CODEWARS TASK - JS - Beginner Series #3 Sum of Numbers
 // https://www.codewars.com/kata/55f2b110f61eb01779000053/train/javascript
 
@@ -52,18 +80,18 @@ function template() {
 
 // OR BEST & CLEVER SOLUTION
 
-const getSum = (a, b) => {
-  let min = Math.min(a, b),
-      max = Math.max(a, b);
-  const result = (max - min + 1) * (min + max) / 2;
-  console.log(result);
-}
+// const getSum = (a, b) => {
+//   let min = Math.min(a, b),
+//       max = Math.max(a, b);
+//   const result = (max - min + 1) * (min + max) / 2;
+//   console.log(result);
+// }
 
-getSum(0, -1); // -1
-getSum(0, 1); //  1
-getSum(2, 2); //  2
-getSum(5, -1); //  14
-getSum(357, -358); //  -358
+// getSum(0, -1); // -1
+// getSum(0, 1); //  1
+// getSum(2, 2); //  2
+// getSum(5, -1); //  14
+// getSum(357, -358); //  -358
 
 // END OF SOLUTION
 
