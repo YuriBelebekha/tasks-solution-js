@@ -10,6 +10,33 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 }
 
+
+
+// CODEWARS TASK - JS - Jaden Casing Strings
+// https://www.codewars.com/kata/5390bac347d09b7da40006f6/train/javascript
+
+// Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid (2010) and After Earth (2013). Jaden is also known for some of his philosophy that he delivers via Twitter. When writing on Twitter, he is known for almost always capitalizing every word. For simplicity, you'll have to capitalize each word, check out how contractions are expected to be in the example below.
+// Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
+// Example:
+// Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
+// Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
+
+// START OF SOLUTION
+String.prototype.toJadenCase = function () {
+  const result = this.split(' ').map((word) => {
+    return word[0].toUpperCase() + word.slice(1);
+  }).join(' ');
+  
+  console.log(result)  
+};
+
+const str = "How can mirrors be real if our eyes aren't real";
+str.toJadenCase();
+// END OF SOLUTION
+
+
+
+
 // CODEWARS TASK - JS - Remove the minimum
 // https://www.codewars.com/kata/563cf89eb4747c5fb100001b/train/javascript
 
@@ -27,16 +54,16 @@ function template() {
 // * Input: [2,2,1,2,1], output = [2,2,2,1]
 
 // START OF SOLUTION
-function removeSmallest(numbers) { 
-  let newArrayNumbers = numbers.slice(0);
-  newArrayNumbers.splice((newArrayNumbers.indexOf(Math.min(...newArrayNumbers))), 1);  
-  console.log(newArrayNumbers);  
-};
+// function removeSmallest(numbers) { 
+//   let newArrayNumbers = numbers.slice(0);
+//   newArrayNumbers.splice((newArrayNumbers.indexOf(Math.min(...newArrayNumbers))), 1);  
+//   console.log(newArrayNumbers);  
+// };
 
-removeSmallest([1, 2, 3, 4, 5]); // [2, 3, 4, 5]
-removeSmallest([5, 3, 2, 1, 4]); // [5, 3, 2, 4]
-removeSmallest([2, 2, 1, 2, 1]); // [2, 2, 2, 1]
-removeSmallest([]);              // []
+// removeSmallest([1, 2, 3, 4, 5]); // [2, 3, 4, 5]
+// removeSmallest([5, 3, 2, 1, 4]); // [5, 3, 2, 4]
+// removeSmallest([2, 2, 1, 2, 1]); // [2, 2, 2, 1]
+// removeSmallest([]);              // []
 // END OF SOLUTION
 
 
