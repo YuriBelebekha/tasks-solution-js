@@ -10,6 +10,68 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 }
 
+// CODEWARS TASK - JS - Quarter of the year
+// https://www.codewars.com/kata/5ce9c1000bab0b001134f5af/train/javascript
+
+// Given a month as an integer from 1 to 12, return to which quarter of the year it
+// belongs as an integer number.
+// For example: month 2(February), is part of the first quarter; month 6(June), is
+// part of the second quarter; and month 11(November), is part of the fourth quarter.
+// Constraint: 1 <= month <= 12
+
+// START OF SOLUTION
+// const quarterOf = (month) => {
+//   // Your code here
+
+//   if (month < 4) {
+//     return console.log(1);
+//   }
+
+//   if (month < 7) {
+//     return console.log(2);    
+//   }
+
+//   if (month < 10) {
+//     return console.log(3);    
+//   }
+
+//   if (month < 13) {
+//     return console.log(4);    
+//   }  
+// }
+
+// OR BEST SOLUTION
+
+// const quarterOf = (month) => console.log(Math.ceil(month / 3));
+
+// quarterOf(3)  // 1
+// quarterOf(8)  // 3
+// quarterOf(11) // 4
+// END OF SOLUTION
+
+
+
+
+// CODEWARS TASK - JS - Remove First and Last Character
+// https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0/train/javascript
+
+// It's pretty straightforward. Your goal is to create a function that removes
+// the first and last characters of a string.You're given one parameter, the 
+// original string.You don't have to worry with strings with less than two characters.
+
+// START OF SOLUTION
+// function removeChar(str){
+//  //You got this!
+//   console.log(str.slice(1, (str.length - 1)));
+// };
+
+// removeChar('eloquent'); // 'loquen'
+// removeChar('country');  // 'ountr'
+// removeChar('person');   // 'erso'
+// removeChar('place');    // 'lac'
+// END OF SOLUTION
+
+
 
 
 // CODEWARS TASK - JS - Jaden Casing Strings
@@ -22,16 +84,16 @@ function template() {
 // Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
 
 // START OF SOLUTION
-String.prototype.toJadenCase = function () {
-  const result = this.split(' ').map((word) => {
-    return word[0].toUpperCase() + word.slice(1);
-  }).join(' ');
+// String.prototype.toJadenCase = function () {
+//   const result = this.split(' ').map((word) => {
+//     return word[0].toUpperCase() + word.slice(1);
+//   }).join(' ');
   
-  console.log(result)  
-};
+//   console.log(result)  
+// };
 
-const str = "How can mirrors be real if our eyes aren't real";
-str.toJadenCase();
+// const str = "How can mirrors be real if our eyes aren't real";
+// str.toJadenCase();
 // END OF SOLUTION
 
 
