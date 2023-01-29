@@ -10,6 +10,38 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 }
 
+
+
+// CODEWARS TASK - JS - Descending Order
+// https://www.codewars.com/kata/5467e4d82edf8bbf40000155/train/javascript
+
+// Your task is to make a function that can take any non - negative integer as an argument and
+// return it with its digits in descending order.Essentially, rearrange the digits to create
+// the highest possible number.
+
+// Examples:
+// Input: 42145 Output: 54421
+// Input: 145263 Output: 654321
+// Input: 123456789 Output: 987654321
+
+// START OF SOLUTION
+function descendingOrder(n){  
+  const result = parseInt(String(n).split('').sort().reverse().join(''));
+  console.log(result);
+}
+
+descendingOrder(0);         // 0 
+descendingOrder(1);         // 1
+descendingOrder(111);       // 111
+descendingOrder(15);        // 51
+descendingOrder(1021);      // 2110
+descendingOrder(123456789); // 987654321
+
+// END OF SOLUTION
+
+
+
+
 // CODEWARS TASK - JS - Quarter of the year
 // https://www.codewars.com/kata/5ce9c1000bab0b001134f5af/train/javascript
 
