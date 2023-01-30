@@ -10,19 +10,41 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 }
 
+
+// CODEWARS TASK - JS - Reversed sequence
+// https://www.codewars.com/kata/5a00e05cc374cb34d100000d/train/javascript
+
+// Build a function that returns an array of integers from n to 1 where n>0.
+// Example : n=5 --> [5,4,3,2,1]
+
+// START OF SOLUTION
+const reverseSeq = n => {
+  const array = [];
+  for (let i = 1; i <= n; i += 1) {
+    array.unshift(i);
+  };
+  console.log(array);  
+};
+
+reverseSeq(5);  // [5, 4, 3, 2, 1]
+// END OF SOLUTION
+
+
+
+
 // CODEWARS TASK - JS - Remove String Spaces
 // https://www.codewars.com/kata/57eae20f5500ad98e50002c5/train/javascript
 
 // Simple, remove the spaces from the string, then return the resultant string.
 
 // START OF SOLUTION
-function noSpace(x){
-  const result = String(x.split(' ').join(''));
-    console.log(result);
-}
-noSpace('8 j 8   mBliB8g  imjB8B8  jl  B');               // '8j8mBliB8gimjB8B8jlB'
-noSpace('8 8 Bi fk8h B 8 BB8B B B  B888 c hl8 BhB fd');   // '88Bifk8hB8BB8BBBB888chl8BhBfd'
-noSpace('8aaaaa dddd r     ');                            // '8aaaaaddddr'
+// function noSpace(x){
+//   const result = String(x.split(' ').join(''));
+//     console.log(result);
+// }
+// noSpace('8 j 8   mBliB8g  imjB8B8  jl  B');               // '8j8mBliB8gimjB8B8jlB'
+// noSpace('8 8 Bi fk8h B 8 BB8B B B  B888 c hl8 BhB fd');   // '88Bifk8hB8BB8BBBB888chl8BhBfd'
+// noSpace('8aaaaa dddd r     ');                            // '8aaaaaddddr'
 // END OF SOLUTION
 
 
