@@ -10,6 +10,22 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 }
 
+// CODEWARS TASK - JS - Remove String Spaces
+// https://www.codewars.com/kata/57eae20f5500ad98e50002c5/train/javascript
+
+// Simple, remove the spaces from the string, then return the resultant string.
+
+// START OF SOLUTION
+function noSpace(x){
+  const result = String(x.split(' ').join(''));
+    console.log(result);
+}
+noSpace('8 j 8   mBliB8g  imjB8B8  jl  B');               // '8j8mBliB8gimjB8B8jlB'
+noSpace('8 8 Bi fk8h B 8 BB8B B B  B888 c hl8 BhB fd');   // '88Bifk8hB8BB8BBBB888chl8BhBfd'
+noSpace('8aaaaa dddd r     ');                            // '8aaaaaddddr'
+// END OF SOLUTION
+
+
 
 
 // CODEWARS TASK - JS - Descending Order
@@ -25,17 +41,17 @@ function template() {
 // Input: 123456789 Output: 987654321
 
 // START OF SOLUTION
-function descendingOrder(n){  
-  const result = parseInt(String(n).split('').sort().reverse().join(''));
-  console.log(result);
-}
+// function descendingOrder(n){  
+//   const result = parseInt(String(n).split('').sort().reverse().join(''));
+//   console.log(result);
+// }
 
-descendingOrder(0);         // 0 
-descendingOrder(1);         // 1
-descendingOrder(111);       // 111
-descendingOrder(15);        // 51
-descendingOrder(1021);      // 2110
-descendingOrder(123456789); // 987654321
+// descendingOrder(0);         // 0 
+// descendingOrder(1);         // 1
+// descendingOrder(111);       // 111
+// descendingOrder(15);        // 51
+// descendingOrder(1021);      // 2110
+// descendingOrder(123456789); // 987654321
 
 // END OF SOLUTION
 
