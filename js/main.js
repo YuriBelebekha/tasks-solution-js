@@ -11,6 +11,44 @@ function template() {
 }
 
 
+// CODEWARS TASK - JS - Are You Playing Banjo?
+// https://www.codewars.com/kata/53af2b8861023f1d88000832/train/javascript
+// Create a function which answers the question "Are you playing banjo?".
+// If your name starts with the letter "R" or lower case "r", you are playing banjo!
+// The function takes a name as its only argument, and returns one of the following strings:
+// name + " plays banjo"
+// name + " does not play banjo"
+// Names given are always valid strings.
+
+// START OF SOLUTION
+// function areYouPlayingBanjo(name) {
+//   if (name.toLowerCase().startsWith('r')) {
+//     console.log(`${name} plays banjo`);
+//   } else {
+//     console.log(`${name} does not play banjo`);
+//   };  
+// }
+
+// OR
+
+// function areYouPlayingBanjo(name) {  
+//   return name.toLowerCase().startsWith('r')
+//     ? `${name} plays banjo`
+//     : `${name} does not play banjo`;
+// }
+
+// areYouPlayingBanjo("Adam");  // "Adam does not play banjo");
+// areYouPlayingBanjo("Paul");  // "Paul does not play banjo");
+// areYouPlayingBanjo("Ringo"); // "Ringo plays banjo");
+// areYouPlayingBanjo("bravo"); // "bravo does not play banjo");
+// areYouPlayingBanjo("rolf");  // "rolf plays banjo");
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Reversed sequence
 // https://www.codewars.com/kata/5a00e05cc374cb34d100000d/train/javascript
 
@@ -18,15 +56,15 @@ function template() {
 // Example : n=5 --> [5,4,3,2,1]
 
 // START OF SOLUTION
-const reverseSeq = n => {
-  const array = [];
-  for (let i = 1; i <= n; i += 1) {
-    array.unshift(i);
-  };
-  console.log(array);  
-};
+// const reverseSeq = n => {
+//   const array = [];
+//   for (let i = 1; i <= n; i += 1) {
+//     array.unshift(i);
+//   };
+//   console.log(array);  
+// };
 
-reverseSeq(5);  // [5, 4, 3, 2, 1]
+// reverseSeq(5);  // [5, 4, 3, 2, 1]
 // END OF SOLUTION
 
 
