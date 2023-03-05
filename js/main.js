@@ -10,6 +10,62 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 }
 
+// CODEWARS TASK - JS - Highest Scoring Word
+// https://www.codewars.com/kata/57eb8fcdf670e99d9b000272/train/javascript
+
+// Given a string of words, you need to find the highest scoring word.
+// Each letter of a word scores points according to its position in the alphabet: a = 1, b = 2, c = 3 etc.
+// For example, the score of abad is 8 (1 + 2 + 1 + 4).
+// You need to return the highest scoring word as a string.
+// If two words score the same, return the word that appears earliest in the original string.
+// All letters will be lowercase and all inputs will be valid.
+
+// START OF SOLUTION
+function high(string){
+  let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+  let wordsArray = string.toLowerCase().split(' ').reverse();  
+  let high = 0;
+  let number;
+  let numbersArray = [].reverse();
+  let objectNumbersWords = {};    
+    
+  wordsArray.map(word => {
+    number = word.split('').map(letter =>
+      alphabet.indexOf(letter) + 1).reduce((acc, value) => acc + value, 0);
+    numbersArray.push(number)
+  });
+  
+  numbersArray.forEach((elem, index) => {
+    objectNumbersWords[elem] = wordsArray[index];
+  });
+
+  const maxNumber = Math.max(...Object.keys(objectNumbersWords));
+  
+  for (const key of Object.keys(objectNumbersWords)) {    
+    if (Number(key) === maxNumber) {
+      console.log(objectNumbersWords[maxNumber])
+    }
+  } 
+}
+
+// OR BEST (CLEVER) SOLUTION
+
+// function high(s){
+//   let as = s.split(' ').map(s=>[...s].reduce((a,b)=>a+b.charCodeAt(0)-96,0));
+//   console.log(s.split(' ')[as.indexOf(Math.max(...as))]);
+// }
+
+high('man i need a taxi up to ubud');               // 'taxi'
+high('what time are we climbing up the volcano');   // 'volcano' 
+high('take me to semynak');                         // 'semynak'   
+high('aa b');                                       // 'aa'
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
 
 
 // CODEWARS TASK - JS - Testing 1-2-3
@@ -22,16 +78,16 @@ function template() {
 // ["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
 
 // START OF SOLUTION
-var number = function (array) {
-  let newArray = [];
-  for (let i = 1; i <= array.length; i += 1) {
-    newArray.push(`${i}: ${array[i-1]}`);
-  }
-  console.log(newArray);
-}
+// var number = function (array) {
+//   let newArray = [];
+//   for (let i = 1; i <= array.length; i += 1) {
+//     newArray.push(`${i}: ${array[i-1]}`);
+//   }
+//   console.log(newArray);
+// }
 
-number([]);              // []
-number(["a", "b", "c"]); // ["1: a", "2: b", "3: c"]
+// number([]);              // []
+// number(["a", "b", "c"]); // ["1: a", "2: b", "3: c"]
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
