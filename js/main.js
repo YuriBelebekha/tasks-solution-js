@@ -10,6 +10,42 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 }
 
+
+
+// CODEWARS TASK - JS - All Star Code Challenge #18
+// https://www.codewars.com/kata/5865918c6b569962950002a1/train/javascript
+// Create a function that accepts a string and a single character, and returns
+// an integer of the count of occurrences the 2nd argument is found in the first one.
+// If no occurrences can be found, a count of 0 should be returned.
+// ("Hello", "o")  ==>  1
+// ("Hello", "l")  ==>  2
+// ("", "z")       ==>  0
+
+// START OF SOLUTION
+// function strCount(str, letter) {
+//   let letterCounter = 0;
+//   str.toLowerCase().split('').map((symbol) => symbol === letter ? letterCounter += 1 : 0);
+//   console.log(letterCounter);
+// }
+
+// OR BEST PRACTICES & CLEVER
+
+// function strCount(str, letter){  
+//   console.log(str.split(letter).length - 1);
+// }
+
+// strCount("Hello", 'o'); // returns 1
+// strCount("Hello", 'l'); // returns 2
+// strCount("Belebekha", 'e'); // returns 3
+// strCount("Hello World", 'o'); // returns 2
+// strCount("Youtube", 'u'); // returns 2
+// strCount("", 'z'); // returns 0
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
 // CODEWARS TASK - JS - Highest Scoring Word
 // https://www.codewars.com/kata/57eb8fcdf670e99d9b000272/train/javascript
 
@@ -21,33 +57,33 @@ function template() {
 // All letters will be lowercase and all inputs will be valid.
 
 // START OF SOLUTION
-function high(string){
-  let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+// function high(string){
+//   let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
-  let wordsArray = string.toLowerCase().split(' ').reverse();  
-  let high = 0;
-  let number;
-  let numbersArray = [].reverse();
-  let objectNumbersWords = {};    
+//   let wordsArray = string.toLowerCase().split(' ').reverse();  
+//   let high = 0;
+//   let number;
+//   let numbersArray = [].reverse();
+//   let objectNumbersWords = {};    
     
-  wordsArray.map(word => {
-    number = word.split('').map(letter =>
-      alphabet.indexOf(letter) + 1).reduce((acc, value) => acc + value, 0);
-    numbersArray.push(number)
-  });
+//   wordsArray.map(word => {
+//     number = word.split('').map(letter =>
+//       alphabet.indexOf(letter) + 1).reduce((acc, value) => acc + value, 0);
+//     numbersArray.push(number)
+//   });
   
-  numbersArray.forEach((elem, index) => {
-    objectNumbersWords[elem] = wordsArray[index];
-  });
+//   numbersArray.forEach((elem, index) => {
+//     objectNumbersWords[elem] = wordsArray[index];
+//   });
 
-  const maxNumber = Math.max(...Object.keys(objectNumbersWords));
+//   const maxNumber = Math.max(...Object.keys(objectNumbersWords));
   
-  for (const key of Object.keys(objectNumbersWords)) {    
-    if (Number(key) === maxNumber) {
-      console.log(objectNumbersWords[maxNumber])
-    }
-  } 
-}
+//   for (const key of Object.keys(objectNumbersWords)) {    
+//     if (Number(key) === maxNumber) {
+//       console.log(objectNumbersWords[maxNumber])
+//     }
+//   } 
+// }
 
 // OR BEST (CLEVER) SOLUTION
 
@@ -56,10 +92,10 @@ function high(string){
 //   console.log(s.split(' ')[as.indexOf(Math.max(...as))]);
 // }
 
-high('man i need a taxi up to ubud');               // 'taxi'
-high('what time are we climbing up the volcano');   // 'volcano' 
-high('take me to semynak');                         // 'semynak'   
-high('aa b');                                       // 'aa'
+// high('man i need a taxi up to ubud');               // 'taxi'
+// high('what time are we climbing up the volcano');   // 'volcano' 
+// high('take me to semynak');                         // 'semynak'   
+// high('aa b');                                       // 'aa'
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
