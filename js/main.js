@@ -11,6 +11,27 @@ function template() {
 }
 
 
+// CODEWARS TASK - JS - Beginner Series #1 School Paperwork
+// https://www.codewars.com/kata/55f9b48403f6b87a7c0000bd/train/javascript
+// Your classmates asked you to copy some paperwork for them.
+// You know that there are 'n' classmates and the paperwork has 'm' pages.
+// Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
+
+// START OF SOLUTION
+function paperwork(n, m) {
+  console.log(n < 0 || m < 0 ? 0 : n * m)
+}
+
+paperwork(5,5); // 25, 'Failed at paperwork(5, 5)');
+paperwork(5,-5); // 0, 'Failed at paperwork(5, -5)');
+paperwork(-5,-5); // 0, 'Failed at paperwork(-5, -5)');
+paperwork(-5,5); // 0, 'Failed at paperwork(-5, 5)');
+paperwork(5,0); // 0, 'Failed at paperwork(5, 0)');
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
 
 // CODEWARS TASK - JS - Disemvowel Trolls
 // https://www.codewars.com/kata/52fba66badcd10859f00097e/train/javascript
@@ -23,31 +44,31 @@ function template() {
 
 // START OF SOLUTION
 //vowels: a, e, i, o, u
-function disemvowel(str) {
-  const result = `${str
-    .split('a').join('')
-    .split('e').join('')
-    .split('i').join('')
-    .split('o').join('')
-    .split('u').join('')
-    .split('A').join('')
-    .split('E').join('')
-    .split('I').join('')
-    .split('O').join('')
-    .split('U').join('')
-  }`;
-  console.log(result)
-}
-
-// OR BEST PRACTICES & CLEVER
-
 // function disemvowel(str) {
-//   console.log(str.replace(/[aeiou]/ig,''));
+//   const result = `${str
+//     .split('a').join('')
+//     .split('e').join('')
+//     .split('i').join('')
+//     .split('o').join('')
+//     .split('u').join('')
+//     .split('A').join('')
+//     .split('E').join('')
+//     .split('I').join('')
+//     .split('O').join('')
+//     .split('U').join('')
+//   }`;
+//   console.log(result)
 // }
 
-disemvowel("This website is for losers LOL!"); // "Ths wbst s fr lsrs LL!
-disemvowel("No offense but,\n Your writing is among the worst I've ever read"); // "N ffns bt,\nYr wrtng s mng th wrst 'v vr rd
-disemvowel("What are you, a communist?"); // "Wht r y,  cmmnst?
+// // OR BEST PRACTICES & CLEVER
+
+// // function disemvowel(str) {
+// //   console.log(str.replace(/[aeiou]/ig,''));
+// // }
+
+// disemvowel("This website is for losers LOL!"); // "Ths wbst s fr lsrs LL!
+// disemvowel("No offense but,\n Your writing is among the worst I've ever read"); // "N ffns bt,\nYr wrtng s mng th wrst 'v vr rd
+// disemvowel("What are you, a communist?"); // "Wht r y,  cmmnst?
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
