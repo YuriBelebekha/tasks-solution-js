@@ -11,6 +11,27 @@ function template() {
 }
 
 
+// CODEWARS TASK - JS - Beginner Series #2 Clock
+// https://www.codewars.com/kata/55f9bca8ecaa9eac7100004a/train/javascript
+// Clock shows h hours, m minutes and s seconds after midnight.
+// Your task is to write a function which returns the time since midnight in milliseconds.
+
+// START OF SOLUTION
+function past(h, m, s){
+  console.log((((h * 60 + m) * 60) + s) * 1000);  
+}
+
+past(0,1,1); // 61000)
+past(1,1,1); // 3661000)
+past(0,0,0); // 0)
+past(1,0,1); // 3601000)
+past(1,0,0); // 3600000)
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
 // CODEWARS TASK - JS - Beginner Series #1 School Paperwork
 // https://www.codewars.com/kata/55f9b48403f6b87a7c0000bd/train/javascript
 // Your classmates asked you to copy some paperwork for them.
@@ -18,15 +39,15 @@ function template() {
 // Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
 
 // START OF SOLUTION
-function paperwork(n, m) {
-  console.log(n < 0 || m < 0 ? 0 : n * m)
-}
+// function paperwork(n, m) {
+//   console.log(n < 0 || m < 0 ? 0 : n * m)
+// }
 
-paperwork(5,5); // 25, 'Failed at paperwork(5, 5)');
-paperwork(5,-5); // 0, 'Failed at paperwork(5, -5)');
-paperwork(-5,-5); // 0, 'Failed at paperwork(-5, -5)');
-paperwork(-5,5); // 0, 'Failed at paperwork(-5, 5)');
-paperwork(5,0); // 0, 'Failed at paperwork(5, 0)');
+// paperwork(5,5); // 25, 'Failed at paperwork(5, 5)');
+// paperwork(5,-5); // 0, 'Failed at paperwork(5, -5)');
+// paperwork(-5,-5); // 0, 'Failed at paperwork(-5, -5)');
+// paperwork(-5,5); // 0, 'Failed at paperwork(-5, 5)');
+// paperwork(5,0); // 0, 'Failed at paperwork(5, 0)');
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
