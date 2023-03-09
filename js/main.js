@@ -10,6 +10,35 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 }
 
+// CODEWARS TASK - JS - Sum of positive
+// https://www.codewars.com/kata/5715eaedb436cf5606000381/train/javascript
+// You get an array of numbers, return the sum of all of the positives ones.
+// Example [1,-4,7,12] => 1 + 7 + 12 = 20
+// Note: if there is nothing to sum, the sum is default to 0.
+
+// START OF SOLUTION
+function positiveSum(arr) {
+  let arrPositiveSum = [];
+  arr.map(num => {
+    if (num > 0) {
+      arrPositiveSum.push(num);
+    };    
+  })
+  const sum = arrPositiveSum.reduce((acc, value) => acc + value, 0);
+  console.log(sum);
+}
+
+positiveSum([1, 2, 3, 4, 5]);       // 15
+positiveSum([1, -2, 3, 4, 5]);      // 13
+positiveSum([]);                    // 0
+positiveSum([-1, -2, -3, -4, -5]);  // 0
+positiveSum([-1, 2, 3, 4, -5]);     // 9
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
 
 // CODEWARS TASK - JS - Beginner Series #2 Clock
 // https://www.codewars.com/kata/55f9bca8ecaa9eac7100004a/train/javascript
@@ -17,15 +46,15 @@ function template() {
 // Your task is to write a function which returns the time since midnight in milliseconds.
 
 // START OF SOLUTION
-function past(h, m, s){
-  console.log((((h * 60 + m) * 60) + s) * 1000);  
-}
+// function past(h, m, s){
+//   console.log((((h * 60 + m) * 60) + s) * 1000);  
+// }
 
-past(0,1,1); // 61000)
-past(1,1,1); // 3661000)
-past(0,0,0); // 0)
-past(1,0,1); // 3601000)
-past(1,0,0); // 3600000)
+// past(0,1,1); // 61000)
+// past(1,1,1); // 3661000)
+// past(0,0,0); // 0)
+// past(1,0,1); // 3601000)
+// past(1,0,0); // 3600000)
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
