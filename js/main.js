@@ -10,6 +10,40 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 }
 
+
+// CODEWARS TASK - JS - Sum of two lowest positive integers
+// https://www.codewars.com/kata/558fc85d8fd1938afb000014/train/javascript
+// Create a function that returns the sum of the two lowest positive numbers
+// given an array of minimum 4 positive integers.No floats or non - positive integers will be passed.
+// For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+// [10, 343445353, 3453445, 3453545353453] should return 3453455.
+
+// START OF SOLUTION
+function sumTwoSmallestNumbers(numbers) {
+  const firstLowestNumber = numbers.splice(numbers.indexOf(Math.min(...numbers)), 1);
+  const secondLowestNumber = numbers.splice(numbers.indexOf(Math.min(...numbers)), 1);
+  console.log(Number(...firstLowestNumber) + Number(...secondLowestNumber));
+}
+
+// OR BEST PRACTICES & CLEVER
+
+// function sumTwoSmallestNumbers(numbers){  
+//   numbers = numbers.sort(function(a, b){return a - b; });
+//   console.log(numbers[0] + numbers[1]);
+// };
+
+// sumTwoSmallestNumbers([5, 8, 12, 19, 22]);  // 13 , "Sum should be 13");
+// sumTwoSmallestNumbers([15, 28, 4, 2, 43]);  // 6 , "Sum should be 6");
+// sumTwoSmallestNumbers([3, 87, 45, 12, 7]);  // 10 , "Sum should be 10");
+// sumTwoSmallestNumbers([23, 71, 33, 82, 1]); // 24 , "Sum should be 24");
+// sumTwoSmallestNumbers([52, 76, 14, 12, 4]); // 16 , "Sum should be 16");
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Sum of positive
 // https://www.codewars.com/kata/5715eaedb436cf5606000381/train/javascript
 // You get an array of numbers, return the sum of all of the positives ones.
@@ -17,22 +51,22 @@ function template() {
 // Note: if there is nothing to sum, the sum is default to 0.
 
 // START OF SOLUTION
-function positiveSum(arr) {
-  let arrPositiveSum = [];
-  arr.map(num => {
-    if (num > 0) {
-      arrPositiveSum.push(num);
-    };    
-  })
-  const sum = arrPositiveSum.reduce((acc, value) => acc + value, 0);
-  console.log(sum);
-}
+// function positiveSum(arr) {
+//   let arrPositiveSum = [];
+//   arr.map(num => {
+//     if (num > 0) {
+//       arrPositiveSum.push(num);
+//     };    
+//   })
+//   const sum = arrPositiveSum.reduce((acc, value) => acc + value, 0);
+//   console.log(sum);
+// }
 
-positiveSum([1, 2, 3, 4, 5]);       // 15
-positiveSum([1, -2, 3, 4, 5]);      // 13
-positiveSum([]);                    // 0
-positiveSum([-1, -2, -3, -4, -5]);  // 0
-positiveSum([-1, 2, 3, 4, -5]);     // 9
+// positiveSum([1, 2, 3, 4, 5]);       // 15
+// positiveSum([1, -2, 3, 4, 5]);      // 13
+// positiveSum([]);                    // 0
+// positiveSum([-1, -2, -3, -4, -5]);  // 0
+// positiveSum([-1, 2, 3, 4, -5]);     // 9
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
