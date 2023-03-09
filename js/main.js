@@ -12,6 +12,48 @@ function template() {
 
 
 
+// CODEWARS TASK - JS - Disemvowel Trolls
+// https://www.codewars.com/kata/52fba66badcd10859f00097e/train/javascript
+// Trolls are attacking your comment section!
+// A common way to deal with this situation is to remove all of the vowels from the trolls' comments,
+// neutralizing the threat.
+// Your task is to write a function that takes a string and return a new string with all vowels removed.
+// For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+// Note: for this kata y isn't considered a vowel.
+
+// START OF SOLUTION
+//vowels: a, e, i, o, u
+function disemvowel(str) {
+  const result = `${str
+    .split('a').join('')
+    .split('e').join('')
+    .split('i').join('')
+    .split('o').join('')
+    .split('u').join('')
+    .split('A').join('')
+    .split('E').join('')
+    .split('I').join('')
+    .split('O').join('')
+    .split('U').join('')
+  }`;
+  console.log(result)
+}
+
+// OR BEST PRACTICES & CLEVER
+
+// function disemvowel(str) {
+//   console.log(str.replace(/[aeiou]/ig,''));
+// }
+
+disemvowel("This website is for losers LOL!"); // "Ths wbst s fr lsrs LL!
+disemvowel("No offense but,\n Your writing is among the worst I've ever read"); // "N ffns bt,\nYr wrtng s mng th wrst 'v vr rd
+disemvowel("What are you, a communist?"); // "Wht r y,  cmmnst?
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
 // CODEWARS TASK - JS - All Star Code Challenge #18
 // https://www.codewars.com/kata/5865918c6b569962950002a1/train/javascript
 // Create a function that accepts a string and a single character, and returns
