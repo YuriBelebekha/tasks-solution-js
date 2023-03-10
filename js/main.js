@@ -11,6 +11,33 @@ function template() {
 }
 
 
+// CODEWARS TASK - JS - Square(n) Sum
+// https://www.codewars.com/kata/515e271a311df0350d00000f/train/javascript
+// Complete the square sum function so that it squares each number passed into
+// it and then sums the results together.
+
+// START OF SOLUTION
+function squareSum(numbers) {
+  let sum = 0;
+  numbers.map(num => {sum += Math.pow(num, 2)});
+  console.log(sum);
+}
+
+// OR BEST PRACTICES & CLEVER
+
+// function squareSum(numbers){
+//   console.log(numbers.reduce((sum,num) => sum + (num * num), 0));
+// }
+
+squareSum([1, 2]);       // 5
+squareSum([0, 3, 4, 5]); // 50
+squareSum([]);           // 0
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
 
 // CODEWARS TASK - JS - Break camelCase
 // https://www.codewars.com/kata/5208f99aee097e6552000148/train/javascript
@@ -21,12 +48,12 @@ function template() {
 // ""             =>  ""
 
 // START OF SOLUTION
-function solution(string) {  
-  console.log(string.replace(/[A-Z]/g, " $&"))
-};
+// function solution(string) {  
+//   console.log(string.replace(/[A-Z]/g, " $&"))
+// };
 
-solution('camelCasing');     // 'camel Casing';
-solution('camelCasingTest');  // 'camel Casing Test';
+// solution('camelCasing');     // 'camel Casing';
+// solution('camelCasingTest');  // 'camel Casing Test';
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
