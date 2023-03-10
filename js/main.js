@@ -12,6 +12,31 @@ function template() {
 
 
 
+// CODEWARS TASK - JS - String repeat
+// https://www.codewars.com/kata/57a0e5c372292dd76d000d7e/train/javascript
+// Write a function that accepts an integer n and a string s as parameters,
+// and returns a string of s repeated exactly n times.
+// Examples(input -> output)
+// 6, "I"     -> "IIIIII"
+// 5, "Hello" -> "HelloHelloHelloHelloHello"
+
+// START OF SOLUTION
+function repeatStr(n, s) {
+  let str = '';
+  for (let i = 1; i <= n; i += 1) {
+    str += s;    
+  }
+  console.log(str)
+}
+
+repeatStr(3, "*");    // "***")
+repeatStr(5, "#");    // "#####"
+repeatStr(2, "ha ");  // "ha ha "
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
 
 
 // CODEWARS TASK - JS - Calculate BMI
@@ -23,32 +48,32 @@ function template() {
 // if bmi > 30 return "Obese"
 
 // START OF SOLUTION
-function bmi(weight, height) {
-  const bmi = weight / Math.pow(height, 2);
-  console.log(bmi)
+// function bmi(weight, height) {
+//   const bmi = weight / Math.pow(height, 2);
+//   console.log(bmi)
 
-  if (bmi <= 18.5) {
-    console.log("Underweight");
-    return;
-  }
+//   if (bmi <= 18.5) {
+//     console.log("Underweight");
+//     return;
+//   }
 
-  if (bmi <= 25.0) {
-    console.log("Normal");
-    return;
-  }
+//   if (bmi <= 25.0) {
+//     console.log("Normal");
+//     return;
+//   }
 
-  if (bmi <= 30.0) {
-    console.log("Overweight");
-    return;
-  }
+//   if (bmi <= 30.0) {
+//     console.log("Overweight");
+//     return;
+//   }
 
-  if (bmi > 30) {
-    console.log("Obese");
-    return;
-  }
-}
+//   if (bmi > 30) {
+//     console.log("Obese");
+//     return;
+//   }
+// }
 
-bmi(80, 1.80); // "Normal"
+// bmi(80, 1.80); // "Normal"
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
