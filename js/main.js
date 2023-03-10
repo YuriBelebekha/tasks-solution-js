@@ -12,6 +12,28 @@ function template() {
 
 
 
+// CODEWARS TASK - JS - Break camelCase
+// https://www.codewars.com/kata/5208f99aee097e6552000148/train/javascript
+// Complete the solution so that the function will break up camel casing, using a space between words.
+// Example
+// "camelCasing"  =>  "camel Casing"
+// "identifier"   =>  "identifier"
+// ""             =>  ""
+
+// START OF SOLUTION
+function solution(string) {  
+  console.log(string.replace(/[A-Z]/g, " $&"))
+};
+
+solution('camelCasing');     // 'camel Casing';
+solution('camelCasingTest');  // 'camel Casing Test';
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - String repeat
 // https://www.codewars.com/kata/57a0e5c372292dd76d000d7e/train/javascript
 // Write a function that accepts an integer n and a string s as parameters,
@@ -21,17 +43,24 @@ function template() {
 // 5, "Hello" -> "HelloHelloHelloHelloHello"
 
 // START OF SOLUTION
-function repeatStr(n, s) {
-  let str = '';
-  for (let i = 1; i <= n; i += 1) {
-    str += s;    
-  }
-  console.log(str)
-}
+// function repeatStr(n, s) {
+//   let str = '';
+//   for (let i = 1; i <= n; i += 1) {
+//     str += s;    
+//   }
+//   console.log(str)
+// }
 
-repeatStr(3, "*");    // "***")
-repeatStr(5, "#");    // "#####"
-repeatStr(2, "ha ");  // "ha ha "
+// repeatStr(3, "*");    // "***")
+// repeatStr(5, "#");    // "#####"
+// repeatStr(2, "ha ");  // "ha ha "
+
+// OR BEST PRACTICES & CLEVER
+
+// function repeatStr (n, s) {
+//   console.log(s.repeat(n));
+// }
+
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
