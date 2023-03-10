@@ -11,6 +11,51 @@ function template() {
 }
 
 
+
+
+
+// CODEWARS TASK - JS - Calculate BMI
+// https://www.codewars.com/kata/57a429e253ba3381850000fb/train/javascript
+// Write function bmi that calculates body mass index (bmi = weight / height2).
+// if bmi <= 18.5 return "Underweight"
+// if bmi <= 25.0 return "Normal"
+// if bmi <= 30.0 return "Overweight"
+// if bmi > 30 return "Obese"
+
+// START OF SOLUTION
+function bmi(weight, height) {
+  const bmi = weight / Math.pow(height, 2);
+  console.log(bmi)
+
+  if (bmi <= 18.5) {
+    console.log("Underweight");
+    return;
+  }
+
+  if (bmi <= 25.0) {
+    console.log("Normal");
+    return;
+  }
+
+  if (bmi <= 30.0) {
+    console.log("Overweight");
+    return;
+  }
+
+  if (bmi > 30) {
+    console.log("Obese");
+    return;
+  }
+}
+
+bmi(80, 1.80); // "Normal"
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Sum of two lowest positive integers
 // https://www.codewars.com/kata/558fc85d8fd1938afb000014/train/javascript
 // Create a function that returns the sum of the two lowest positive numbers
@@ -19,11 +64,11 @@ function template() {
 // [10, 343445353, 3453445, 3453545353453] should return 3453455.
 
 // START OF SOLUTION
-function sumTwoSmallestNumbers(numbers) {
-  const firstLowestNumber = numbers.splice(numbers.indexOf(Math.min(...numbers)), 1);
-  const secondLowestNumber = numbers.splice(numbers.indexOf(Math.min(...numbers)), 1);
-  console.log(Number(...firstLowestNumber) + Number(...secondLowestNumber));
-}
+// function sumTwoSmallestNumbers(numbers) {
+//   const firstLowestNumber = numbers.splice(numbers.indexOf(Math.min(...numbers)), 1);
+//   const secondLowestNumber = numbers.splice(numbers.indexOf(Math.min(...numbers)), 1);
+//   console.log(Number(...firstLowestNumber) + Number(...secondLowestNumber));
+// }
 
 // OR BEST PRACTICES & CLEVER
 
