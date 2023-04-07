@@ -11,17 +11,48 @@ function template() {
 }
 
 
+// CODEWARS TASK - JS - Sort array by string length
+// https://www.codewars.com/kata/57ea5b0b75ae11d1e800006c/train/javascript
+// Write a function that takes an array of strings as an argument and returns 
+// a sorted array containing the same strings, ordered from shortest to longest.
+// For example, if this array were passed as an argument:
+// ["Telescopes", "Glasses", "Eyes", "Monocles"]
+// Your function would return the following array:
+// ["Eyes", "Glasses", "Monocles", "Telescopes"]
+// All of the strings in the array passed to your function will be different
+// lengths, so you will not have to decide how to order multiple strings of 
+// the same length.
+
+// START OF SOLUTION
+function sortByLength(array) {
+  // const sortedArrayByWordLength = array.sort(function (a, b) {
+  //   return a.length - b.length;
+  // })
+  // console.log(sortedArrayByWordLength)
+  
+  // OR
+
+  return array.sort((a, b) => a.length - b.length);
+};
+sortByLength(["Beg", "Life", "I", "To"]); // ["I", "To", "Beg", "Life"]
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Square(n) Sum
 // https://www.codewars.com/kata/515e271a311df0350d00000f/train/javascript
 // Complete the square sum function so that it squares each number passed into
 // it and then sums the results together.
 
 // START OF SOLUTION
-function squareSum(numbers) {
-  let sum = 0;
-  numbers.map(num => {sum += Math.pow(num, 2)});
-  console.log(sum);
-}
+// function squareSum(numbers) {
+//   let sum = 0;
+//   numbers.map(num => {sum += Math.pow(num, 2)});
+//   console.log(sum);
+// }
 
 // OR BEST PRACTICES & CLEVER
 
@@ -29,9 +60,9 @@ function squareSum(numbers) {
 //   console.log(numbers.reduce((sum,num) => sum + (num * num), 0));
 // }
 
-squareSum([1, 2]);       // 5
-squareSum([0, 3, 4, 5]); // 50
-squareSum([]);           // 0
+// squareSum([1, 2]);       // 5
+// squareSum([0, 3, 4, 5]); // 50
+// squareSum([]);           // 0
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
