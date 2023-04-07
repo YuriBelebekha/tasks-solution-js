@@ -11,6 +11,44 @@ function template() {
 }
 
 
+// CODEWARS TASK - JS - Thinkful - Logic Drills: Traffic light
+// https://www.codewars.com/kata/58649884a1659ed6cb000072/train/javascript
+// You're writing code to control your town's traffic lights.You need a
+// function to handle each change from green, to yellow, to red, and then 
+// to green again.
+// Complete the function that takes a string as an argument representing 
+// the current state of the light and returns a string representing the 
+// state the light should change to.
+// For example, when the input is green, output should be yellow.
+
+// START OF SOLUTION
+function updateLight(current) {
+  
+  switch (current) {
+    case 'green':
+      return 'yellow'
+      break;
+    case 'yellow':
+      return 'red'
+      break;
+    case 'red':
+      return 'green'
+      break;
+    default:
+      break;
+  }
+}
+
+  updateLight("green")  // yellow
+  updateLight("yellow") // red
+  updateLight("red")    // green
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Sort array by string length
 // https://www.codewars.com/kata/57ea5b0b75ae11d1e800006c/train/javascript
 // Write a function that takes an array of strings as an argument and returns 
@@ -24,7 +62,7 @@ function template() {
 // the same length.
 
 // START OF SOLUTION
-function sortByLength(array) {
+// function sortByLength(array) {
   // const sortedArrayByWordLength = array.sort(function (a, b) {
   //   return a.length - b.length;
   // })
@@ -32,9 +70,9 @@ function sortByLength(array) {
   
   // OR
 
-  return array.sort((a, b) => a.length - b.length);
-};
-sortByLength(["Beg", "Life", "I", "To"]); // ["I", "To", "Beg", "Life"]
+//   return array.sort((a, b) => a.length - b.length);
+// };
+// sortByLength(["Beg", "Life", "I", "To"]); // ["I", "To", "Beg", "Life"]
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
