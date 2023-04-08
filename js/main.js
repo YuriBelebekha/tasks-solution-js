@@ -10,6 +10,32 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 }
 
+// CODEWARS TASK - JS - You're a square!
+// https://www.codewars.com/kata/54c27a33fb7da0db0100040e/train/javascript
+// Given an integral number, determine if it's a square number:
+// In mathematics, a square number or perfect square is an integer
+//  that is the square of an integer; in other words, it is the product
+//  of some integer with itself.
+// The tests will always use some integral number, so don't worry
+// about that in dynamic typed languages.
+
+// START OF SOLUTION
+var isSquare = function(n){
+  Number.isInteger(Math.sqrt(n)) ? true : false;  
+}
+
+    isSquare(-1) // false, "-1: Negative numbers cannot be square numbers");
+    isSquare( 0) // true, "0 is a square number (0 * 0)");
+    isSquare( 3) // false, "3 is not a square number");
+    isSquare( 4) // true, "4 is a square number (2 * 2)");
+    isSquare(25) // true, "25 is a square number (5 * 5)");
+    isSquare(26) // false, "26 is not a square number");
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
 
 // CODEWARS TASK - JS - Thinkful - Logic Drills: Traffic light
 // https://www.codewars.com/kata/58649884a1659ed6cb000072/train/javascript
@@ -22,26 +48,25 @@ function template() {
 // For example, when the input is green, output should be yellow.
 
 // START OF SOLUTION
-function updateLight(current) {
-  
-  switch (current) {
-    case 'green':
-      return 'yellow'
-      break;
-    case 'yellow':
-      return 'red'
-      break;
-    case 'red':
-      return 'green'
-      break;
-    default:
-      break;
-  }
-}
+// function updateLight(current) {  
+//   switch (current) {
+//     case 'green':
+//       return 'yellow'
+//       break;
+//     case 'yellow':
+//       return 'red'
+//       break;
+//     case 'red':
+//       return 'green'
+//       break;
+//     default:
+//       break;
+//   }
+// }
 
-  updateLight("green")  // yellow
-  updateLight("yellow") // red
-  updateLight("red")    // green
+//   updateLight("green")  // yellow
+//   updateLight("yellow") // red
+//   updateLight("red")    // green
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
