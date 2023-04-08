@@ -9,6 +9,33 @@ function template() {
 
 //////////////////////////////////////////////////////////////////////
 }
+// CODEWARS TASK - JS - List Filtering
+// https://www.codewars.com/kata/53dbd5315a3c69eed20002dd/train/javascript
+// In this kata you will create a function that takes a list of non - negative 
+// integers and strings and returns a new list with the strings filtered out.
+
+// START OF SOLUTION
+function filter_list(l) {
+  // let filteredList = [];
+  // l.map(elem => {
+  //   if (Number.isInteger(elem)) {
+  //     filteredList.push(elem);
+  //   }
+  // })
+  // console.log(filteredList);
+
+  console.log(l.filter(num => Number.isInteger(num)))
+}
+
+filter_list([1, 2, 'a', 'b']);                // [1, 2]                 
+filter_list([1, 'a', 'b', 0, 15]);            // [1, 0, 15]          
+filter_list([1, 2, 'aasf', '1', '123', 123]); // [1, 2, 123]
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
 
 // CODEWARS TASK - JS - You're a square!
 // https://www.codewars.com/kata/54c27a33fb7da0db0100040e/train/javascript
