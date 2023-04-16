@@ -8,28 +8,66 @@ function template() {
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
-}
+};
+
+
+// CODEWARS TASK - JS -
+// 
+
+
+// START OF SOLUTION
+
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
+// CODEWARS TASK - JS - How good are you really?
+// https://www.codewars.com/kata/5601409514fc93442500010b/train/javascript
+
+// START OF SOLUTION
+// function betterThanAverage(classPoints, yourPoints) {
+//   const sumClassPoints = classPoints.reduce((acc, value) => acc + value);
+//   const averageClassPoint = sumClassPoints / classPoints.length;
+  
+//   console.log(averageClassPoint < yourPoints)
+// };
+
+// betterThanAverage([2, 3], 5);                                // true
+// betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75);    // true
+// betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9);  // false
+// betterThanAverage([41, 75, 72, 56, 80, 82, 81, 33], 50);     // false
+// betterThanAverage([29, 55, 74, 60, 11, 90, 67, 28], 21);     // false
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - List Filtering
 // https://www.codewars.com/kata/53dbd5315a3c69eed20002dd/train/javascript
 // In this kata you will create a function that takes a list of non - negative 
 // integers and strings and returns a new list with the strings filtered out.
 
 // START OF SOLUTION
-function filter_list(l) {
-  // let filteredList = [];
-  // l.map(elem => {
-  //   if (Number.isInteger(elem)) {
-  //     filteredList.push(elem);
-  //   }
-  // })
-  // console.log(filteredList);
+// function filter_list(l) {
+//   // let filteredList = [];
+//   // l.map(elem => {
+//   //   if (Number.isInteger(elem)) {
+//   //     filteredList.push(elem);
+//   //   }
+//   // })
+//   // console.log(filteredList);
 
-  console.log(l.filter(num => Number.isInteger(num)))
-}
+//   console.log(l.filter(num => Number.isInteger(num)))
+// }
 
-filter_list([1, 2, 'a', 'b']);                // [1, 2]                 
-filter_list([1, 'a', 'b', 0, 15]);            // [1, 0, 15]          
-filter_list([1, 2, 'aasf', '1', '123', 123]); // [1, 2, 123]
+// filter_list([1, 2, 'a', 'b']);                // [1, 2]                 
+// filter_list([1, 'a', 'b', 0, 15]);            // [1, 0, 15]          
+// filter_list([1, 2, 'aasf', '1', '123', 123]); // [1, 2, 123]
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
