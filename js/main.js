@@ -11,12 +11,26 @@ function template() {
 };
 
 
-// CODEWARS TASK - JS -
-// 
-
+// CODEWARS TASK - JS - Is it a palindrome?
+// https://www.codewars.com/kata/57a1fd2ce298a731b20006a4/train/javascript
+// Write a function that checks if a given string (case insensitive) is
+// a palindrome.
 
 // START OF SOLUTION
+function isPalindrome(x) {
+  
+  
+  console.log(x.toLowerCase().split('').reverse().join('') === x.toLowerCase())
+};
 
+isPalindrome("a");     // true));
+isPalindrome("aba");   // true));
+isPalindrome("Abba");  // true));
+isPalindrome("hello"); // false));
+isPalindrome("Bob");   // true));
+isPalindrome("Madam"); // true));
+isPalindrome("AbBa");  // true));
+isPalindrome("");      // true));
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
