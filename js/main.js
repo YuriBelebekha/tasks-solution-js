@@ -10,6 +10,29 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 };
 
+// CODEWARS TASK - JS - Beginner - Reduce but Grow
+// https://www.codewars.com/kata/57f780909f7e8e3183000078/train/javascript
+// Given a non - empty array of integers, return the result of multiplying the 
+// values together in order.Example: [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+
+// START OF SOLUTION
+function grow(x){
+  let result = x.reduce((acc, num) => acc * num);
+  console.log(result);
+};
+
+grow([1, 2, 3]);          // 6
+grow([4, 1, 1, 1, 4]);    // 16
+grow([2, 2, 2, 2, 2, 2]); // 64
+grow([1, 2, 6]); // 12
+grow([2, 3, 4, 5, 6, 7]); // 5040
+grow([4, 4, 4, 4, 4, 4]); // 4096
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
 
 // CODEWARS TASK - JS - Is it a palindrome?
 // https://www.codewars.com/kata/57a1fd2ce298a731b20006a4/train/javascript
@@ -17,20 +40,18 @@ function template() {
 // a palindrome.
 
 // START OF SOLUTION
-function isPalindrome(x) {
-  
-  
-  console.log(x.toLowerCase().split('').reverse().join('') === x.toLowerCase())
-};
+// function isPalindrome(x) {  
+//   console.log(x.toLowerCase().split('').reverse().join('') === x.toLowerCase())
+// };
 
-isPalindrome("a");     // true));
-isPalindrome("aba");   // true));
-isPalindrome("Abba");  // true));
-isPalindrome("hello"); // false));
-isPalindrome("Bob");   // true));
-isPalindrome("Madam"); // true));
-isPalindrome("AbBa");  // true));
-isPalindrome("");      // true));
+// isPalindrome("a");     // true));
+// isPalindrome("aba");   // true));
+// isPalindrome("Abba");  // true));
+// isPalindrome("hello"); // false));
+// isPalindrome("Bob");   // true));
+// isPalindrome("Madam"); // true));
+// isPalindrome("AbBa");  // true));
+// isPalindrome("");      // true));
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
