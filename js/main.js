@@ -10,23 +10,52 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 };
 
+// CODEWARS TASK - JS - Century From Year
+// https://www.codewars.com/kata/5a3fe3dde1ce0e8ed6000097/train/javascript
+// The first century spans from the year 1 up to and including the year 100,
+//   the second century - from the year 101 up to and including the year 200, etc.
+// Task
+// Given a year, return the century it is in.
+//   Examples
+// 1705 --> 18
+// 1900 --> 19
+// 1601 --> 17
+// 2000 --> 20
+
+// START OF SOLUTION
+function century(year) {
+  console.log(Math.ceil(year / 100));
+}
+
+century(1705); // 18, 'Testing for year 1705');
+century(1900); // 19, 'Testing for year 1900');
+century(1601); // 17, 'Testing for year 1601');
+century(2000); // 20, 'Testing for year 2000');
+century(89);   // 1,  'Testing for year 89');
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Beginner - Reduce but Grow
 // https://www.codewars.com/kata/57f780909f7e8e3183000078/train/javascript
 // Given a non - empty array of integers, return the result of multiplying the 
 // values together in order.Example: [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
 
 // START OF SOLUTION
-function grow(x){
-  let result = x.reduce((acc, num) => acc * num);
-  console.log(result);
-};
+// function grow(x){
+//   let result = x.reduce((acc, num) => acc * num);
+//   console.log(result);
+// };
 
-grow([1, 2, 3]);          // 6
-grow([4, 1, 1, 1, 4]);    // 16
-grow([2, 2, 2, 2, 2, 2]); // 64
-grow([1, 2, 6]); // 12
-grow([2, 3, 4, 5, 6, 7]); // 5040
-grow([4, 4, 4, 4, 4, 4]); // 4096
+// grow([1, 2, 3]);          // 6
+// grow([4, 1, 1, 1, 4]);    // 16
+// grow([2, 2, 2, 2, 2, 2]); // 64
+// grow([1, 2, 6]); // 12
+// grow([2, 3, 4, 5, 6, 7]); // 5040
+// grow([4, 4, 4, 4, 4, 4]); // 4096
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
@@ -120,16 +149,16 @@ grow([4, 4, 4, 4, 4, 4]); // 4096
 // about that in dynamic typed languages.
 
 // START OF SOLUTION
-var isSquare = function(n){
-  Number.isInteger(Math.sqrt(n)) ? true : false;  
-}
+// var isSquare = function(n){
+//   Number.isInteger(Math.sqrt(n)) ? true : false;  
+// }
 
-    isSquare(-1) // false, "-1: Negative numbers cannot be square numbers");
-    isSquare( 0) // true, "0 is a square number (0 * 0)");
-    isSquare( 3) // false, "3 is not a square number");
-    isSquare( 4) // true, "4 is a square number (2 * 2)");
-    isSquare(25) // true, "25 is a square number (5 * 5)");
-    isSquare(26) // false, "26 is not a square number");
+//     isSquare(-1) // false, "-1: Negative numbers cannot be square numbers");
+//     isSquare( 0) // true, "0 is a square number (0 * 0)");
+//     isSquare( 3) // false, "3 is not a square number");
+//     isSquare( 4) // true, "4 is a square number (2 * 2)");
+//     isSquare(25) // true, "25 is a square number (5 * 5)");
+//     isSquare(26) // false, "26 is not a square number");
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
