@@ -10,6 +10,42 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 };
 
+// CODEWARS TASK - JS - Round up to the next multiple of 5
+// https://www.codewars.com/kata/55d1d6d5955ec6365400006d/train/javascript
+// Given an integer as input, can you round it to the next(meaning, "greater
+// than or equal") multiple of 5?
+// Examples:
+// input:    output:
+// 0    ->   0
+// 2    ->   5
+// 3    ->   5
+// 12   ->   15
+// 21   ->   25
+// 30   ->   30
+// -2   ->   0
+// -5   ->   -5
+// etc.
+
+// START OF SOLUTION
+function roundToNext5(n) {  
+  console.log(Math.ceil(n / 5) * 5 )
+};
+
+roundToNext5(0);   // 0
+roundToNext5(2);   // 5
+roundToNext5(3);   // 5
+roundToNext5(12);  // 15
+roundToNext5(21);  // 25
+roundToNext5(30);  // 30
+roundToNext5(-2);  // 0
+roundToNext5(-5);  // -5
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Century From Year
 // https://www.codewars.com/kata/5a3fe3dde1ce0e8ed6000097/train/javascript
 // The first century spans from the year 1 up to and including the year 100,
@@ -23,15 +59,15 @@ function template() {
 // 2000 --> 20
 
 // START OF SOLUTION
-function century(year) {
-  console.log(Math.ceil(year / 100));
-}
+// function century(year) {
+//   console.log(Math.ceil(year / 100));
+// }
 
-century(1705); // 18, 'Testing for year 1705');
-century(1900); // 19, 'Testing for year 1900');
-century(1601); // 17, 'Testing for year 1601');
-century(2000); // 20, 'Testing for year 2000');
-century(89);   // 1,  'Testing for year 89');
+// century(1705); // 18, 'Testing for year 1705');
+// century(1900); // 19, 'Testing for year 1900');
+// century(1601); // 17, 'Testing for year 1601');
+// century(2000); // 20, 'Testing for year 2000');
+// century(89);   // 1,  'Testing for year 89');
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
