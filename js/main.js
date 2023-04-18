@@ -10,6 +10,37 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 };
 
+// CODEWARS TASK - JS - Mumbling
+// https://www.codewars.com/kata/5667e8f4e3f572a8f2000039/train/javascript
+// This time no story, no theory. The examples below show you how to write function accum:
+// Examples:
+// accum("abcd") -> "A-Bb-Ccc-Dddd"
+// accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+// accum("cwAt") -> "C-Ww-Aaa-Tttt"
+
+// START OF SOLUTION
+function accum(s) {  
+  let mumbling = [];
+  for (let i = 0; i < s.length; i += 1) {
+    mumbling.push(
+      (s[i].repeat(i + 1))[i].charAt(0).toUpperCase() +
+      (s[i].toLowerCase().repeat(i)));
+  };
+  console.log(mumbling.join('-'));
+};
+
+accum("ZpglnRxqenU"); // "Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu");
+accum("NyffsGeyylB"); // "N-Yy-Fff-Ffff-Sssss-Gggggg-Eeeeeee-Yyyyyyyy-Yyyyyyyyy-Llllllllll-Bbbbbbbbbbb");
+accum("MjtkuBovqrU"); // "M-Jj-Ttt-Kkkk-Uuuuu-Bbbbbb-Ooooooo-Vvvvvvvv-Qqqqqqqqq-Rrrrrrrrrr-Uuuuuuuuuuu");
+accum("EvidjUnokmM"); // "E-Vv-Iii-Dddd-Jjjjj-Uuuuuu-Nnnnnnn-Oooooooo-Kkkkkkkkk-Mmmmmmmmmm-Mmmmmmmmmmm");
+accum("HbideVbxncC"); // "H-Bb-Iii-Dddd-Eeeee-Vvvvvv-Bbbbbbb-Xxxxxxxx-Nnnnnnnnn-Cccccccccc-Ccccccccccc");
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Round up to the next multiple of 5
 // https://www.codewars.com/kata/55d1d6d5955ec6365400006d/train/javascript
 // Given an integer as input, can you round it to the next(meaning, "greater
@@ -27,18 +58,18 @@ function template() {
 // etc.
 
 // START OF SOLUTION
-function roundToNext5(n) {  
-  console.log(Math.ceil(n / 5) * 5 )
-};
+// function roundToNext5(n) {  
+//   console.log(Math.ceil(n / 5) * 5 )
+// };
 
-roundToNext5(0);   // 0
-roundToNext5(2);   // 5
-roundToNext5(3);   // 5
-roundToNext5(12);  // 15
-roundToNext5(21);  // 25
-roundToNext5(30);  // 30
-roundToNext5(-2);  // 0
-roundToNext5(-5);  // -5
+// roundToNext5(0);   // 0
+// roundToNext5(2);   // 5
+// roundToNext5(3);   // 5
+// roundToNext5(12);  // 15
+// roundToNext5(21);  // 25
+// roundToNext5(30);  // 30
+// roundToNext5(-2);  // 0
+// roundToNext5(-5);  // -5
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
