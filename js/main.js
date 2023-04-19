@@ -10,6 +10,36 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 };
 
+// CODEWARS TASK - JS - Removing Elements
+// https://www.codewars.com/kata/5769b3802ae6f8e4890009d2/train/javascript
+// Take an array and remove every second element from the array.
+// Always keep the first element and start removing with the next element.
+// Example:
+// ["Keep", "Remove", "Keep", "Remove", "Keep", ...]-- > ["Keep", "Keep", "Keep", ...]
+// None of the arrays will be empty, so you don't have to worry about that!
+
+// START OF SOLUTION
+function removeEveryOther(arr) {  
+  let newArr = [];
+  for (let i = 0; i < arr.length; i += 1) {    
+    if (i % 2 === 0) {
+      newArr.push(arr[i])
+    };    
+  };
+  console.log(newArr);
+}
+
+removeEveryOther(['Hello', 'Goodbye', 'Hello Again']); //['Hello', 'Hello Again']
+removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);     // [1, 3, 5, 7, 9]
+removeEveryOther([[1, 2]]);                            // [[1, 2]])
+removeEveryOther([['Goodbye'], { 'Great': 'Job' }]);   // [['Goodbye']]
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Mumbling
 // https://www.codewars.com/kata/5667e8f4e3f572a8f2000039/train/javascript
 // This time no story, no theory. The examples below show you how to write function accum:
@@ -19,21 +49,24 @@ function template() {
 // accum("cwAt") -> "C-Ww-Aaa-Tttt"
 
 // START OF SOLUTION
-function accum(s) {  
-  let mumbling = [];
-  for (let i = 0; i < s.length; i += 1) {
-    mumbling.push(
-      (s[i].repeat(i + 1))[i].charAt(0).toUpperCase() +
-      (s[i].toLowerCase().repeat(i)));
-  };
-  console.log(mumbling.join('-'));
-};
+// function accum(s) {  
+//   let mumbling = [];
+//   for (let i = 0; i < s.length; i += 1) {
+//     mumbling.push(
+//       (s[i].repeat(i + 1))[i].charAt(0).toUpperCase() +
+//       (s[i].toLowerCase().repeat(i)));
+//   };
+//   console.log(mumbling.join('-'));
+// };
 
-accum("ZpglnRxqenU"); // "Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu");
-accum("NyffsGeyylB"); // "N-Yy-Fff-Ffff-Sssss-Gggggg-Eeeeeee-Yyyyyyyy-Yyyyyyyyy-Llllllllll-Bbbbbbbbbbb");
-accum("MjtkuBovqrU"); // "M-Jj-Ttt-Kkkk-Uuuuu-Bbbbbb-Ooooooo-Vvvvvvvv-Qqqqqqqqq-Rrrrrrrrrr-Uuuuuuuuuuu");
-accum("EvidjUnokmM"); // "E-Vv-Iii-Dddd-Jjjjj-Uuuuuu-Nnnnnnn-Oooooooo-Kkkkkkkkk-Mmmmmmmmmm-Mmmmmmmmmmm");
-accum("HbideVbxncC"); // "H-Bb-Iii-Dddd-Eeeee-Vvvvvv-Bbbbbbb-Xxxxxxxx-Nnnnnnnnn-Cccccccccc-Ccccccccccc");
+// // Best Practices an Clever
+// // return s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-');
+
+// accum("ZpglnRxqenU"); // "Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu");
+// accum("NyffsGeyylB"); // "N-Yy-Fff-Ffff-Sssss-Gggggg-Eeeeeee-Yyyyyyyy-Yyyyyyyyy-Llllllllll-Bbbbbbbbbbb");
+// accum("MjtkuBovqrU"); // "M-Jj-Ttt-Kkkk-Uuuuu-Bbbbbb-Ooooooo-Vvvvvvvv-Qqqqqqqqq-Rrrrrrrrrr-Uuuuuuuuuuu");
+// accum("EvidjUnokmM"); // "E-Vv-Iii-Dddd-Jjjjj-Uuuuuu-Nnnnnnn-Oooooooo-Kkkkkkkkk-Mmmmmmmmmm-Mmmmmmmmmmm");
+// accum("HbideVbxncC"); // "H-Bb-Iii-Dddd-Eeeee-Vvvvvv-Bbbbbbb-Xxxxxxxx-Nnnnnnnnn-Cccccccccc-Ccccccccccc");
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
