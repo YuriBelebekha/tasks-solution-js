@@ -10,6 +10,27 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 };
 
+// CODEWARS TASK - JS - Shortest Word
+// https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9/train/javascript
+// Simple, given a string of words, return the length of the shortest word(s).
+// String will never be empty and you do not need to account for different data types.
+
+// START OF SOLUTION
+function findShort(s) {
+  const array = s.split(' ').sort((a, b) => a.length - b.length )[0].length; 
+  console.log(array);
+}
+findShort("bitcoin take over the world maybe who knows perhaps");                // 3);
+findShort("turns out random test cases are easier than writing out basic ones"); // 3); 
+findShort("Let's travel abroad shall we");                                       // 2);
+findShort("Buy me a coffee");                                                    // 1);
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Removing Elements
 // https://www.codewars.com/kata/5769b3802ae6f8e4890009d2/train/javascript
 // Take an array and remove every second element from the array.
@@ -19,20 +40,20 @@ function template() {
 // None of the arrays will be empty, so you don't have to worry about that!
 
 // START OF SOLUTION
-function removeEveryOther(arr) {  
-  let newArr = [];
-  for (let i = 0; i < arr.length; i += 1) {    
-    if (i % 2 === 0) {
-      newArr.push(arr[i])
-    };    
-  };
-  console.log(newArr);
-}
+// function removeEveryOther(arr) {  
+//   let newArr = [];
+//   for (let i = 0; i < arr.length; i += 1) {    
+//     if (i % 2 === 0) {
+//       newArr.push(arr[i])
+//     };    
+//   };
+//   console.log(newArr);
+// }
 
-removeEveryOther(['Hello', 'Goodbye', 'Hello Again']); //['Hello', 'Hello Again']
-removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);     // [1, 3, 5, 7, 9]
-removeEveryOther([[1, 2]]);                            // [[1, 2]])
-removeEveryOther([['Goodbye'], { 'Great': 'Job' }]);   // [['Goodbye']]
+// removeEveryOther(['Hello', 'Goodbye', 'Hello Again']); //['Hello', 'Hello Again']
+// removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);     // [1, 3, 5, 7, 9]
+// removeEveryOther([[1, 2]]);                            // [[1, 2]])
+// removeEveryOther([['Goodbye'], { 'Great': 'Job' }]);   // [['Goodbye']]
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
