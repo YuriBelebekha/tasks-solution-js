@@ -10,20 +10,44 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 };
 
+// CODEWARS TASK - JS - Remove anchor from URL
+// https://www.codewars.com/kata/51f2b4448cadf20ed0000386/train/javascript
+// Complete the function/method so that it returns the url
+// with anything after the anchor(#) removed.
+// Examples
+// "www.codewars.com#about" --> "www.codewars.com"
+// "www.codewars.com?page=1" -->"www.codewars.com?page=1"
+
+// START OF SOLUTION
+function removeUrlAnchor(url){  
+  const result = url.indexOf('#') < 0 ? url : url.slice(0, url.indexOf('#'));
+  console.log(result);
+};
+
+removeUrlAnchor('www.codewars.com#about');               // www.codewars.com
+removeUrlAnchor('www.codewars.com/katas/?page=1#about'); // www.codewars.com/katas/?page=1
+removeUrlAnchor('www.codewars.com/katas/');              // www.codewars.com/katas/
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Shortest Word
 // https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9/train/javascript
 // Simple, given a string of words, return the length of the shortest word(s).
 // String will never be empty and you do not need to account for different data types.
 
 // START OF SOLUTION
-function findShort(s) {
-  const array = s.split(' ').sort((a, b) => a.length - b.length )[0].length; 
-  console.log(array);
-}
-findShort("bitcoin take over the world maybe who knows perhaps");                // 3);
-findShort("turns out random test cases are easier than writing out basic ones"); // 3); 
-findShort("Let's travel abroad shall we");                                       // 2);
-findShort("Buy me a coffee");                                                    // 1);
+// function findShort(s) {
+//   const array = s.split(' ').sort((a, b) => a.length - b.length )[0].length; 
+//   console.log(array);
+// }
+// findShort("bitcoin take over the world maybe who knows perhaps");                // 3);
+// findShort("turns out random test cases are easier than writing out basic ones"); // 3); 
+// findShort("Let's travel abroad shall we");                                       // 2);
+// findShort("Buy me a coffee");                                                    // 1);
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
