@@ -10,6 +10,44 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 };
 
+
+
+// CODEWARS TASK - JS - Is the string uppercase?
+// https://www.codewars.com/kata/56cd44e1aa4ac7879200010b/train/javascript
+// Task
+// Create a method to see whether the string is ALL CAPS.
+//   Examples(input -> output)
+// "c" -> False
+// "C" -> True
+// "hello I AM DONALD" -> False
+// "HELLO I AM DONALD" -> True
+// "ACSKLDFJSgSKLDFJSKLDFJ" -> False
+// "ACSKLDFJSGSKLDFJSKLDFJ" -> True
+
+// START OF SOLUTION
+String.prototype.isUpperCase = function (string) {
+  console.log(
+    !this ? false : this.toString() === this.toUpperCase() ? true : false
+  );
+};
+
+
+''.isUpperCase();
+'c'.isUpperCase();
+'C'.isUpperCase();
+'hello I AM DONALD'.isUpperCase();
+'HELLO I AM DONALD'.isUpperCase();
+'ACSKLDFJSgSKLDFJSKLDFJ'.isUpperCase();
+'ACSKLDFJSGSKLDFJSKLDFJ'.isUpperCase();
+
+
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Remove anchor from URL
 // https://www.codewars.com/kata/51f2b4448cadf20ed0000386/train/javascript
 // Complete the function/method so that it returns the url
@@ -19,14 +57,14 @@ function template() {
 // "www.codewars.com?page=1" -->"www.codewars.com?page=1"
 
 // START OF SOLUTION
-function removeUrlAnchor(url){  
-  const result = url.indexOf('#') < 0 ? url : url.slice(0, url.indexOf('#'));
-  console.log(result);
-};
+// function removeUrlAnchor(url){  
+//   const result = url.indexOf('#') < 0 ? url : url.slice(0, url.indexOf('#'));
+//   console.log(result);
+// };
 
-removeUrlAnchor('www.codewars.com#about');               // www.codewars.com
-removeUrlAnchor('www.codewars.com/katas/?page=1#about'); // www.codewars.com/katas/?page=1
-removeUrlAnchor('www.codewars.com/katas/');              // www.codewars.com/katas/
+// removeUrlAnchor('www.codewars.com#about');               // www.codewars.com
+// removeUrlAnchor('www.codewars.com/katas/?page=1#about'); // www.codewars.com/katas/?page=1
+// removeUrlAnchor('www.codewars.com/katas/');              // www.codewars.com/katas/
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
