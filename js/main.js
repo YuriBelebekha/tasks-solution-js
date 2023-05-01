@@ -11,6 +11,98 @@ function template() {
 };
 
 
+
+// CODEWARS TASK - JS - Drink about
+// https://www.codewars.com/kata/56170e844da7c6f647000063/train/javascript
+// Kids drink toddy.
+// Teens drink coke.
+// Young adults drink beer.
+// Adults drink whisky.
+// Make a function that receive age, and return what they drink.
+
+// Rules:
+// Children under 14 old.
+// Teens under 18 old.
+// Young under 21 old.
+// Adults have 21 or more.
+// Examples: (Input-- > Output)
+// 13 --> "drink toddy"
+// 17 --> "drink coke"
+// 18 --> "drink beer"
+// 20 --> "drink beer"
+// 30 --> "drink whisky"
+
+// START OF SOLUTION
+function peopleWithAgeDrink(old) {
+  if (old < 14) {
+    console.log('drink toddy');
+    return;
+  };
+  if (old < 18) {
+    console.log('drink coke');
+    return;
+  };
+  if (old >= 18 && old < 21) {
+    console.log('drink beer');
+    return;
+  };
+  if (old >= 21) {
+    console.log('drink whisky');
+    return;
+  };  
+};
+
+peopleWithAgeDrink(13);
+peopleWithAgeDrink(17);
+peopleWithAgeDrink(18);
+peopleWithAgeDrink(20);
+peopleWithAgeDrink(30);
+
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
+//////////////////////////////
+// return {
+//     0 : 'no one likes this',
+//     1 : `${names[0]} likes this`,
+//     2 : `${names[0]} and ${names[1]} like this`,
+//     3 : `${names[0]}, ${names[1]} and ${names[2]} like this`,
+//     4 : `${names[0]}, ${names[1]} and ${names.length - 2} others like this`,
+//   }[Math.min(4, names.length)]
+
+// function likes(names) {
+//   switch (names.length) {
+//     case 0:
+//       return `no one likes this`;
+  
+//     case 1:
+//       return `${names[0]} likes this`;
+  
+//     case 2:
+//       return `${names[0]} and ${names[1]} likes this`;
+  
+//     case 3:
+//       return `${names[0]}, ${names[1]} and ${names[2]} likes this`;
+
+//     default:
+//       return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`;
+//   }
+// }
+
+// likes([]);
+// likes(['Peter']);
+// likes(['Jacob', 'Alex']);
+// likes(['Max', 'John', 'Mark']);
+// likes(['Alex', 'Jacob', 'Mark', 'Max']);
+//////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Ones and Zeros
 // https://www.codewars.com/kata/578553c3a1b8d5c40300037c/train/javascript
 // Given an array of ones and zeroes, convert the equivalent binary value to an integer.
@@ -27,26 +119,26 @@ function template() {
 // However, the arrays can have varying lengths, not just limited to 4.
 
 // START OF SOLUTION
-const binaryArrayToNumber = arr => {  
-  // let result = 0;
-  // const arrReversed = arr.reverse();  
-  // for (let i = 0; i < arrReversed.length; i += 1) {    
-  //   if (arrReversed[i] === 1) {      
-  //     result += Math.pow(2, i);
-  //   };
-  // };
-  // console.log(result)
+// const binaryArrayToNumber = arr => {  
+//   // let result = 0;
+//   // const arrReversed = arr.reverse();  
+//   // for (let i = 0; i < arrReversed.length; i += 1) {    
+//   //   if (arrReversed[i] === 1) {      
+//   //     result += Math.pow(2, i);
+//   //   };
+//   // };
+//   // console.log(result)
 
-  // Best Practices an Clever  
-  const result = parseInt(arr.join(""), 2)
-  console.log(result)
+//   // Best Practices an Clever  
+//   const result = parseInt(arr.join(""), 2)
+//   console.log(result)
 
-};
+// };
 
-binaryArrayToNumber([0,0,0,1]);  // 1
-binaryArrayToNumber([0,0,1,0]);  // 2
-binaryArrayToNumber([1,1,1,1]);  // 15
-binaryArrayToNumber([0,1,1,0]);  // 6
+// binaryArrayToNumber([0,0,0,1]);  // 1
+// binaryArrayToNumber([0,0,1,0]);  // 2
+// binaryArrayToNumber([1,1,1,1]);  // 15
+// binaryArrayToNumber([0,1,1,0]);  // 6
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
