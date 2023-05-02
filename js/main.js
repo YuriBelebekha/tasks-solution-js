@@ -12,6 +12,39 @@ function template() {
 
 
 
+
+
+// CODEWARS TASK - JS - Two to One
+// https://www.codewars.com/kata/5656b6906de340bd1b0000ac/train/javascript
+// Take 2 strings s1 and s2 including only letters from a to z. Return a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
+// Examples:
+// a = "xyaabbbccccdefww"
+// b = "xxxxyyyyabklmopq"
+// longest(a, b) -> "abcdefklmopqwxy"
+
+// a = "abcdefghijklmnopqrstuvwxyz"
+// longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
+
+// START OF SOLUTION
+function longest(s1, s2) {  
+  const commonArr = s1.concat(s2).split('');  
+  
+  const result = commonArr.filter((elem, index) => {
+    return commonArr.indexOf(elem) === index;
+  })
+  console.log(result.sort().join(''));
+};
+
+longest("aretheyhere", "yestheyarehere"); // "aehrsty"
+longest("loopingisfunbutdangerous", "lessdangerousthancoding"); // "abcdefghilnoprstu"
+longest("inmanylanguages", "theresapairoffunctions"); // "acefghilmnoprstuy"
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Drink about
 // https://www.codewars.com/kata/56170e844da7c6f647000063/train/javascript
 // Kids drink toddy.
@@ -33,31 +66,30 @@ function template() {
 // 30 --> "drink whisky"
 
 // START OF SOLUTION
-function peopleWithAgeDrink(old) {
-  if (old < 14) {
-    console.log('drink toddy');
-    return;
-  };
-  if (old < 18) {
-    console.log('drink coke');
-    return;
-  };
-  if (old >= 18 && old < 21) {
-    console.log('drink beer');
-    return;
-  };
-  if (old >= 21) {
-    console.log('drink whisky');
-    return;
-  };  
-};
+// function peopleWithAgeDrink(old) {
+//   if (old < 14) {
+//     console.log('drink toddy');
+//     return;
+//   };
+//   if (old < 18) {
+//     console.log('drink coke');
+//     return;
+//   };
+//   if (old >= 18 && old < 21) {
+//     console.log('drink beer');
+//     return;
+//   };
+//   if (old >= 21) {
+//     console.log('drink whisky');
+//     return;
+//   };  
+// };
 
-peopleWithAgeDrink(13);
-peopleWithAgeDrink(17);
-peopleWithAgeDrink(18);
-peopleWithAgeDrink(20);
-peopleWithAgeDrink(30);
-
+// peopleWithAgeDrink(13);
+// peopleWithAgeDrink(17);
+// peopleWithAgeDrink(18);
+// peopleWithAgeDrink(20);
+// peopleWithAgeDrink(30);
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
