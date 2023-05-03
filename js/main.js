@@ -12,6 +12,40 @@ function template() {
 
 
 
+// CODEWARS TASK - JS - Small enough? - Beginner
+// https://www.codewars.com/kata/57cc981a58da9e302a000214/train/javascript
+// You will be given an array and a limit value.You must check that all values
+// in the array are below or equal to the limit value.If they are, return true.
+// Else, return false.
+
+// You can assume all values in the array are numbers.
+
+// START OF SOLUTION
+// function smallEnough(a, limit) {
+//   const resultArr = [];
+
+//   a.map(element => {
+//     (element > limit) ? resultArr.push(false) : resultArr.push(true);
+//   });
+//   // console.log(resultArr)
+//   console.log(resultArr.includes(false) ? false : true);
+// };
+
+// Best Practices and Clever
+function smallEnough(a, limit){  
+  const result = Math.max(...a) <= limit;
+  console.log(result);
+}
+
+smallEnough([66, 101], 200);                              // true
+smallEnough([78, 117, 110, 99, 104, 117, 107, 115], 100); // false
+smallEnough([101, 45, 75, 105, 99, 107], 107);            // true
+smallEnough([80, 117, 115, 104, 45, 85, 112, 115], 120);  // true
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
 
 
 // CODEWARS TASK - JS - Two to One
@@ -26,18 +60,18 @@ function template() {
 // longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
 
 // START OF SOLUTION
-function longest(s1, s2) {  
-  const commonArr = s1.concat(s2).split('');  
+// function longest(s1, s2) {  
+//   const commonArr = s1.concat(s2).split('');  
   
-  const result = commonArr.filter((elem, index) => {
-    return commonArr.indexOf(elem) === index;
-  })
-  console.log(result.sort().join(''));
-};
+//   const result = commonArr.filter((elem, index) => {
+//     return commonArr.indexOf(elem) === index;
+//   })
+//   console.log(result.sort().join(''));
+// };
 
-longest("aretheyhere", "yestheyarehere"); // "aehrsty"
-longest("loopingisfunbutdangerous", "lessdangerousthancoding"); // "abcdefghilnoprstu"
-longest("inmanylanguages", "theresapairoffunctions"); // "acefghilmnoprstuy"
+// longest("aretheyhere", "yestheyarehere"); // "aehrsty"
+// longest("loopingisfunbutdangerous", "lessdangerousthancoding"); // "abcdefghilnoprstu"
+// longest("inmanylanguages", "theresapairoffunctions"); // "acefghilmnoprstuy"
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
@@ -308,7 +342,7 @@ longest("inmanylanguages", "theresapairoffunctions"); // "acefghilmnoprstuy"
 //   console.log(mumbling.join('-'));
 // };
 
-// // Best Practices an Clever
+// // Best Practices and Clever
 // // return s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-');
 
 // accum("ZpglnRxqenU"); // "Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu");
