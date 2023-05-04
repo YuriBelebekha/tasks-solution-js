@@ -12,6 +12,45 @@ function template() {
 
 
 
+
+// CODEWARS TASK - JS - Find Maximum and Minimum Values of a List
+// https://www.codewars.com/kata/577a98a6ae28071780000989/javascript
+// Your task is to make two functions(max and min, or maximum and minimum, etc.,
+// depending on the language) that receive a list of integers as input, and return
+// the largest and lowest number in that list, respectively.
+
+// Examples (Input -> Output)
+// * [4,6,2,1,9,63,-134,566]         -> max = 566, min = -134
+// * [-52, 56, 30, 29, -54, 0, -110] -> min = -110, max = 56
+// * [42, 54, 65, 87, 0]             -> min = 0, max = 87
+// * [5]                             -> min = 5, max = 5
+
+// START OF SOLUTION
+var min = function(list){
+    console.log(list.sort()[0])
+    return list[0];
+}
+
+var max = function(list){
+    console.log(list.sort(function(a, b) {return a - b}).reverse()[0])
+    return list[0];
+}
+
+// Best Practices and Clever
+// const min = (list) => console.log(Math.min(...list));
+// const max = (list) => console.log(Math.max(...list));
+
+min([-52, 56, 30, 29, -54, 0, -110]); // -110
+min([42, 54, 65, 87, 0]);             // 0
+max([4, 6, 2, 1, 9, 63, -134, 566]);  // 566
+max([5]);                             // 5
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Small enough? - Beginner
 // https://www.codewars.com/kata/57cc981a58da9e302a000214/train/javascript
 // You will be given an array and a limit value.You must check that all values
@@ -32,15 +71,15 @@ function template() {
 // };
 
 // Best Practices and Clever
-function smallEnough(a, limit){  
-  const result = Math.max(...a) <= limit;
-  console.log(result);
-}
+// function smallEnough(a, limit){  
+//   const result = Math.max(...a) <= limit;
+//   console.log(result);
+// }
 
-smallEnough([66, 101], 200);                              // true
-smallEnough([78, 117, 110, 99, 104, 117, 107, 115], 100); // false
-smallEnough([101, 45, 75, 105, 99, 107], 107);            // true
-smallEnough([80, 117, 115, 104, 45, 85, 112, 115], 120);  // true
+// smallEnough([66, 101], 200);                              // true
+// smallEnough([78, 117, 110, 99, 104, 117, 107, 115], 100); // false
+// smallEnough([101, 45, 75, 105, 99, 107], 107);            // true
+// smallEnough([80, 117, 115, 104, 45, 85, 112, 115], 120);  // true
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
