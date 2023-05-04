@@ -27,7 +27,7 @@ function template() {
 
 // START OF SOLUTION
 var min = function (list) {
-  console.log(list.sort()[0]);
+  console.log(list.sort(function (a, b) { return a - b })[0]);
 };
 
 var max = function (list) {
