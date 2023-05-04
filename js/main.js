@@ -26,15 +26,13 @@ function template() {
 // * [5]                             -> min = 5, max = 5
 
 // START OF SOLUTION
-var min = function(list){
-    console.log(list.sort()[0])
-    return list[0];
-}
+var min = function (list) {
+  console.log(list.sort()[0]);
+};
 
-var max = function(list){
-    console.log(list.sort(function(a, b) {return a - b}).reverse()[0])
-    return list[0];
-}
+var max = function (list) {
+  console.log(list.sort(function (a, b) { return a - b }).reverse()[0]);
+};
 
 // Best Practices and Clever
 // const min = (list) => console.log(Math.min(...list));
