@@ -11,6 +11,25 @@ function template() {
 };
 
 
+// CODEWARS TASK - JS - Name Shuffler
+// https://www.codewars.com/kata/559ac78160f0be07c200005a/train/javascript
+// Write a function that returns a string in which firstname is swapped with last name.
+// Example(Input-- > Output)
+// "john McClane" --> "McClane john"
+
+// START OF SOLUTION
+function nameShuffler(str){
+  console.log(str.split(' ').reverse().join(' '))
+}
+
+nameShuffler('john McClane');  // 'McClane john')
+nameShuffler('Mary jeggins');  // 'jeggins Mary'
+nameShuffler('tom jerry');     // 'jerry tom'
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
 
 
 // CODEWARS TASK - JS - Find Maximum and Minimum Values of a List
@@ -26,22 +45,22 @@ function template() {
 // * [5]                             -> min = 5, max = 5
 
 // START OF SOLUTION
-var min = function (list) {
-  console.log(list.sort(function (a, b) { return a - b })[0]);
-};
+// var min = function (list) {
+//   console.log(list.sort(function (a, b) { return a - b })[0]);
+// };
 
-var max = function (list) {
-  console.log(list.sort(function (a, b) { return a - b }).reverse()[0]);
-};
+// var max = function (list) {
+//   console.log(list.sort(function (a, b) { return a - b }).reverse()[0]);
+// };
 
-// Best Practices and Clever
-// const min = (list) => console.log(Math.min(...list));
-// const max = (list) => console.log(Math.max(...list));
+// // Best Practices and Clever
+// // const min = (list) => console.log(Math.min(...list));
+// // const max = (list) => console.log(Math.max(...list));
 
-min([-52, 56, 30, 29, -54, 0, -110]); // -110
-min([42, 54, 65, 87, 0]);             // 0
-max([4, 6, 2, 1, 9, 63, -134, 566]);  // 566
-max([5]);                             // 5
+// min([-52, 56, 30, 29, -54, 0, -110]); // -110
+// min([42, 54, 65, 87, 0]);             // 0
+// max([4, 6, 2, 1, 9, 63, -134, 566]);  // 566
+// max([5]);                             // 5
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
