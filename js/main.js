@@ -11,6 +11,42 @@ function template() {
 };
 
 
+// CODEWARS TASK - JS - Write Number in Expanded Form
+// https://www.codewars.com/kata/5842df8ccbd22792a4000245/train/javascript
+// Write Number in Expanded Form
+// You will be given a number and you will need to return it as a string in Expanded Form.
+// For example:
+// expandedForm(12); // Should return '10 + 2'
+// expandedForm(42); // Should return '40 + 2'
+// expandedForm(70304); // Should return '70000 + 300 + 4'
+// NOTE: All numbers will be whole numbers greater than 0.
+
+// START OF SOLUTION
+function expandedForm(num) { 
+  const numArr = num.toString().split('');
+  const newArr = [];
+
+  numArr.map(function (digit, index) {    
+    const power = numArr.length - index - 1;
+    
+    if (digit > 0) {
+      newArr.push(digit * Math.pow(10, power));  
+    };    
+  });
+
+  console.log(newArr.join(' + '));
+};
+
+expandedForm(12);    // '10 + 2'
+expandedForm(42);    // '40 + 2'
+expandedForm(70304); // '70000 + 300 + 4'
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Name Shuffler
 // https://www.codewars.com/kata/559ac78160f0be07c200005a/train/javascript
 // Write a function that returns a string in which firstname is swapped with last name.
@@ -18,13 +54,13 @@ function template() {
 // "john McClane" --> "McClane john"
 
 // START OF SOLUTION
-function nameShuffler(str){
-  console.log(str.split(' ').reverse().join(' '))
-}
+// function nameShuffler(str){
+//   console.log(str.split(' ').reverse().join(' '))
+// }
 
-nameShuffler('john McClane');  // 'McClane john')
-nameShuffler('Mary jeggins');  // 'jeggins Mary'
-nameShuffler('tom jerry');     // 'jerry tom'
+// nameShuffler('john McClane');  // 'McClane john')
+// nameShuffler('Mary jeggins');  // 'jeggins Mary'
+// nameShuffler('tom jerry');     // 'jerry tom'
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
