@@ -11,6 +11,44 @@ function template() {
 };
 
 
+// CODEWARS TASK - JS - Summing a number's digits
+// https://www.codewars.com/kata/52f3149496de55aded000410/train/javascript
+// Write a function named sumDigits which takes a number as input and returns
+// the sum of the absolute value of each of the number's decimal digits.
+// For example: (Input --> Output)
+// 10 --> 1
+// 99 --> 18
+// -32 -- > 5
+// Let's assume that all numbers in the input will be integer values.
+
+// START OF SOLUTION
+function sumDigits(number) { 
+  const initialValue = 0;
+  const numArr = [];
+  number.toString().split('').map(symbol => {
+    if (symbol > 0) {
+      numArr.push(Number(symbol));
+    };
+  }); 
+  
+  console.log(numArr.reduce((acc, num) => acc + num, initialValue));
+};
+
+// Best Practices and Clever
+// function sumDigits(number) {
+//   console.log(Math.abs(number).toString().split('').reduce(function (a, b) { return +a + +b }, 0)); 
+// };
+
+sumDigits(10);  // 1
+sumDigits(99);  // 18
+sumDigits(-32); // 5
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Write Number in Expanded Form
 // https://www.codewars.com/kata/5842df8ccbd22792a4000245/train/javascript
 // Write Number in Expanded Form
@@ -22,24 +60,24 @@ function template() {
 // NOTE: All numbers will be whole numbers greater than 0.
 
 // START OF SOLUTION
-function expandedForm(num) { 
-  const numArr = num.toString().split('');
-  const newArr = [];
+// function expandedForm(num) { 
+//   const numArr = num.toString().split('');
+//   const newArr = [];
 
-  numArr.map(function (digit, index) {    
-    const power = numArr.length - index - 1;
+//   numArr.map(function (digit, index) {    
+//     const power = numArr.length - index - 1;
     
-    if (digit > 0) {
-      newArr.push(digit * Math.pow(10, power));  
-    };    
-  });
+//     if (digit > 0) {
+//       newArr.push(digit * Math.pow(10, power));  
+//     };    
+//   });
 
-  console.log(newArr.join(' + '));
-};
+//   console.log(newArr.join(' + '));
+// };
 
-expandedForm(12);    // '10 + 2'
-expandedForm(42);    // '40 + 2'
-expandedForm(70304); // '70000 + 300 + 4'
+// expandedForm(12);    // '10 + 2'
+// expandedForm(42);    // '40 + 2'
+// expandedForm(70304); // '70000 + 300 + 4'
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
