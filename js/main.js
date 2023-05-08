@@ -11,6 +11,35 @@ function template() {
 };
 
 
+
+
+// CODEWARS TASK - JS - Exclamation marks series #11: Replace all vowel to exclamation mark in the sentence
+// https://www.codewars.com/kata/57fb09ef2b5314a8a90001ed/train/javascript
+// Description:
+// Replace all vowel to exclamation mark in the sentence. aeiouAEIOU is vowel.
+//   Examples
+// replace("Hi!") === "H!!"
+// replace("!Hi! Hi!") === "!H!! H!!"
+// replace("aeiou") === "!!!!!"
+// replace("ABCDE") === "!BCD!"
+
+// START OF SOLUTION
+function replace(s){  
+  const newString = s.replace(/[aeiou]/gi, '!');
+  console.log(newString);
+}
+
+replace("Hi!");      // "H!!"
+replace("!Hi! Hi!"); // "!H!! H!!"
+replace("aeiou");    // "!!!!!"
+replace("ABCDE");    // "!BCD!"
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Summing a number's digits
 // https://www.codewars.com/kata/52f3149496de55aded000410/train/javascript
 // Write a function named sumDigits which takes a number as input and returns
@@ -22,26 +51,26 @@ function template() {
 // Let's assume that all numbers in the input will be integer values.
 
 // START OF SOLUTION
-function sumDigits(number) { 
-  const initialValue = 0;
-  const numArr = [];
-  number.toString().split('').map(symbol => {
-    if (symbol > 0) {
-      numArr.push(Number(symbol));
-    };
-  }); 
+// function sumDigits(number) { 
+//   const initialValue = 0;
+//   const numArr = [];
+//   number.toString().split('').map(symbol => {
+//     if (symbol > 0) {
+//       numArr.push(Number(symbol));
+//     };
+//   }); 
   
-  console.log(numArr.reduce((acc, num) => acc + num, initialValue));
-};
+//   console.log(numArr.reduce((acc, num) => acc + num, initialValue));
+// };
 
 // Best Practices and Clever
 // function sumDigits(number) {
 //   console.log(Math.abs(number).toString().split('').reduce(function (a, b) { return +a + +b }, 0)); 
 // };
 
-sumDigits(10);  // 1
-sumDigits(99);  // 18
-sumDigits(-32); // 5
+// sumDigits(10);  // 1
+// sumDigits(99);  // 18
+// sumDigits(-32); // 5
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
