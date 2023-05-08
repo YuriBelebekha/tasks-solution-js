@@ -12,6 +12,39 @@ function template() {
 
 
 
+// CODEWARS TASK - JS - String incrementer
+// https://www.codewars.com/kata/54a91a4883a7de5d7800009c/train/javascript
+// Your job is to write a function which increments a string, to create a new string.
+// If the string already ends with a number, the number should be incremented by 1.
+// If the string does not end with a number.the number 1 should be appended to the
+// new string.
+// Examples:
+// foo -> foo1
+// foobar23 -> foobar24
+// foo0042 -> foo0043
+// foo9 -> foo10
+// foo099 -> foo100
+
+// START OF SOLUTION
+function incrementString (string) {    
+  console.log(string.replace(/([0-8]|\d?9+)?$/, num => num ? +num + 1 : 1));
+}
+
+incrementString("foobar000");    // "foobar001"
+incrementString("foobar999");    // "foobar1000"
+incrementString("foobar00999");  // "foobar01000"
+incrementString("foo");          // "foo1"
+incrementString("foobar001");    // "foobar002"
+incrementString("foobar1");      // "foobar2"
+incrementString("1");            // "2"
+incrementString("009");          // "010"
+incrementString("fo99obar99");   // "fo99obar100"
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
 
 // CODEWARS TASK - JS - Exclamation marks series #11: Replace all vowel to exclamation mark in the sentence
 // https://www.codewars.com/kata/57fb09ef2b5314a8a90001ed/train/javascript
@@ -24,15 +57,15 @@ function template() {
 // replace("ABCDE") === "!BCD!"
 
 // START OF SOLUTION
-function replace(s){  
-  const newString = s.replace(/[aeiou]/gi, '!');
-  console.log(newString);
-}
+// function replace(s){  
+//   const newString = s.replace(/[aeiou]/gi, '!');
+//   console.log(newString);
+// }
 
-replace("Hi!");      // "H!!"
-replace("!Hi! Hi!"); // "!H!! H!!"
-replace("aeiou");    // "!!!!!"
-replace("ABCDE");    // "!BCD!"
+// replace("Hi!");      // "H!!"
+// replace("!Hi! Hi!"); // "!H!! H!!"
+// replace("aeiou");    // "!!!!!"
+// replace("ABCDE");    // "!BCD!"
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
