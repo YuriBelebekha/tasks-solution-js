@@ -11,6 +11,34 @@ function template() {
 };
 
 
+// CODEWARS TASK - JS - Find the stray number
+// https://www.codewars.com/kata/57f609022f4d534f05000024/train/javascript
+// You are given an odd - length array of integers, in which all of them are the same,
+// except for one single number.
+// Complete the method which accepts such an array, and returns that single different
+// number.
+// The input array will always be valid! (odd-length >= 3)
+
+// Examples
+// [1, 1, 2] ==> 2
+// [17, 17, 3, 17, 17, 17, 17] ==> 3
+// START OF SOLUTION
+function stray(numbers) {
+  console.log(numbers.reduce((a, b) => a ^ b));
+
+
+};
+
+stray([1, 1, 2]); // 2
+stray([1, 2, 1]); // 2
+stray([2, 1, 1]); // 2
+stray([17, 17, 3, 17, 17, 17, 17]); // 3
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
 
 // CODEWARS TASK - JS - String incrementer
 // https://www.codewars.com/kata/54a91a4883a7de5d7800009c/train/javascript
@@ -26,19 +54,19 @@ function template() {
 // foo099 -> foo100
 
 // START OF SOLUTION
-function incrementString (string) {    
-  console.log(string.replace(/([0-8]|\d?9+)?$/, num => num ? +num + 1 : 1));
-}
+// function incrementString (string) {    
+//   console.log(string.replace(/([0-8]|\d?9+)?$/, num => num ? +num + 1 : 1));
+// }
 
-incrementString("foobar000");    // "foobar001"
-incrementString("foobar999");    // "foobar1000"
-incrementString("foobar00999");  // "foobar01000"
-incrementString("foo");          // "foo1"
-incrementString("foobar001");    // "foobar002"
-incrementString("foobar1");      // "foobar2"
-incrementString("1");            // "2"
-incrementString("009");          // "010"
-incrementString("fo99obar99");   // "fo99obar100"
+// incrementString("foobar000");    // "foobar001"
+// incrementString("foobar999");    // "foobar1000"
+// incrementString("foobar00999");  // "foobar01000"
+// incrementString("foo");          // "foo1"
+// incrementString("foobar001");    // "foobar002"
+// incrementString("foobar1");      // "foobar2"
+// incrementString("1");            // "2"
+// incrementString("009");          // "010"
+// incrementString("fo99obar99");   // "fo99obar100"
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
