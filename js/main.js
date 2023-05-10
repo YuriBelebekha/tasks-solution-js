@@ -11,6 +11,27 @@ function template() {
 };
 
 
+
+// CODEWARS TASK - JS - Remove exclamation marks
+// https://www.codewars.com/kata/57a0885cbb9944e24c00008e/train/javascript
+// Write function RemoveExclamationMarks which removes all exclamation marks
+// from a given string.
+
+// START OF SOLUTION
+function removeExclamationMarks(s) {
+  // console.log(s.split('').map(symbol => symbol.replace(/!/, )));
+  console.log(s.replaceAll(/!/g, ''));
+};
+
+removeExclamationMarks("Hello World!"); // "Hello World"
+removeExclamationMarks("Hello World!!"); // "Hello World"
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Find the stray number
 // https://www.codewars.com/kata/57f609022f4d534f05000024/train/javascript
 // You are given an odd - length array of integers, in which all of them are the same,
@@ -23,16 +44,14 @@ function template() {
 // [1, 1, 2] ==> 2
 // [17, 17, 3, 17, 17, 17, 17] ==> 3
 // START OF SOLUTION
-function stray(numbers) {
-  console.log(numbers.reduce((a, b) => a ^ b));
+// function stray(numbers) {
+//   console.log(numbers.reduce((a, b) => a ^ b));
+// };
 
-
-};
-
-stray([1, 1, 2]); // 2
-stray([1, 2, 1]); // 2
-stray([2, 1, 1]); // 2
-stray([17, 17, 3, 17, 17, 17, 17]); // 3
+// stray([1, 1, 2]); // 2
+// stray([1, 2, 1]); // 2
+// stray([2, 1, 1]); // 2
+// stray([17, 17, 3, 17, 17, 17, 17]); // 3
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
