@@ -11,6 +11,34 @@ function template() {
 };
 
 
+
+// CODEWARS TASK - JS - Opposites Attract
+// https://www.codewars.com/kata/555086d53eac039a2a000083/train/javascript
+// Timmy & Sarah think they are in love, but around where they live, they will
+// only know once they pick a flower each.If one of the flowers has an even
+// number of petals and the other has an odd number of petals it means they are in love.
+// Write a function that will take the number of petals of each flower and return
+// true if they are in love and false if they aren't.
+
+// START OF SOLUTION
+function lovefunc(flower1, flower2){
+  console.log(flower1 % 2 !== flower2 % 2);
+};
+
+lovefunc(1,4);           // true)
+lovefunc(2,2);           // false)
+lovefunc(0,1);           // true)
+lovefunc(0,0);           // false)
+lovefunc(undefined);     // true)
+lovefunc(undefined, 1);  // true)
+lovefunc();              // true)
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Check the exam
 // https://www.codewars.com/kata/5a3dd29055519e23ec000074/train/javascript
 // The first input array is the key to the correct answers to an exam,
@@ -22,23 +50,23 @@ function template() {
 // If the score < 0, return 0.
 
 // START OF SOLUTION
-function checkExam(array1, array2) {  
-  let result = 0;
+// function checkExam(array1, array2) {  
+//   let result = 0;
   
-  for (let i = 0; i < array1.length; i += 1) {
-    !array2[i]
-      ? result += 0 
-      : array1[i] === array2[i]
-        ? result += 4
-        : result -= 1;    
-  };
-  console.log(result < 0 ? 0 : result);
-};
+//   for (let i = 0; i < array1.length; i += 1) {
+//     !array2[i]
+//       ? result += 0 
+//       : array1[i] === array2[i]
+//         ? result += 4
+//         : result -= 1;    
+//   };
+//   console.log(result < 0 ? 0 : result);
+// };
 
-checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"]); // 6);
-checkExam(["a", "a", "c", "b"], ["a", "a", "b",  ""]); // 7);
-checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"]); // 16);
-checkExam(["b", "c", "b", "a"], ["",  "a", "a", "c"]); // 0); 
+// checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"]); // 6);
+// checkExam(["a", "a", "c", "b"], ["a", "a", "b",  ""]); // 7);
+// checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"]); // 16);
+// checkExam(["b", "c", "b", "a"], ["",  "a", "a", "c"]); // 0); 
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
