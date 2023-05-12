@@ -12,6 +12,38 @@ function template() {
 
 
 
+// CODEWARS TASK - JS - Bin to Decimal
+// https://www.codewars.com/kata/57a5c31ce298a7e6b7000334/train/javascript
+// Complete the function which converts a binary number(given as a string)
+// to a decimal number.
+
+// START OF SOLUTION
+// function binToDec(bin){
+//   console.log(parseInt(bin, 2));
+// };
+
+function binToDec(bin) {
+  const binReversedArray = bin.split('').reverse();
+  let decimalArray = []; 
+
+  for (let i = 0; i < binReversedArray.length; i += 1) {
+    decimalArray.push(binReversedArray[i] * Math.pow(2, i));    
+  };
+  
+  const result = decimalArray.reduce((acc, value) => acc + value);
+  console.log(result)
+};
+
+binToDec('0');       // 0
+binToDec('1');       // 1
+binToDec('1001001'); // 73
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Opposites Attract
 // https://www.codewars.com/kata/555086d53eac039a2a000083/train/javascript
 // Timmy & Sarah think they are in love, but around where they live, they will
@@ -21,17 +53,17 @@ function template() {
 // true if they are in love and false if they aren't.
 
 // START OF SOLUTION
-function lovefunc(flower1, flower2){
-  console.log(flower1 % 2 !== flower2 % 2);
-};
+// function lovefunc(flower1, flower2){
+//   console.log(flower1 % 2 !== flower2 % 2);
+// };
 
-lovefunc(1,4);           // true)
-lovefunc(2,2);           // false)
-lovefunc(0,1);           // true)
-lovefunc(0,0);           // false)
-lovefunc(undefined);     // true)
-lovefunc(undefined, 1);  // true)
-lovefunc();              // true)
+// lovefunc(1,4);           // true)
+// lovefunc(2,2);           // false)
+// lovefunc(0,1);           // true)
+// lovefunc(0,0);           // false)
+// lovefunc(undefined);     // true)
+// lovefunc(undefined, 1);  // true)
+// lovefunc();              // true)
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
