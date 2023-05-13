@@ -12,6 +12,37 @@ function template() {
 
 
 
+// CODEWARS TASK - JS - Unique In Order
+// https://www.codewars.com/kata/54e6533c92449cc251001667/javascript
+// Implement the function unique_in_order which takes as argument a sequence
+// and returns a list of items without any elements with the same value next
+// to each other and preserving the original order of elements.
+// For example:
+// uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
+// uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
+// uniqueInOrder([1, 2, 2, 3, 3]) == [1, 2, 3]
+
+// START OF SOLUTION
+var uniqueInOrder = function (iterable) {
+  const array = [];
+
+  for (let i = 0; i < iterable.length; i += 1) {
+    if (iterable[i] !== iterable[i + 1]) {
+      array.push(iterable[i]);
+    }
+  };
+
+  console.log(array);
+};
+
+uniqueInOrder('AAAABBBCCDAABBB'); // ['A','B','C','D','A','B']
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Bin to Decimal
 // https://www.codewars.com/kata/57a5c31ce298a7e6b7000334/train/javascript
 // Complete the function which converts a binary number(given as a string)
@@ -22,21 +53,21 @@ function template() {
 //   console.log(parseInt(bin, 2));
 // };
 
-function binToDec(bin) {
-  const binReversedArray = bin.split('').reverse();
-  let decimalArray = []; 
+// function binToDec(bin) {
+//   const binReversedArray = bin.split('').reverse();
+//   let decimalArray = []; 
 
-  for (let i = 0; i < binReversedArray.length; i += 1) {
-    decimalArray.push(binReversedArray[i] * Math.pow(2, i));    
-  };
+//   for (let i = 0; i < binReversedArray.length; i += 1) {
+//     decimalArray.push(binReversedArray[i] * Math.pow(2, i));    
+//   };
   
-  const result = decimalArray.reduce((acc, value) => acc + value);
-  console.log(result)
-};
+//   const result = decimalArray.reduce((acc, value) => acc + value);
+//   console.log(result)
+// };
 
-binToDec('0');       // 0
-binToDec('1');       // 1
-binToDec('1001001'); // 73
+// binToDec('0');       // 0
+// binToDec('1');       // 1
+// binToDec('1001001'); // 73
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
