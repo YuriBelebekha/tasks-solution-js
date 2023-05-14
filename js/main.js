@@ -11,6 +11,41 @@ function template() {
 };
 
 
+// CODEWARS TASK - JS - Rock Paper Scissors!
+// https://www.codewars.com/kata/5672a98bdbdd995fad00000f/train/javascript
+// Let's play! You have to return which player won! In case of a draw return Draw!.
+// Examples(Input1, Input2 --> Output):
+// "scissors", "paper" --> "Player 1 won!"
+// "scissors", "rock" --> "Player 2 won!"
+// "paper", "paper" --> "Draw!"
+
+// START OF SOLUTION
+const rps = (p1, p2) => {
+  if (p1 === p2) {
+    console.log(`Draw!`);
+  }
+  if (p1 === 'rock' && p2 === 'scissors') {
+    console.log(`Player 1 won!`);
+  } else if (p1 === 'paper' && p2 === 'rock') {
+    console.log(`Player 1 won!`);
+  } else if (p1 === 'scissors' && p2 === 'paper') {
+    console.log(`Player 1 won!`);
+  } else {
+    console.log(`Player 2 won!`);
+  }  
+};
+
+rps('rock', 'scissors');  // getMsg(1));
+rps('scissors', 'paper'); // getMsg(1));
+rps('paper', 'rock');     // getMsg(1));
+rps('rock', 'paper');     // getMsg(2));
+rps('rock', 'rock');      // getMsg(Draw));
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
 
 // CODEWARS TASK - JS - Unique In Order
 // https://www.codewars.com/kata/54e6533c92449cc251001667/javascript
@@ -23,19 +58,19 @@ function template() {
 // uniqueInOrder([1, 2, 2, 3, 3]) == [1, 2, 3]
 
 // START OF SOLUTION
-var uniqueInOrder = function (iterable) {
-  const array = [];
+// var uniqueInOrder = function (iterable) {
+//   const array = [];
 
-  for (let i = 0; i < iterable.length; i += 1) {
-    if (iterable[i] !== iterable[i + 1]) {
-      array.push(iterable[i]);
-    }
-  };
+//   for (let i = 0; i < iterable.length; i += 1) {
+//     if (iterable[i] !== iterable[i + 1]) {
+//       array.push(iterable[i]);
+//     }
+//   };
 
-  console.log(array);
-};
+//   console.log(array);
+// };
 
-uniqueInOrder('AAAABBBCCDAABBB'); // ['A','B','C','D','A','B']
+// uniqueInOrder('AAAABBBCCDAABBB'); // ['A','B','C','D','A','B']
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
