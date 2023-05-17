@@ -11,6 +11,50 @@ function template() {
 };
 
 
+
+// CODEWARS TASK - JS - Counting sheep...
+// https://www.codewars.com/kata/54edbc7200b811e956000556/train/javascript
+// Consider an array / list of sheep where some sheep may be missing from their place.
+// We need a function that counts the number of sheep present in the array(true means
+// present).
+// For example,
+// [true,  true,  true,  false,
+//   true,  true,  true,  true ,
+//   true,  false, true,  false,
+//   true,  false, false, true ,
+//   true,  true,  true,  true ,
+//   false, false, true, true]
+// The correct answer would be 17.
+
+// Hint: Don't forget to check for bad values like null/undefined 
+
+// START OF SOLUTION
+function countSheeps(arrayOfSheep) {
+  let countOfSheep = 0;
+
+  arrayOfSheep.map(sheep => {
+    if (sheep) {
+      countOfSheep += 1;
+    }
+  });
+
+  console.log(countOfSheep);
+}
+// END OF SOLUTION
+
+const array1 = [true,  true,  true,  false,
+true,  true,  true,  true ,
+true,  false, true,  false,
+true,  false, false, true ,
+true,  true,  true,  true ,
+false, false, true,  true ]
+
+countSheeps(array1);    // 17
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Third Angle of a Triangle
 // https://www.codewars.com/kata/5a023c426975981341000014/train/javascript
 // You are given two interior angles (in degrees) of a triangle.
@@ -19,14 +63,14 @@ function template() {
 // https://en.wikipedia.org/wiki/Triangle
 
 // START OF SOLUTION
-function otherAngle(a, b) {
-  console.log(180 - (a + b);)
-}
+// function otherAngle(a, b) {
+//   console.log(180 - (a + b);)
+// }
 
-otherAngle(30, 60); // 90);
-otherAngle(60, 60); // 60);
-otherAngle(43, 78); // 59);
-otherAngle(10, 20); // 150);
+// otherAngle(30, 60); // 90);
+// otherAngle(60, 60); // 60);
+// otherAngle(43, 78); // 59);
+// otherAngle(10, 20); // 150);
 
 // END OF SOLUTION
 
@@ -44,26 +88,26 @@ otherAngle(10, 20); // 150);
 // "paper", "paper" --> "Draw!"
 
 // START OF SOLUTION
-const rps = (p1, p2) => {
-  if (p1 === p2) {
-    console.log(`Draw!`);
-  }
-  if (p1 === 'rock' && p2 === 'scissors') {
-    console.log(`Player 1 won!`);
-  } else if (p1 === 'paper' && p2 === 'rock') {
-    console.log(`Player 1 won!`);
-  } else if (p1 === 'scissors' && p2 === 'paper') {
-    console.log(`Player 1 won!`);
-  } else {
-    console.log(`Player 2 won!`);
-  }  
-};
+// const rps = (p1, p2) => {
+//   if (p1 === p2) {
+//     console.log(`Draw!`);
+//   }
+//   if (p1 === 'rock' && p2 === 'scissors') {
+//     console.log(`Player 1 won!`);
+//   } else if (p1 === 'paper' && p2 === 'rock') {
+//     console.log(`Player 1 won!`);
+//   } else if (p1 === 'scissors' && p2 === 'paper') {
+//     console.log(`Player 1 won!`);
+//   } else {
+//     console.log(`Player 2 won!`);
+//   }  
+// };
 
-rps('rock', 'scissors');  // getMsg(1));
-rps('scissors', 'paper'); // getMsg(1));
-rps('paper', 'rock');     // getMsg(1));
-rps('rock', 'paper');     // getMsg(2));
-rps('rock', 'rock');      // getMsg(Draw));
+// rps('rock', 'scissors');  // getMsg(1));
+// rps('scissors', 'paper'); // getMsg(1));
+// rps('paper', 'rock');     // getMsg(1));
+// rps('rock', 'paper');     // getMsg(2));
+// rps('rock', 'rock');      // getMsg(Draw));
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
