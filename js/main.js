@@ -12,6 +12,32 @@ function template() {
 
 
 
+// CODEWARS TASK - JS - Highest and Lowest
+// https://www.codewars.com/kata/554b4ac871d6813a03000035/train/javascript
+// In this little assignment you are given a string of space separated numbers,
+// and have to return the highest and lowest number.
+// Examples
+// highAndLow("1 2 3 4 5");  // return "5 1"
+// highAndLow("1 2 -3 4 5"); // return "5 -3"
+// highAndLow("1 9 3 4 -5"); // return "9 -5"
+
+// START OF SOLUTION
+function highAndLow(numbers) {
+  const arrayNumbers = numbers.split(' ');
+  const maxNumber = Math.max(...arrayNumbers);
+  const minNumber = Math.min(...arrayNumbers);
+  console.log(String(maxNumber) + ' ' + String(minNumber));
+};
+
+highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"); // "42 -9"
+highAndLow("1 2 3");                        // "3 1"
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Counting sheep...
 // https://www.codewars.com/kata/54edbc7200b811e956000556/train/javascript
 // Consider an array / list of sheep where some sheep may be missing from their place.
@@ -29,27 +55,27 @@ function template() {
 // Hint: Don't forget to check for bad values like null/undefined 
 
 // START OF SOLUTION
-function countSheeps(arrayOfSheep) {
-  let countOfSheep = 0;
+// function countSheeps(arrayOfSheep) {
+//   let countOfSheep = 0;
 
-  arrayOfSheep.map(sheep => {
-    if (sheep) {
-      countOfSheep += 1;
-    }
-  });
+//   arrayOfSheep.map(sheep => {
+//     if (sheep) {
+//       countOfSheep += 1;
+//     }
+//   });
 
-  console.log(countOfSheep);
-}
-// END OF SOLUTION
+//   console.log(countOfSheep);
+// }
+// // END OF SOLUTION
 
-const array1 = [true,  true,  true,  false,
-true,  true,  true,  true ,
-true,  false, true,  false,
-true,  false, false, true ,
-true,  true,  true,  true ,
-false, false, true,  true ]
+// const array1 = [true,  true,  true,  false,
+// true,  true,  true,  true ,
+// true,  false, true,  false,
+// true,  false, false, true ,
+// true,  true,  true,  true ,
+// false, false, true,  true ]
 
-countSheeps(array1);    // 17
+// countSheeps(array1);    // 17
 //////////////////////////////////////////////////////////////////////
 
 
