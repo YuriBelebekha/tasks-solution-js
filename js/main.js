@@ -12,6 +12,35 @@ function template() {
 
 
 
+
+// CODEWARS TASK - JS - Reversing Words in a String
+// https://www.codewars.com/kata/57a55c8b72292d057b000594/train/javascript
+// You need to write a function that reverses the words in a given string.
+// A word can also fit an empty string.If this is not clear enough,
+// here are some examples:
+// As the input may have trailing spaces, you will also need to ignore
+// unneccesary whitespace.
+// Example(Input-- > Output)
+// "Hello World" --> "World Hello"
+// "Hi There." --> "There. Hi"
+
+// START OF SOLUTION
+function reverse(string){
+  console.log(string.split(' ').reverse().join(' '));
+};
+
+reverse('I am an expert at this');  // 'this at expert an am I');
+reverse('This is so easy');         // 'easy so is This');
+reverse('no one cares');            // 'cares one no');
+reverse('');                        // '');
+reverse('CodeWars');                // 'CodeWars');
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Highest and Lowest
 // https://www.codewars.com/kata/554b4ac871d6813a03000035/train/javascript
 // In this little assignment you are given a string of space separated numbers,
@@ -22,15 +51,15 @@ function template() {
 // highAndLow("1 9 3 4 -5"); // return "9 -5"
 
 // START OF SOLUTION
-function highAndLow(numbers) {
-  const arrayNumbers = numbers.split(' ');
-  const maxNumber = Math.max(...arrayNumbers);
-  const minNumber = Math.min(...arrayNumbers);
-  console.log(String(maxNumber) + ' ' + String(minNumber));
-};
+// function highAndLow(numbers) {
+//   const arrayNumbers = numbers.split(' ');
+//   const maxNumber = Math.max(...arrayNumbers);
+//   const minNumber = Math.min(...arrayNumbers);
+//   console.log(String(maxNumber) + ' ' + String(minNumber));
+// };
 
-highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"); // "42 -9"
-highAndLow("1 2 3");                        // "3 1"
+// highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"); // "42 -9"
+// highAndLow("1 2 3");                        // "3 1"
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
