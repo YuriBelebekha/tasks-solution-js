@@ -11,6 +11,31 @@ function template() {
 };
 
 
+// CODEWARS TASK - JS - Merge two sorted arrays into one
+// https://www.codewars.com/kata/5899642f6e1b25935d000161/train/javascript
+// You are given two sorted arrays that both only contain integers.Your task is to
+// find a way to merge them into a single one, sorted in asc order.Complete the
+// function mergeArrays(arr1, arr2), where arr1 and arr2 are the original sorted arrays.
+// You don't need to worry about validation, since arr1 and arr2 must be arrays with 0
+// or more Integers.If both arr1 and arr2 are empty, then just return an empty array.
+// Note: arr1 and arr2 may be sorted in different orders.Also arr1 and arr2 may have
+// same integers.Remove duplicated in the returned result.
+
+// START OF SOLUTION
+function mergeArrays(arr1, arr2) {
+  const commonArray = arr1.concat(arr2);
+  let uniqueCharsInArray = [...new Set(commonArray)]; 
+  console.log(uniqueCharsInArray.sort((a, b) => a - b));
+};
+
+mergeArrays([1, 2, 3, 4], [5, 6, 7, 8]);                        // [1,2,3,4,5,6,7,8], "Basic tests");
+mergeArrays([1, 3, 5, 7, 9], [10, 8, 6, 4, 2]);                 // [1,2,3,4,5,6,7,8,9,10], "Basic tests");
+mergeArrays([1, 3, 5, 7, 9, 11, 12], [1, 2, 3, 4, 5, 10, 12]);  // [1,2,3,4,5,7,9,10,11,12], "Basic tests");
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
 
 
 // CODEWARS TASK - JS - Reversing Words in a String
@@ -25,15 +50,15 @@ function template() {
 // "Hi There." --> "There. Hi"
 
 // START OF SOLUTION
-function reverse(string){
-  console.log(string.split(' ').reverse().join(' '));
-};
+// function reverse(string){
+//   console.log(string.split(' ').reverse().join(' '));
+// };
 
-reverse('I am an expert at this');  // 'this at expert an am I');
-reverse('This is so easy');         // 'easy so is This');
-reverse('no one cares');            // 'cares one no');
-reverse('');                        // '');
-reverse('CodeWars');                // 'CodeWars');
+// reverse('I am an expert at this');  // 'this at expert an am I');
+// reverse('This is so easy');         // 'easy so is This');
+// reverse('no one cares');            // 'cares one no');
+// reverse('');                        // '');
+// reverse('CodeWars');                // 'CodeWars');
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
