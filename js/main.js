@@ -10,6 +10,42 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 };
 
+// CODEWARS TASK - JS - Multiple of index
+// https://www.codewars.com/kata/5a34b80155519e1a00000009/train/javascript
+// Return a new array consisting of elements which are multiple of their own index in input array (length > 1).
+// Some cases:
+// [22, -6, 32, 82, 9, 25] =>  [-6, 32, 25]
+// [68, -1, 1, -7, 10, 10] => [-1, 10]
+// [-56, -85, 72, -26, -14, 76, -27, 72, 35, -21, -67, 87, 0, 21, 59, 27, -92, 68] => [-85, 72, 0, 68]
+
+// START OF SOLUTION
+function multipleOfIndex(array) {
+  let result = [];
+
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] % i === 0) {
+      result.push(array[i]);
+    };
+  };
+
+  console.log(result);  
+};
+
+// clever and best solution
+// return array.filter((num, i) => num % i === 0);
+
+multipleOfIndex([22, -6, 32, 82, 9, 25]); // [-6, 32, 25]);
+multipleOfIndex([68, -1, 1, -7, 10, 10]); // [-1, 10]);
+multipleOfIndex([11, -11]); // [-11]);
+multipleOfIndex([-56, -85, 72, -26, -14, 76, -27, 72, 35, -21, -67, 87, 0, 21, 59, 27, -92, 68]); // [-85, 72, 0, 68]);
+multipleOfIndex([28, 38, -44, -99, -13, -54, 77, -51]); // [38, -44, -99]);
+multipleOfIndex([-1, -49, -1, 67, 8, -60, 39, 35]); // [-49, 8, -60, 35]);
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
 
 // CODEWARS TASK - JS - Merge two sorted arrays into one
 // https://www.codewars.com/kata/5899642f6e1b25935d000161/train/javascript
@@ -22,15 +58,15 @@ function template() {
 // same integers.Remove duplicated in the returned result.
 
 // START OF SOLUTION
-function mergeArrays(arr1, arr2) {
-  const commonArray = arr1.concat(arr2);
-  let uniqueCharsInArray = [...new Set(commonArray)]; 
-  console.log(uniqueCharsInArray.sort((a, b) => a - b));
-};
+// function mergeArrays(arr1, arr2) {
+//   const commonArray = arr1.concat(arr2);
+//   let uniqueCharsInArray = [...new Set(commonArray)]; 
+//   console.log(uniqueCharsInArray.sort((a, b) => a - b));
+// };
 
-mergeArrays([1, 2, 3, 4], [5, 6, 7, 8]);                        // [1,2,3,4,5,6,7,8], "Basic tests");
-mergeArrays([1, 3, 5, 7, 9], [10, 8, 6, 4, 2]);                 // [1,2,3,4,5,6,7,8,9,10], "Basic tests");
-mergeArrays([1, 3, 5, 7, 9, 11, 12], [1, 2, 3, 4, 5, 10, 12]);  // [1,2,3,4,5,7,9,10,11,12], "Basic tests");
+// mergeArrays([1, 2, 3, 4], [5, 6, 7, 8]);                        // [1,2,3,4,5,6,7,8], "Basic tests");
+// mergeArrays([1, 3, 5, 7, 9], [10, 8, 6, 4, 2]);                 // [1,2,3,4,5,6,7,8,9,10], "Basic tests");
+// mergeArrays([1, 3, 5, 7, 9, 11, 12], [1, 2, 3, 4, 5, 10, 12]);  // [1,2,3,4,5,7,9,10,11,12], "Basic tests");
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
