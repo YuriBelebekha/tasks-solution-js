@@ -10,6 +10,30 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 };
 
+
+
+
+// CODEWARS TASK - JS - Extract the domain name from a URL
+// https://www.codewars.com/kata/514a024011ea4fb54200004b/train/javascript
+// Write a function that when given a URL as a string, parses out just the domain
+// name and returns it as a string.
+
+// START OF SOLUTION
+function domainName(url){
+  console.log(url.replace(/.+\/\/|www.|\..+/g, ''));  
+};
+
+domainName("http://google.com");    // "google");
+domainName("http://google.co.jp");  // "google");
+domainName("www.xakep.ru");         // "xakep");
+domainName("https://youtube.com");  // "youtube");
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Multiple of index
 // https://www.codewars.com/kata/5a34b80155519e1a00000009/train/javascript
 // Return a new array consisting of elements which are multiple of their own index in input array (length > 1).
@@ -19,27 +43,27 @@ function template() {
 // [-56, -85, 72, -26, -14, 76, -27, 72, 35, -21, -67, 87, 0, 21, 59, 27, -92, 68] => [-85, 72, 0, 68]
 
 // START OF SOLUTION
-function multipleOfIndex(array) {
-  let result = [];
+// function multipleOfIndex(array) {
+//   let result = [];
 
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % i === 0) {
-      result.push(array[i]);
-    };
-  };
+//   for (let i = 0; i < array.length; i += 1) {
+//     if (array[i] % i === 0) {
+//       result.push(array[i]);
+//     };
+//   };
 
-  console.log(result);  
-};
+//   console.log(result);  
+// };
 
-// clever and best solution
-// return array.filter((num, i) => num % i === 0);
+// // clever and best solution
+// // return array.filter((num, i) => num % i === 0);
 
-multipleOfIndex([22, -6, 32, 82, 9, 25]); // [-6, 32, 25]);
-multipleOfIndex([68, -1, 1, -7, 10, 10]); // [-1, 10]);
-multipleOfIndex([11, -11]); // [-11]);
-multipleOfIndex([-56, -85, 72, -26, -14, 76, -27, 72, 35, -21, -67, 87, 0, 21, 59, 27, -92, 68]); // [-85, 72, 0, 68]);
-multipleOfIndex([28, 38, -44, -99, -13, -54, 77, -51]); // [38, -44, -99]);
-multipleOfIndex([-1, -49, -1, 67, 8, -60, 39, 35]); // [-49, 8, -60, 35]);
+// multipleOfIndex([22, -6, 32, 82, 9, 25]); // [-6, 32, 25]);
+// multipleOfIndex([68, -1, 1, -7, 10, 10]); // [-1, 10]);
+// multipleOfIndex([11, -11]); // [-11]);
+// multipleOfIndex([-56, -85, 72, -26, -14, 76, -27, 72, 35, -21, -67, 87, 0, 21, 59, 27, -92, 68]); // [-85, 72, 0, 68]);
+// multipleOfIndex([28, 38, -44, -99, -13, -54, 77, -51]); // [38, -44, -99]);
+// multipleOfIndex([-1, -49, -1, 67, 8, -60, 39, 35]); // [-49, 8, -60, 35]);
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
