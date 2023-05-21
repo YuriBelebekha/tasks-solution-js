@@ -10,6 +10,31 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 };
 
+
+
+// CODEWARS TASK - JS - Sum of Minimums!
+// https://www.codewars.com/kata/5d5ee4c35162d9001af7d699/train/javascript
+// Given a 2D(nested) list(array, vector, ..) of size m * n, your task is
+// to find the sum of the minimum values in each row.
+
+// START OF SOLUTION
+function sumOfMinimums(arr) {
+  let sumMinimums = 0;
+  arr.map(nums =>
+    sumMinimums += Math.min(...nums)
+  );
+  console.log(sumMinimums);
+}
+
+sumOfMinimums([[7, 9, 8, 6, 2], [6, 3, 5, 4, 3], [5, 8, 7, 4, 5]]);              // 9
+sumOfMinimums([[11, 12, 14, 54], [67, 89, 90, 56], [7, 9, 4, 3], [9, 8, 6, 7]]); // 76
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Find the position!
 // https://www.codewars.com/kata/5808e2006b65bff35500008f/train/javascript
 // When provided with a letter, return its position in the alphabet.
@@ -17,14 +42,14 @@ function template() {
 // Ouput :: "Position of alphabet: 1"
 
 // START OF SOLUTION
-function position(letter) {
-  const alphabetArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
-    'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
-    'Y', 'Z'];
+// function position(letter) {
+//   const alphabetArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+//     'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
+//     'Y', 'Z'];
   
-  const letterPosition = alphabetArray.indexOf(letter.toUpperCase()) + 1;
-  console.log(`Position of alphabet: ${letterPosition}`);
-};
+//   const letterPosition = alphabetArray.indexOf(letter.toUpperCase()) + 1;
+//   console.log(`Position of alphabet: ${letterPosition}`);
+// };
 
 // clever and best solution
 // function position(letter) {
@@ -32,9 +57,9 @@ function position(letter) {
 //   console.log(result);
 // };
 
-position("a");  // "Position of alphabet: 1");
-position("z");  // "Position of alphabet: 26");
-position("e");  // "Position of alphabet: 5");
+// position("a");  // "Position of alphabet: 1");
+// position("z");  // "Position of alphabet: 26");
+// position("e");  // "Position of alphabet: 5");
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
