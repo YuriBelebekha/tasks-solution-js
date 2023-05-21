@@ -10,6 +10,35 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 };
 
+// CODEWARS TASK - JS - Find the position!
+// https://www.codewars.com/kata/5808e2006b65bff35500008f/train/javascript
+// When provided with a letter, return its position in the alphabet.
+// Input :: "a"
+// Ouput :: "Position of alphabet: 1"
+
+// START OF SOLUTION
+function position(letter) {
+  const alphabetArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+    'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
+    'Y', 'Z'];
+  
+  const letterPosition = alphabetArray.indexOf(letter.toUpperCase()) + 1;
+  console.log(`Position of alphabet: ${letterPosition}`);
+};
+
+// clever and best solution
+// function position(letter) {
+//   const result = `Position of alphabet: ${letter.charCodeAt() - 96}`;
+//   console.log(result);
+// };
+
+position("a");  // "Position of alphabet: 1");
+position("z");  // "Position of alphabet: 26");
+position("e");  // "Position of alphabet: 5");
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
 
 
 
@@ -19,14 +48,14 @@ function template() {
 // name and returns it as a string.
 
 // START OF SOLUTION
-function domainName(url){
-  console.log(url.replace(/.+\/\/|www.|\..+/g, ''));  
-};
+// function domainName(url){
+//   console.log(url.replace(/.+\/\/|www.|\..+/g, ''));  
+// };
 
-domainName("http://google.com");    // "google");
-domainName("http://google.co.jp");  // "google");
-domainName("www.xakep.ru");         // "xakep");
-domainName("https://youtube.com");  // "youtube");
+// domainName("http://google.com");    // "google");
+// domainName("http://google.co.jp");  // "google");
+// domainName("www.xakep.ru");         // "xakep");
+// domainName("https://youtube.com");  // "youtube");
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
