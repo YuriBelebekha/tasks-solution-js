@@ -10,6 +10,31 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 };
 
+// CODEWARS TASK - JS - No zeros for heros
+// https://www.codewars.com/kata/570a6a46455d08ff8d001002/train/javascript
+// Numbers ending with zeros are boring.
+// They might be fun in your world, but not here.
+// Get rid of them. Only the ending ones.
+
+// START OF SOLUTION
+function noBoringZeros(n) {  
+  while (n != 0 && n % 10 === 0) {
+    n = n / 10;
+  };
+  console.log(n);
+};
+
+noBoringZeros(1450);   // 145)
+noBoringZeros(960000); // 96)
+noBoringZeros(1050);   // 105)
+noBoringZeros(-1050);  // -105)
+noBoringZeros(-105);   // -105)
+noBoringZeros(0);      // 0)
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
 
 
 // CODEWARS TASK - JS - Sum of Minimums!
@@ -18,16 +43,16 @@ function template() {
 // to find the sum of the minimum values in each row.
 
 // START OF SOLUTION
-function sumOfMinimums(arr) {
-  let sumMinimums = 0;
-  arr.map(nums =>
-    sumMinimums += Math.min(...nums)
-  );
-  console.log(sumMinimums);
-}
+// function sumOfMinimums(arr) {
+//   let sumMinimums = 0;
+//   arr.map(nums =>
+//     sumMinimums += Math.min(...nums)
+//   );
+//   console.log(sumMinimums);
+// }
 
-sumOfMinimums([[7, 9, 8, 6, 2], [6, 3, 5, 4, 3], [5, 8, 7, 4, 5]]);              // 9
-sumOfMinimums([[11, 12, 14, 54], [67, 89, 90, 56], [7, 9, 4, 3], [9, 8, 6, 7]]); // 76
+// sumOfMinimums([[7, 9, 8, 6, 2], [6, 3, 5, 4, 3], [5, 8, 7, 4, 5]]);              // 9
+// sumOfMinimums([[11, 12, 14, 54], [67, 89, 90, 56], [7, 9, 4, 3], [9, 8, 6, 7]]); // 76
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
