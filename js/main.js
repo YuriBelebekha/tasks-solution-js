@@ -10,6 +10,33 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 };
 
+
+// CODEWARS TASK - JS - Add Length
+// https://www.codewars.com/kata/559d2284b5bb6799e9000047/train/javascript
+// What if we need the length of the words separated by a space to be added at
+// the end of that same word and have it returned as an array ?
+// Your task is to write a function that takes a String and returns an Array / list
+// with the length of each word added to each element.
+// Note: String will have at least one element; words will always be separated by a space.
+  
+// START OF SOLUTION
+function addLength(str) {
+  const result = [];
+  str.split(' ').map(word => {
+    result.push(`${word} ${word.length}`);
+  });
+  console.log(result);
+};
+
+addLength('apple ban');     // ["apple 5", "ban 3"]
+addLength('you will win');  // ["you 3", "will 4", "win 3"]
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - No zeros for heros
 // https://www.codewars.com/kata/570a6a46455d08ff8d001002/train/javascript
 // Numbers ending with zeros are boring.
@@ -17,19 +44,19 @@ function template() {
 // Get rid of them. Only the ending ones.
 
 // START OF SOLUTION
-function noBoringZeros(n) {  
-  while (n != 0 && n % 10 === 0) {
-    n = n / 10;
-  };
-  console.log(n);
-};
+// function noBoringZeros(n) {  
+//   while (n != 0 && n % 10 === 0) {
+//     n = n / 10;
+//   };
+//   console.log(n);
+// };
 
-noBoringZeros(1450);   // 145)
-noBoringZeros(960000); // 96)
-noBoringZeros(1050);   // 105)
-noBoringZeros(-1050);  // -105)
-noBoringZeros(-105);   // -105)
-noBoringZeros(0);      // 0)
+// noBoringZeros(1450);   // 145)
+// noBoringZeros(960000); // 96)
+// noBoringZeros(1050);   // 105)
+// noBoringZeros(-1050);  // -105)
+// noBoringZeros(-105);   // -105)
+// noBoringZeros(0);      // 0)
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
