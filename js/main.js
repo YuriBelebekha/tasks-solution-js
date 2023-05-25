@@ -11,6 +11,33 @@ function template() {
 };
 
 
+// CODEWARS TASK - JS - Is he gonna survive?
+// https://www.codewars.com/kata/59ca8246d751df55cc00014c/train/javascript
+// A hero is on his way to the castle to complete his mission.
+// However, he's been told that the castle is surrounded with a
+// couple of powerful dragons! each dragon takes 2 bullets to be
+// defeated, our hero has no idea how many bullets he should carry..
+// Assuming he's gonna grab a specific given number of bullets and
+// move forward to fight another specific given number of dragons,
+// will he survive ?
+// Return true if yes, false otherwise :)
+
+// START OF SOLUTION
+function hero(bullets, dragons){
+  console.log(bullets >= dragons * 2)
+}
+
+hero(10, 5);   // true);
+hero(7, 4);    // false);
+hero(4, 5);    // false);
+hero(100, 40); // true);
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Add Length
 // https://www.codewars.com/kata/559d2284b5bb6799e9000047/train/javascript
 // What if we need the length of the words separated by a space to be added at
@@ -20,16 +47,16 @@ function template() {
 // Note: String will have at least one element; words will always be separated by a space.
   
 // START OF SOLUTION
-function addLength(str) {
-  const result = [];
-  str.split(' ').map(word => {
-    result.push(`${word} ${word.length}`);
-  });
-  console.log(result);
-};
+// function addLength(str) {
+//   const result = [];
+//   str.split(' ').map(word => {
+//     result.push(`${word} ${word.length}`);
+//   });
+//   console.log(result);
+// };
 
-addLength('apple ban');     // ["apple 5", "ban 3"]
-addLength('you will win');  // ["you 3", "will 4", "win 3"]
+// addLength('apple ban');     // ["apple 5", "ban 3"]
+// addLength('you will win');  // ["you 3", "will 4", "win 3"]
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
