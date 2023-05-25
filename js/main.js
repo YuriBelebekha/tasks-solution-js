@@ -11,6 +11,39 @@ function template() {
 };
 
 
+
+// CODEWARS TASK - JS - Multiplication table
+// https://www.codewars.com/kata/534d2f5b5371ecf8d2000a08/train/javascript
+// Your task, is to create N×N multiplication table, of size provided in parameter.
+// For example, when given size is 3:
+// 1 2 3
+// 2 4 6
+// 3 6 9
+// For the given example, the return value should be:
+// [[1,2,3],[2,4,6],[3,6,9]]
+
+// START OF SOLUTION
+function multiplicationTable(size) {  
+  let result = [];
+  for(let i = 1; i <= size; i += 1) {
+    let arr = [];
+    for(let j = 1; j <= size; j += 1) {
+      arr.push(i * j);
+    };
+    result.push(arr);
+  };
+  console.log(result);
+};
+
+multiplicationTable(3); // [[1,2,3], [2,4,6], [3,6,9]]
+multiplicationTable(4); // [[1,2,3], [2,4,6], [3,6,9]]
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Is he gonna survive?
 // https://www.codewars.com/kata/59ca8246d751df55cc00014c/train/javascript
 // A hero is on his way to the castle to complete his mission.
@@ -23,14 +56,14 @@ function template() {
 // Return true if yes, false otherwise :)
 
 // START OF SOLUTION
-function hero(bullets, dragons){
-  console.log(bullets >= dragons * 2)
-}
+// function hero(bullets, dragons){
+//   console.log(bullets >= dragons * 2)
+// }
 
-hero(10, 5);   // true);
-hero(7, 4);    // false);
-hero(4, 5);    // false);
-hero(100, 40); // true);
+// hero(10, 5);   // true);
+// hero(7, 4);    // false);
+// hero(4, 5);    // false);
+// hero(100, 40); // true);
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
