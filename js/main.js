@@ -11,6 +11,34 @@ function template() {
 };
 
 
+// CODEWARS TASK - JS - Build a pile of Cubes
+// https://www.codewars.com/kata/5592e3bd57b64d00f3000047
+
+// START OF SOLUTION
+function findNb(m) {
+  let sum = 0;
+  let i = 1;
+
+  while ( sum < m ) {
+    sum += Math.pow(i, 3);
+    if ( sum === m ) {
+      console.log(i);
+    };
+    i += 1;    
+  };
+  return -1;
+}
+
+findNb(4183059834009);   // 2022
+findNb(24723578342962);  // -1
+findNb(135440716410000); // 4824
+findNb(40539911473216);  // 3568
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
 
 // CODEWARS TASK - JS - Multiplication table
 // https://www.codewars.com/kata/534d2f5b5371ecf8d2000a08/train/javascript
@@ -23,20 +51,20 @@ function template() {
 // [[1,2,3],[2,4,6],[3,6,9]]
 
 // START OF SOLUTION
-function multiplicationTable(size) {  
-  let result = [];
-  for(let i = 1; i <= size; i += 1) {
-    let arr = [];
-    for(let j = 1; j <= size; j += 1) {
-      arr.push(i * j);
-    };
-    result.push(arr);
-  };
-  console.log(result);
-};
+// function multiplicationTable(size) {  
+//   let result = [];
+//   for(let i = 1; i <= size; i += 1) {
+//     let arr = [];
+//     for(let j = 1; j <= size; j += 1) {
+//       arr.push(i * j);
+//     };
+//     result.push(arr);
+//   };
+//   console.log(result);
+// };
 
-multiplicationTable(3); // [[1,2,3], [2,4,6], [3,6,9]]
-multiplicationTable(4); // [[1,2,3], [2,4,6], [3,6,9]]
+// multiplicationTable(3); // [[1,2,3], [2,4,6], [3,6,9]]
+// multiplicationTable(4); // [[1,2,3], [2,4,6], [3,6,9]]
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
