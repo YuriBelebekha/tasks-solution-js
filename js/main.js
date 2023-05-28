@@ -11,6 +11,35 @@ function template() {
 };
 
 
+
+// CODEWARS TASK - JS - Simple Fun #176: Reverse Letter
+// https://www.codewars.com/kata/58b8c94b7df3f116eb00005b/train/javascript
+// Given a string str, reverse it and omit all non-alphabetic characters.
+// Example
+// For str = "krishan", the output should be "nahsirk".
+// For str = "ultr53o?n", the output should be "nortlu".
+// Input/Output
+// [input] string str
+// A string consists of lowercase latin letters, digits and symbols.
+// [output] a string
+
+// START OF SOLUTION
+function reverseLetter(str) {  
+  const regExp = /[^a-z]+/g;
+  console.log(str.replace(regExp, '').split('').reverse().join(''));
+};
+
+reverseLetter("krishan");   // "nahsirk")
+reverseLetter("ultr53o?n"); // "nortlu")
+reverseLetter("ab23c");     // "cba")
+reverseLetter("krish21an"); // "nahsirk")
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Binary Addition
 // https://www.codewars.com/kata/551f37452ff852b7bd000139/train/javascript
 // Implement a function that adds two numbers together and returns
@@ -21,13 +50,13 @@ function template() {
 // 5, 9 --> "1110" (5 + 9 = 14 in decimal or 1110 in binary)
 
 // START OF SOLUTION
-function addBinary(a, b) {
-  console.log(Number(a + b).toString(2));    
-};
+// function addBinary(a, b) {
+//   console.log(Number(a + b).toString(2));    
+// };
 
-addBinary(1, 1);
-addBinary(1, 2);
-addBinary(5, 9);
+// addBinary(1, 1);
+// addBinary(1, 2);
+// addBinary(5, 9);
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
