@@ -11,6 +11,28 @@ function template() {
 };
 
 
+// CODEWARS TASK - JS - Binary Addition
+// https://www.codewars.com/kata/551f37452ff852b7bd000139/train/javascript
+// Implement a function that adds two numbers together and returns
+// their sum in binary.The conversion can be done before, or after the addition.
+// The binary number returned should be a string.
+// Examples:(Input1, Input2 --> Output (explanation)))
+// 1, 1 --> "10" (1 + 1 = 2 in decimal or 10 in binary)
+// 5, 9 --> "1110" (5 + 9 = 14 in decimal or 1110 in binary)
+
+// START OF SOLUTION
+function addBinary(a, b) {
+  console.log(Number(a + b).toString(2));    
+};
+
+addBinary(1, 1);
+addBinary(1, 2);
+addBinary(5, 9);
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
 
 
 // CODEWARS TASK - JS - A wolf in sheep's clothing
@@ -32,41 +54,41 @@ function template() {
 // Output: "Pls go away and stop eating my sheep"
 
 // START OF SOLUTION
-function warnTheSheep(queue) {
-  const wolfOfIndex = queue.reverse().indexOf('wolf');
+// function warnTheSheep(queue) {
+//   const wolfOfIndex = queue.reverse().indexOf('wolf');
   
-  if (wolfOfIndex > 0) {
-    return console.log(`Oi! Sheep number ${wolfOfIndex}! You are about to be eaten by a wolf!`);
-  } else {
-    console.log(`Pls go away and stop eating my sheep`);
-  };
+//   if (wolfOfIndex > 0) {
+//     return console.log(`Oi! Sheep number ${wolfOfIndex}! You are about to be eaten by a wolf!`);
+//   } else {
+//     console.log(`Pls go away and stop eating my sheep`);
+//   };
   
-  // OR
+//   // OR
 
-  // const wolfOfIndex = queue.reverse().indexOf('wolf');
+//   // const wolfOfIndex = queue.reverse().indexOf('wolf');
   
-  // return wolfOfIndex === 0
-  //   ? console.log(`Pls go away and stop eating my sheep`)
-  //   : console.log(`Oi! Sheep number ${wolfOfIndex}! You are about to be eaten by a wolf!`);     
-};
+//   // return wolfOfIndex === 0
+//   //   ? console.log(`Pls go away and stop eating my sheep`)
+//   //   : console.log(`Oi! Sheep number ${wolfOfIndex}! You are about to be eaten by a wolf!`);     
+// };
 
-warnTheSheep(["sheep", "sheep", "sheep", "sheep", "sheep", "wolf", "sheep", "sheep"]);
-// "Oi! Sheep number 2! You are about to be eaten by a wolf!"
+// warnTheSheep(["sheep", "sheep", "sheep", "sheep", "sheep", "wolf", "sheep", "sheep"]);
+// // "Oi! Sheep number 2! You are about to be eaten by a wolf!"
 
-warnTheSheep(["sheep", "wolf", "sheep", "sheep", "sheep", "sheep", "sheep"]);
-// "Oi! Sheep number 5! You are about to be eaten by a wolf!"
+// warnTheSheep(["sheep", "wolf", "sheep", "sheep", "sheep", "sheep", "sheep"]);
+// // "Oi! Sheep number 5! You are about to be eaten by a wolf!"
 
-warnTheSheep(["wolf", "sheep", "sheep", "sheep", "sheep", "sheep", "sheep"]);
-// "Oi! Sheep number 6! You are about to be eaten by a wolf!"
+// warnTheSheep(["wolf", "sheep", "sheep", "sheep", "sheep", "sheep", "sheep"]);
+// // "Oi! Sheep number 6! You are about to be eaten by a wolf!"
 
-warnTheSheep(["sheep", "wolf", "sheep"]);
-// "Oi! Sheep number 1! You are about to be eaten by a wolf!"
+// warnTheSheep(["sheep", "wolf", "sheep"]);
+// // "Oi! Sheep number 1! You are about to be eaten by a wolf!"
 
-warnTheSheep(["wolf"]);
-// "Pls go away and stop eating my sheep"
+// warnTheSheep(["wolf"]);
+// // "Pls go away and stop eating my sheep"
     
-warnTheSheep(["sheep", "sheep", "wolf"]);
-// "Pls go away and stop eating my sheep"
+// warnTheSheep(["sheep", "sheep", "wolf"]);
+// // "Pls go away and stop eating my sheep"
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
