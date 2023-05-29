@@ -11,6 +11,36 @@ function template() {
 };
 
 
+// CODEWARS TASK - JS - Vowel remover
+// https://www.codewars.com/kata/5547929140907378f9000039/train/javascript
+// Create a function called shortcut to remove the lowercase vowels(a, e, i, o, u)
+//  in a given string.
+
+// Examples
+// "hello"     -->  "hll"
+// "codewars"  -->  "cdwrs"
+// "goodbye"   -->  "gdby"
+// "HELLO"     -- > "HELLO"
+// don't worry about uppercase vowels
+// y is not considered a vowel for this kata
+
+// START OF SOLUTION
+function shortcut (string) {
+  const vowels = /[a,e,i,o,u]/g;
+  console.log(string.replace(vowels, ''));
+};
+
+shortcut('hello');              // 'hll'
+shortcut('how are you today?'); // 'hw r y tdy?'
+shortcut('complain');           // 'cmpln'
+shortcut('never');              // 'nvr'
+shortcut('HELLO');              // 'HELLO'
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
 
 // CODEWARS TASK - JS - Simple Fun #176: Reverse Letter
 // https://www.codewars.com/kata/58b8c94b7df3f116eb00005b/train/javascript
@@ -24,15 +54,15 @@ function template() {
 // [output] a string
 
 // START OF SOLUTION
-function reverseLetter(str) {  
-  const regExp = /[^a-z]+/g;
-  console.log(str.replace(regExp, '').split('').reverse().join(''));
-};
+// function reverseLetter(str) {  
+//   const regExp = /[^a-z]+/g;
+//   console.log(str.replace(regExp, '').split('').reverse().join(''));
+// };
 
-reverseLetter("krishan");   // "nahsirk")
-reverseLetter("ultr53o?n"); // "nortlu")
-reverseLetter("ab23c");     // "cba")
-reverseLetter("krish21an"); // "nahsirk")
+// reverseLetter("krishan");   // "nahsirk")
+// reverseLetter("ultr53o?n"); // "nortlu")
+// reverseLetter("ab23c");     // "cba")
+// reverseLetter("krish21an"); // "nahsirk")
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
