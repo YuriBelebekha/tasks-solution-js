@@ -11,6 +11,37 @@ function template() {
 };
 
 
+
+// CODEWARS TASK - JS - Hello, Name or World!
+// https://www.codewars.com/kata/57e3f79c9cb119374600046b/train/javascript
+// Define a method hello that returns "Hello, Name!" to a given name,
+// or says Hello, World! if name is not given(or passed as an empty String).
+// Assuming that name is a String and it checks for user typos to return
+// a name with a first capital letter(Xxxx).
+
+// START OF SOLUTION
+function hello(name) {
+  if (name) {
+    const normalizedString = name.toLowerCase();
+    const firstLetter = normalizedString.charAt(0).toUpperCase();
+    const nameWithoutFirstLetter = normalizedString.slice(1);
+
+    console.log(`Hello, ${firstLetter.concat(nameWithoutFirstLetter)}!`);
+  } else {
+    console.log(`Hello, World!`);
+  };
+}
+
+hello('alice'); // 'Hello, Alice!', "returns 'Hello, Alice!' when given 'alice'");
+hello();        // 'Hello, World!', "returns 'Hello, World!' when name is not given");
+hello('');      // 'Hello, World!', "returns 'Hello, World!' when name is an empty string");
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Vowel remover
 // https://www.codewars.com/kata/5547929140907378f9000039/train/javascript
 // Create a function called shortcut to remove the lowercase vowels(a, e, i, o, u)
@@ -25,16 +56,16 @@ function template() {
 // y is not considered a vowel for this kata
 
 // START OF SOLUTION
-function shortcut (string) {
-  const vowels = /[a,e,i,o,u]/g;
-  console.log(string.replace(vowels, ''));
-};
+// function shortcut (string) {
+//   const vowels = /[a,e,i,o,u]/g;
+//   console.log(string.replace(vowels, ''));
+// };
 
-shortcut('hello');              // 'hll'
-shortcut('how are you today?'); // 'hw r y tdy?'
-shortcut('complain');           // 'cmpln'
-shortcut('never');              // 'nvr'
-shortcut('HELLO');              // 'HELLO'
+// shortcut('hello');              // 'hll'
+// shortcut('how are you today?'); // 'hw r y tdy?'
+// shortcut('complain');           // 'cmpln'
+// shortcut('never');              // 'nvr'
+// shortcut('HELLO');              // 'HELLO'
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
