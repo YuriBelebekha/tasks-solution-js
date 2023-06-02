@@ -11,6 +11,36 @@ function template() {
 };
 
 
+// CODEWARS TASK - JS - Alternate capitalization
+// https://www.codewars.com/kata/59cfc000aeb2844d16000075/train/javascript
+// Given a string, capitalize the letters that occupy even indexes and odd indexes
+// separately, and return as shown below.Index 0 will be considered even.
+// For example, capitalize("abcdef") = ['AbCdEf', 'aBcDeF']. See test cases for more examples.
+// The input will be a lowercase string with no spaces.
+
+// START OF SOLUTION
+function capitalize(s){
+  const arr = s.split('');
+  
+  const result = [
+    arr.map((symbol, i) => i % 2 === 0 ? symbol.toUpperCase() : symbol.toLowerCase()).join(''),
+    arr.map((symbol, i) => i % 2 !== 0 ? symbol.toUpperCase() : symbol.toLowerCase()).join('')
+  ];
+  
+  console.log(result);
+};
+
+capitalize("abcdef");       // ['AbCdEf', 'aBcDeF']);
+capitalize("codewars");     // ['CoDeWaRs', 'cOdEwArS']);
+capitalize("abracadabra");  // ['AbRaCaDaBrA', 'aBrAcAdAbRa']);
+capitalize("codewarriors"); // ['CoDeWaRrIoRs', 'cOdEwArRiOrS']);
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Is this a triangle?
 // https://www.codewars.com/kata/56606694ec01347ce800001b/train/javascript
 // Implement a function that accepts 3 integer values a, b, c.The function
@@ -20,16 +50,16 @@ function template() {
 // (In this case, all triangles must have surface greater than 0 to be accepted).
 
 // START OF SOLUTION
-function isTriangle(a, b, c) {
-  const p = (a + b + c) / 2;
-  const triangleArea = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+// function isTriangle(a, b, c) {
+//   const p = (a + b + c) / 2;
+//   const triangleArea = Math.sqrt(p * (p - a) * (p - b) * (p - c));
   
-  console.log(triangleArea && a > 0 && b > 0 && c > 0 ? true : false);
-};
+//   console.log(triangleArea && a > 0 && b > 0 && c > 0 ? true : false);
+// };
 
-isTriangle(1, 2, 2);  // true);
-isTriangle(7, 2, 2);  // false);
-isTriangle(3, 3, -2); // false);
+// isTriangle(1, 2, 2);  // true);
+// isTriangle(7, 2, 2);  // false);
+// isTriangle(3, 3, -2); // false);
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
