@@ -11,6 +11,50 @@ function template() {
 };
 
 
+
+// CODEWARS TASK - JS - Calculating with Functions
+// https://www.codewars.com/kata/525f3eda17c7cd9f9e000b39/train/javascript
+// This time we want to write calculations using functions and get the results.Let's have a look at some examples:
+// seven(times(five())); // must return 35
+// four(plus(nine())); // must return 13
+// eight(minus(three())); // must return 5
+// six(dividedBy(two())); // must return 3
+
+// Requirements:
+// There must be a function for each number from 0 ("zero") to 9 ("nine")
+// There must be a function for each of the following mathematical operations: plus, minus, times, dividedBy
+// Each calculation consist of exactly one operation and two numbers
+// The most outer function represents the left operand, the most inner function represents the right operand
+// Division should be integer division. For example, this should return 2, not 2.666666...:
+
+// START OF SOLUTION
+function zero(f)  { return (f ? f(0) : 0) };
+function one(f)   { return (f ? f(1) : 1) };
+function two(f)   { return (f ? f(2) : 2) };
+function three(f) { return (f ? f(3) : 3) };
+function four(f)  { return (f ? f(4) : 4) };
+function five(f)  { return (f ? f(5) : 5) };
+function six(f)   { return (f ? f(6) : 6) };
+function seven(f) { return (f ? f(7) : 7) };
+function eight(f) { return (f ? f(8) : 8) };
+function nine(f)  { return (f ? f(9) : 9) };
+
+function plus(y)      { return function (x) { return (x + y) } };
+function minus(y)     { return function (x) { return (x - y) } };
+function times(y)     { return function (x) { return (x * y) } };
+function dividedBy(y) { return function (x) { return Math.floor(x / y) } };
+
+// seven(times    (five ()));   // 35);
+// four (plus     (nine ()));   // 13);
+eight(minus    (three()));   //  5);
+// six  (dividedBy(two  ()));   //  3);
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Alternate capitalization
 // https://www.codewars.com/kata/59cfc000aeb2844d16000075/train/javascript
 // Given a string, capitalize the letters that occupy even indexes and odd indexes
@@ -19,21 +63,21 @@ function template() {
 // The input will be a lowercase string with no spaces.
 
 // START OF SOLUTION
-function capitalize(s){
-  const arr = s.split('');
+// function capitalize(s){
+//   const arr = s.split('');
   
-  const result = [
-    arr.map((symbol, i) => i % 2 === 0 ? symbol.toUpperCase() : symbol.toLowerCase()).join(''),
-    arr.map((symbol, i) => i % 2 !== 0 ? symbol.toUpperCase() : symbol.toLowerCase()).join('')
-  ];
+//   const result = [
+//     arr.map((symbol, i) => i % 2 === 0 ? symbol.toUpperCase() : symbol.toLowerCase()).join(''),
+//     arr.map((symbol, i) => i % 2 !== 0 ? symbol.toUpperCase() : symbol.toLowerCase()).join('')
+//   ];
   
-  console.log(result);
-};
+//   console.log(result);
+// };
 
-capitalize("abcdef");       // ['AbCdEf', 'aBcDeF']);
-capitalize("codewars");     // ['CoDeWaRs', 'cOdEwArS']);
-capitalize("abracadabra");  // ['AbRaCaDaBrA', 'aBrAcAdAbRa']);
-capitalize("codewarriors"); // ['CoDeWaRrIoRs', 'cOdEwArRiOrS']);
+// capitalize("abcdef");       // ['AbCdEf', 'aBcDeF']);
+// capitalize("codewars");     // ['CoDeWaRs', 'cOdEwArS']);
+// capitalize("abracadabra");  // ['AbRaCaDaBrA', 'aBrAcAdAbRa']);
+// capitalize("codewarriors"); // ['CoDeWaRrIoRs', 'cOdEwArRiOrS']);
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
