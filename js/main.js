@@ -12,6 +12,28 @@ function template() {
 
 
 
+// CODEWARS TASK - JS - Convert to Binary
+// https://www.codewars.com/kata/59fca81a5712f9fa4700159a/train/javascript
+// Task Overview
+// Given a non - negative integer n, write a function to_binary/ToBinary which
+// returns that number in a binary format.
+
+// START OF SOLUTION
+function toBinary(n){
+  console.log(Number(n.toString(2)))
+};
+
+toBinary(1); // 1
+toBinary(2); // 10
+toBinary(3); // 11
+toBinary(5); // 101
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Calculating with Functions
 // https://www.codewars.com/kata/525f3eda17c7cd9f9e000b39/train/javascript
 // This time we want to write calculations using functions and get the results.Let's have a look at some examples:
@@ -28,25 +50,25 @@ function template() {
 // Division should be integer division. For example, this should return 2, not 2.666666...:
 
 // START OF SOLUTION
-function zero(f)  { return (f ? f(0) : 0) };
-function one(f)   { return (f ? f(1) : 1) };
-function two(f)   { return (f ? f(2) : 2) };
-function three(f) { return (f ? f(3) : 3) };
-function four(f)  { return (f ? f(4) : 4) };
-function five(f)  { return (f ? f(5) : 5) };
-function six(f)   { return (f ? f(6) : 6) };
-function seven(f) { return (f ? f(7) : 7) };
-function eight(f) { return (f ? f(8) : 8) };
-function nine(f)  { return (f ? f(9) : 9) };
+// function zero(f)  { return (f ? f(0) : 0) };
+// function one(f)   { return (f ? f(1) : 1) };
+// function two(f)   { return (f ? f(2) : 2) };
+// function three(f) { return (f ? f(3) : 3) };
+// function four(f)  { return (f ? f(4) : 4) };
+// function five(f)  { return (f ? f(5) : 5) };
+// function six(f)   { return (f ? f(6) : 6) };
+// function seven(f) { return (f ? f(7) : 7) };
+// function eight(f) { return (f ? f(8) : 8) };
+// function nine(f)  { return (f ? f(9) : 9) };
 
-function plus(y)      { return function (x) { return (x + y) } };
-function minus(y)     { return function (x) { return (x - y) } };
-function times(y)     { return function (x) { return (x * y) } };
-function dividedBy(y) { return function (x) { return Math.floor(x / y) } };
+// function plus(y)      { return function (x) { return (x + y) } };
+// function minus(y)     { return function (x) { return (x - y) } };
+// function times(y)     { return function (x) { return (x * y) } };
+// function dividedBy(y) { return function (x) { return Math.floor(x / y) } };
 
 // seven(times    (five ()));   // 35);
 // four (plus     (nine ()));   // 13);
-eight(minus    (three()));   //  5);
+// eight(minus    (three()));   //  5);
 // six  (dividedBy(two  ()));   //  3);
 // END OF SOLUTION
 
