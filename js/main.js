@@ -11,6 +11,58 @@ function template() {
 };
 
 
+
+
+// CODEWARS TASK - JS - Row Weights
+// https://www.codewars.com/kata/5abd66a5ccfd1130b30000a9/javascript
+// Scenario
+// Several people are standing in a row divided into two teams.
+// The first person goes into team 1, the second goes into team 2, the third
+// goes into team 1, and so on.
+
+// Task
+// Given an array of positive integers(the weights of the people),
+// return a new array / tuple of two integers, where the first one
+// is the total weight of team 1, and the second one is the total weight of team 2.
+
+// Notes
+// Array size is at least 1.
+// All numbers will be positive.
+
+// START OF SOLUTION
+function rowWeights(array){
+  let sumEven = 0;
+  let sumOdd = 0;
+
+  array.map((value, index) => {    
+    if (index % 2 === 0) {
+      sumEven += value;
+    };
+    if (index % 2 !== 0) {
+      sumOdd += value;
+    };
+  });
+  
+  console.log([sumEven, sumOdd]);
+};
+
+rowWeights([80]);                       // [80,0]);
+rowWeights([100,50]);                   // [100,50]);
+rowWeights([50,60,70,80]);              // [120,140]);
+rowWeights([13,27,49]);                 // [62,27]);
+rowWeights([70,58,75,34,91]);           // [236,92]);
+rowWeights([29,83,67,53,19,28,96]);     // [211,164]);
+rowWeights([0]);                        // [0,0]);
+rowWeights([100,51,50,100]);            // [150,151]);
+rowWeights([39,84,74,18,59,72,35,61]);  // [207,235]);
+rowWeights([0,1,0]);                    // [0,1]);
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Holiday VIII - Duty Free
 // https://www.codewars.com/kata/57e92e91b63b6cbac20001e5/train/javascript
 // The purpose of this kata is to work out just how many bottles of duty free whiskey you would have to buy such that the saving over the normal high street price would effectively cover the cost of your holiday.
@@ -19,13 +71,13 @@ function template() {
 // All inputs will be integers. Please return an integer. Round down.
 
 // START OF SOLUTION
-function dutyFree(normPrice, discount, hol){
-  console.log(Math.floor(hol / (normPrice * discount) * 100));
-}
+// function dutyFree(normPrice, discount, hol){
+//   console.log(Math.floor(hol / (normPrice * discount) * 100));
+// }
 
-dutyFree(12, 50, 1000); // 166);
-dutyFree(17, 10, 500);  // 294);
-dutyFree(24, 35, 3000); // 357);   
+// dutyFree(12, 50, 1000); // 166);
+// dutyFree(17, 10, 500);  // 294);
+// dutyFree(24, 35, 3000); // 357);   
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
