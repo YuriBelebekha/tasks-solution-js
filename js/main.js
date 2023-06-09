@@ -12,6 +12,68 @@ function template() {
 
 
 
+// CODEWARS TASK - JS - L1: Bartender, drinks!
+// https://www.codewars.com/kata/568dc014440f03b13900001d/train/javascript
+// Complete the function that receives as input a string, and produces outputs
+// according to the following table:
+// Input	            Output
+// "Jabroni"	        "Patron Tequila"
+// "School Counselor"	"Anything with Alcohol"
+// "Programmer"	      "Hipster Craft Beer"
+// "Bike Gang Member"	"Moonshine"
+// "Politician"	      "Your tax dollars"
+// "Rapper"	          "Cristal"
+// anything else	      "Beer"
+
+// START OF SOLUTION
+function getDrinkByProfession(param){
+  const normalizeParam = param.toLowerCase();
+
+  switch (normalizeParam) {
+    case "jabroni":
+      console.log("Patron Tequila");
+      break;
+    
+    case "school counselor":
+      console.log("Anything with Alcohol");
+      break;
+    
+    case "programmer":
+      console.log("Hipster Craft Beer");
+      break;
+    
+    case "bike gang member":
+      console.log("Moonshine");
+      break;
+    
+    case "politician":
+      console.log("Your tax dollars");
+      break;
+    
+    case "rapper":
+      console.log("Cristal");
+      break;
+    
+    default:
+      console.log("Beer");
+      break;
+  };
+};
+
+getDrinkByProfession("jabrOni");          // "Patron Tequila", "'Jabroni' should map to 'Patron Tequila'");
+getDrinkByProfession("scHOOl counselor"); // "Anything with Alcohol", "'School Counselor' should map to 'Anything with alcohol'");
+getDrinkByProfession("prOgramMer");       // "Hipster Craft Beer", "'Programmer' should map to 'Hipster Craft Beer'");
+getDrinkByProfession("bike ganG member"); // "Moonshine", "'Bike Gang Member' should map to 'Moonshine'");
+getDrinkByProfession("poLiTiCian");       // "Your tax dollars", "'Politician' should map to 'Your tax dollars'");
+getDrinkByProfession("rapper");           // "Cristal", "'Rapper' should map to 'Cristal'");
+getDrinkByProfession("pundit");           // "Beer", "'Pundit' should map to 'Beer'");
+getDrinkByProfession("Pug");              // "Beer", "'Pug' should map to 'Beer'");
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
 
 // CODEWARS TASK - JS - Row Weights
 // https://www.codewars.com/kata/5abd66a5ccfd1130b30000a9/javascript
@@ -30,32 +92,32 @@ function template() {
 // All numbers will be positive.
 
 // START OF SOLUTION
-function rowWeights(array){
-  let sumEven = 0;
-  let sumOdd = 0;
+// function rowWeights(array){
+//   let sumEven = 0;
+//   let sumOdd = 0;
 
-  array.map((value, index) => {    
-    if (index % 2 === 0) {
-      sumEven += value;
-    };
-    if (index % 2 !== 0) {
-      sumOdd += value;
-    };
-  });
+//   array.map((value, index) => {    
+//     if (index % 2 === 0) {
+//       sumEven += value;
+//     };
+//     if (index % 2 !== 0) {
+//       sumOdd += value;
+//     };
+//   });
   
-  console.log([sumEven, sumOdd]);
-};
+//   console.log([sumEven, sumOdd]);
+// };
 
-rowWeights([80]);                       // [80,0]);
-rowWeights([100,50]);                   // [100,50]);
-rowWeights([50,60,70,80]);              // [120,140]);
-rowWeights([13,27,49]);                 // [62,27]);
-rowWeights([70,58,75,34,91]);           // [236,92]);
-rowWeights([29,83,67,53,19,28,96]);     // [211,164]);
-rowWeights([0]);                        // [0,0]);
-rowWeights([100,51,50,100]);            // [150,151]);
-rowWeights([39,84,74,18,59,72,35,61]);  // [207,235]);
-rowWeights([0,1,0]);                    // [0,1]);
+// rowWeights([80]);                       // [80,0]);
+// rowWeights([100,50]);                   // [100,50]);
+// rowWeights([50,60,70,80]);              // [120,140]);
+// rowWeights([13,27,49]);                 // [62,27]);
+// rowWeights([70,58,75,34,91]);           // [236,92]);
+// rowWeights([29,83,67,53,19,28,96]);     // [211,164]);
+// rowWeights([0]);                        // [0,0]);
+// rowWeights([100,51,50,100]);            // [150,151]);
+// rowWeights([39,84,74,18,59,72,35,61]);  // [207,235]);
+// rowWeights([0,1,0]);                    // [0,1]);
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
