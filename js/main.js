@@ -12,6 +12,29 @@ function template() {
 
 
 
+// CODEWARS TASK - JS - Find the unique number
+// https://www.codewars.com/kata/585d7d5adb20cf33cb000235/train/javascript
+// There is an array with some numbers. All numbers are equal except for one. Try to find it!
+
+// START OF SOLUTION
+function findUniq(arr) {
+  arr.sort((a, b) => a - b);  
+  console.log(arr[0] === arr[1] ? arr.pop() : arr[0]);
+};
+  
+findUniq([ 1, 0, 0 ]);          // 1);
+findUniq([ 0, 1, 0 ]);          // 1);
+findUniq([ 0, 0, 1 ]);          // 1);
+findUniq([ 1, 1, 1, 2, 1, 1 ]); // 2);
+findUniq([ 1, 1, 2, 1, 1 ]);    // 2);
+findUniq([ 3, 10, 3, 3, 3 ]);   // 10);
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - L1: Bartender, drinks!
 // https://www.codewars.com/kata/568dc014440f03b13900001d/train/javascript
 // Complete the function that receives as input a string, and produces outputs
@@ -26,48 +49,48 @@ function template() {
 // anything else	      "Beer"
 
 // START OF SOLUTION
-function getDrinkByProfession(param){
-  const normalizeParam = param.toLowerCase();
+// function getDrinkByProfession(param){
+//   const normalizeParam = param.toLowerCase();
 
-  switch (normalizeParam) {
-    case "jabroni":
-      console.log("Patron Tequila");
-      break;
+//   switch (normalizeParam) {
+//     case "jabroni":
+//       console.log("Patron Tequila");
+//       break;
     
-    case "school counselor":
-      console.log("Anything with Alcohol");
-      break;
+//     case "school counselor":
+//       console.log("Anything with Alcohol");
+//       break;
     
-    case "programmer":
-      console.log("Hipster Craft Beer");
-      break;
+//     case "programmer":
+//       console.log("Hipster Craft Beer");
+//       break;
     
-    case "bike gang member":
-      console.log("Moonshine");
-      break;
+//     case "bike gang member":
+//       console.log("Moonshine");
+//       break;
     
-    case "politician":
-      console.log("Your tax dollars");
-      break;
+//     case "politician":
+//       console.log("Your tax dollars");
+//       break;
     
-    case "rapper":
-      console.log("Cristal");
-      break;
+//     case "rapper":
+//       console.log("Cristal");
+//       break;
     
-    default:
-      console.log("Beer");
-      break;
-  };
-};
+//     default:
+//       console.log("Beer");
+//       break;
+//   };
+// };
 
-getDrinkByProfession("jabrOni");          // "Patron Tequila", "'Jabroni' should map to 'Patron Tequila'");
-getDrinkByProfession("scHOOl counselor"); // "Anything with Alcohol", "'School Counselor' should map to 'Anything with alcohol'");
-getDrinkByProfession("prOgramMer");       // "Hipster Craft Beer", "'Programmer' should map to 'Hipster Craft Beer'");
-getDrinkByProfession("bike ganG member"); // "Moonshine", "'Bike Gang Member' should map to 'Moonshine'");
-getDrinkByProfession("poLiTiCian");       // "Your tax dollars", "'Politician' should map to 'Your tax dollars'");
-getDrinkByProfession("rapper");           // "Cristal", "'Rapper' should map to 'Cristal'");
-getDrinkByProfession("pundit");           // "Beer", "'Pundit' should map to 'Beer'");
-getDrinkByProfession("Pug");              // "Beer", "'Pug' should map to 'Beer'");
+// getDrinkByProfession("jabrOni");          // "Patron Tequila", "'Jabroni' should map to 'Patron Tequila'");
+// getDrinkByProfession("scHOOl counselor"); // "Anything with Alcohol", "'School Counselor' should map to 'Anything with alcohol'");
+// getDrinkByProfession("prOgramMer");       // "Hipster Craft Beer", "'Programmer' should map to 'Hipster Craft Beer'");
+// getDrinkByProfession("bike ganG member"); // "Moonshine", "'Bike Gang Member' should map to 'Moonshine'");
+// getDrinkByProfession("poLiTiCian");       // "Your tax dollars", "'Politician' should map to 'Your tax dollars'");
+// getDrinkByProfession("rapper");           // "Cristal", "'Rapper' should map to 'Cristal'");
+// getDrinkByProfession("pundit");           // "Beer", "'Pundit' should map to 'Beer'");
+// getDrinkByProfession("Pug");              // "Beer", "'Pug' should map to 'Beer'");
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
