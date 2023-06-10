@@ -12,22 +12,54 @@ function template() {
 
 
 
+// CODEWARS TASK - JS - JavaScript Array Filter
+// https://www.codewars.com/kata/514a6336889283a3d2000001/javascript
+// JavaScript Arrays support a filter function (starting in JavaScript 1.6).
+// Use the filter functionality to complete the function given.
+// The solution would work like the following:
+// getEvenNumbers([2,4,5,6]) // should == [2,4,6]
+
+// START OF SOLUTION
+function getEvenNumbers(numbersArray){
+  const evenNumbers = [];
+
+  numbersArray.map(num => {
+    if (num % 2 === 0) {
+      evenNumbers.push(num);
+    };
+  });
+  
+  console.log(evenNumbers);
+};
+
+getEvenNumbers([1, 2, 3, 6, 8, 10]);  // [2, 6, 8, 10]
+getEvenNumbers([1, 2]);               // [2]
+getEvenNumbers([12, 14, 15]);         // [12, 14]
+getEvenNumbers([13, 15]);             // []
+getEvenNumbers([1, 3, 9]);            // []
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Find the unique number
 // https://www.codewars.com/kata/585d7d5adb20cf33cb000235/train/javascript
 // There is an array with some numbers. All numbers are equal except for one. Try to find it!
 
 // START OF SOLUTION
-function findUniq(arr) {
-  arr.sort((a, b) => a - b);  
-  console.log(arr[0] === arr[1] ? arr.pop() : arr[0]);
-};
+// function findUniq(arr) {
+//   arr.sort((a, b) => a - b);  
+//   console.log(arr[0] === arr[1] ? arr.pop() : arr[0]);
+// };
   
-findUniq([ 1, 0, 0 ]);          // 1);
-findUniq([ 0, 1, 0 ]);          // 1);
-findUniq([ 0, 0, 1 ]);          // 1);
-findUniq([ 1, 1, 1, 2, 1, 1 ]); // 2);
-findUniq([ 1, 1, 2, 1, 1 ]);    // 2);
-findUniq([ 3, 10, 3, 3, 3 ]);   // 10);
+// findUniq([ 1, 0, 0 ]);          // 1);
+// findUniq([ 0, 1, 0 ]);          // 1);
+// findUniq([ 0, 0, 1 ]);          // 1);
+// findUniq([ 1, 1, 1, 2, 1, 1 ]); // 2);
+// findUniq([ 1, 1, 2, 1, 1 ]);    // 2);
+// findUniq([ 3, 10, 3, 3, 3 ]);   // 10);
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
