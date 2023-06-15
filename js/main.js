@@ -11,6 +11,32 @@ function template() {
 };
 
 
+// CODEWARS TASK - JS - Sort Numbers
+// https://www.codewars.com/kata/5174a4c0f2769dd8b1000003/train/javascript
+// Finish the solution so that it sorts the passed in array of numbers.If the
+// function passes in an empty array or null / nil value then it should return an empty array.
+
+// For example:
+// solution([1, 2, 10, 50, 5]); // should return [1,2,5,10,50]
+// solution(null); // should return []
+
+// START OF SOLUTION
+function solution(nums){
+
+  console.log(nums ? nums.sort((a, b) => a - b) : []);
+};
+
+solution([1,2,3,10,5]);    //[1,2,3,5,10])
+solution(null);            //[])
+solution([]);              //[])
+solution([20, 2, 10]);     //[2,10,20])
+solution([2, 20, 10]);     //[2,10,20])
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
 
 // CODEWARS TASK - JS - JavaScript Array Filter
 // https://www.codewars.com/kata/514a6336889283a3d2000001/javascript
@@ -20,23 +46,23 @@ function template() {
 // getEvenNumbers([2,4,5,6]) // should == [2,4,6]
 
 // START OF SOLUTION
-function getEvenNumbers(numbersArray){
-  const evenNumbers = [];
+// function getEvenNumbers(numbersArray){
+//   const evenNumbers = [];
 
-  numbersArray.map(num => {
-    if (num % 2 === 0) {
-      evenNumbers.push(num);
-    };
-  });
+//   numbersArray.map(num => {
+//     if (num % 2 === 0) {
+//       evenNumbers.push(num);
+//     };
+//   });
   
-  console.log(evenNumbers);
-};
+//   console.log(evenNumbers);
+// };
 
-getEvenNumbers([1, 2, 3, 6, 8, 10]);  // [2, 6, 8, 10]
-getEvenNumbers([1, 2]);               // [2]
-getEvenNumbers([12, 14, 15]);         // [12, 14]
-getEvenNumbers([13, 15]);             // []
-getEvenNumbers([1, 3, 9]);            // []
+// getEvenNumbers([1, 2, 3, 6, 8, 10]);  // [2, 6, 8, 10]
+// getEvenNumbers([1, 2]);               // [2]
+// getEvenNumbers([12, 14, 15]);         // [12, 14]
+// getEvenNumbers([13, 15]);             // []
+// getEvenNumbers([1, 3, 9]);            // []
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
