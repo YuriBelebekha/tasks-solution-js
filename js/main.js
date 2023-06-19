@@ -10,6 +10,30 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 };
 
+// CODEWARS TASK - JS - Find the capitals
+// https://www.codewars.com/kata/539ee3b6757843632d00026b/train/javascript
+// Write a function that takes a single string(word) as argument.The function must
+// return an ordered list containing the indexes of all capital letters in the string.
+
+  // START OF SOLUTION
+var capitals = function (word) {
+  let resultArray = [];
+  word.split('').map((symbol, index) => {
+    if (symbol === symbol.toUpperCase()) {
+      resultArray.push(index);
+    };
+  });
+  
+  console.log(resultArray)
+};
+
+capitals('CodEWaRs');  // [0, 3, 4, 6]
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
 
 // CODEWARS TASK - JS - Count characters in your string
 // https://www.codewars.com/kata/52efefcbcdf57161d4000091/train/javascript
@@ -19,19 +43,19 @@ function template() {
 // What if the string is empty? Then the result should be empty object literal, {}.
 
 // START OF SOLUTION
-function count(string) {
-  const arrayFromString = string.split('');
-  let object = {};  
-  arrayFromString.map(i => object[i] = object[i] + 1 || 1);
-  console.log(object);
-  // return {};
-}
+// function count(string) {
+//   const arrayFromString = string.split('');
+//   let object = {};  
+//   arrayFromString.map(i => object[i] = object[i] + 1 || 1);
+//   console.log(object);
+//   // return {};
+// }
 
-count('');    // {});
-count('a');   // {'a': 1});
-count('ab');  // {'a': 1, 'b': 1});
-count('aba'); // {'a': 2, 'b': 1});
-count('ABC'); // {'A': 1, 'B': 1, 'C': 1});
+// count('');    // {});
+// count('a');   // {'a': 1});
+// count('ab');  // {'a': 1, 'b': 1});
+// count('aba'); // {'a': 2, 'b': 1});
+// count('ABC'); // {'A': 1, 'B': 1, 'C': 1});
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
