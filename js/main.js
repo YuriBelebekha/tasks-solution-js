@@ -11,6 +11,34 @@ function template() {
 };
 
 
+// CODEWARS TASK - JS - Count characters in your string
+// https://www.codewars.com/kata/52efefcbcdf57161d4000091/train/javascript
+// The main idea is to count all the occurring characters in a string.
+// If you have a string like aba, then the result should be { 'a': 2, 'b': 1 }.
+
+// What if the string is empty? Then the result should be empty object literal, {}.
+
+// START OF SOLUTION
+function count(string) {
+  const arrayFromString = string.split('');
+  let object = {};  
+  arrayFromString.map(i => object[i] = object[i] + 1 || 1);
+  console.log(object);
+  // return {};
+}
+
+count('');    // {});
+count('a');   // {'a': 1});
+count('ab');  // {'a': 1, 'b': 1});
+count('aba'); // {'a': 2, 'b': 1});
+count('ABC'); // {'A': 1, 'B': 1, 'C': 1});
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Sort Numbers
 // https://www.codewars.com/kata/5174a4c0f2769dd8b1000003/train/javascript
 // Finish the solution so that it sorts the passed in array of numbers.If the
@@ -21,16 +49,16 @@ function template() {
 // solution(null); // should return []
 
 // START OF SOLUTION
-function solution(nums){
+// function solution(nums){
 
-  console.log(nums ? nums.sort((a, b) => a - b) : []);
-};
+//   console.log(nums ? nums.sort((a, b) => a - b) : []);
+// };
 
-solution([1,2,3,10,5]);    //[1,2,3,5,10])
-solution(null);            //[])
-solution([]);              //[])
-solution([20, 2, 10]);     //[2,10,20])
-solution([2, 20, 10]);     //[2,10,20])
+// solution([1,2,3,10,5]);    //[1,2,3,5,10])
+// solution(null);            //[])
+// solution([]);              //[])
+// solution([20, 2, 10]);     //[2,10,20])
+// solution([2, 20, 10]);     //[2,10,20])
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
