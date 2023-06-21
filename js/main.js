@@ -10,24 +10,73 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 };
 
+
+// CODEWARS TASK - JS - No Loops 2 - You only need one
+// https://www.codewars.com/kata/57cc40b2f8392dbf2a0003ce/train/javascript
+// *** No Loops Allowed ***
+
+// You will be given an array a and a value x.All you need to do is check whether
+// the provided array contains the value, without using a loop.
+
+// Array can contain numbers or strings.x can be either.Return true if the array
+// contains the value, false if not.With strings you will need to account for case.
+
+// START OF SOLUTION
+function check(a, x) {
+  const result = a.includes(x) ? true : false;
+  console.log(result)
+};
+
+check([66, 101], 66);                              // true);
+check([80, 117, 115, 104, 45, 85, 112, 115], 45);  // true);
+check(['t', 'e', 's', 't'], 'e');                  // true);
+check(['what', 'a', 'great', 'kata'], 'kat');      // false);
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
+// CODEWARS TASK - JS - Remove duplicates from list
+// https://www.codewars.com/kata/57a5b0dfcf1fa526bb000118/train/javascript
+// Define a function that removes duplicates from an array of numbers and returns it as a result.
+
+// The order of the sequence has to stay the same.
+
+// START OF SOLUTION
+// function distinct(a) {
+//   console.log([...new Set(a)]);
+// };
+
+// distinct([1]);     // [1]);
+// distinct([1,2]);   // [1,2]);
+// distinct([1,1,2]); // [1,2]);
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Find the capitals
 // https://www.codewars.com/kata/539ee3b6757843632d00026b/train/javascript
 // Write a function that takes a single string(word) as argument.The function must
 // return an ordered list containing the indexes of all capital letters in the string.
 
-  // START OF SOLUTION
-var capitals = function (word) {
-  let resultArray = [];
-  word.split('').map((symbol, index) => {
-    if (symbol === symbol.toUpperCase()) {
-      resultArray.push(index);
-    };
-  });
+// START OF SOLUTION
+// var capitals = function (word) {
+//   let resultArray = [];
+//   word.split('').map((symbol, index) => {
+//     if (symbol === symbol.toUpperCase()) {
+//       resultArray.push(index);
+//     };
+//   });
   
-  console.log(resultArray)
-};
+//   console.log(resultArray)
+// };
 
-capitals('CodEWaRs');  // [0, 3, 4, 6]
+// capitals('CodEWaRs');  // [0, 3, 4, 6]
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
