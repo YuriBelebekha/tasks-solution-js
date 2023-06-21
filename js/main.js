@@ -11,6 +11,31 @@ function template() {
 };
 
 
+// CODEWARS TASK - JS - Welcome to the City
+// https://www.codewars.com/kata/5302d846be2a9189af0001e4/train/javascript
+// Create a method sayHello / say_hello / SayHello that takes as input a name, city,
+// and state to welcome a person.Note that name will be an array consisting of one
+// or more values that should be joined together with one space between each, and
+// the length of the name array in test cases will vary.
+
+// START OF SOLUTION
+function sayHello(name, city, state) {
+  console.log(`Hello, ${name.join(' ')}! Welcome to ${city}, ${state}!`);
+};
+
+sayHello(['John', 'Smith'], 'Phoenix', 'Arizona');
+// 'Hello, John Smith! Welcome to Phoenix, Arizona!')
+sayHello(['Franklin', 'Delano', 'Roosevelt'], 'Chicago', 'Illinois');
+// 'Hello, Franklin Delano Roosevelt! Welcome to Chicago, Illinois!')
+sayHello(['Wallace', 'Russel', 'Osbourne'], 'Albany', 'New York');
+// 'Hello, Wallace Russel Osbourne! Welcome to Albany, New York!')
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - No Loops 2 - You only need one
 // https://www.codewars.com/kata/57cc40b2f8392dbf2a0003ce/train/javascript
 // *** No Loops Allowed ***
@@ -22,15 +47,15 @@ function template() {
 // contains the value, false if not.With strings you will need to account for case.
 
 // START OF SOLUTION
-function check(a, x) {
-  const result = a.includes(x) ? true : false;
-  console.log(result)
-};
+// function check(a, x) {
+//   const result = a.includes(x) ? true : false;
+//   console.log(result)
+// };
 
-check([66, 101], 66);                              // true);
-check([80, 117, 115, 104, 45, 85, 112, 115], 45);  // true);
-check(['t', 'e', 's', 't'], 'e');                  // true);
-check(['what', 'a', 'great', 'kata'], 'kat');      // false);
+// check([66, 101], 66);                              // true);
+// check([80, 117, 115, 104, 45, 85, 112, 115], 45);  // true);
+// check(['t', 'e', 's', 't'], 'e');                  // true);
+// check(['what', 'a', 'great', 'kata'], 'kat');      // false);
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
