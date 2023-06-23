@@ -11,6 +11,31 @@ function template() {
 };
 
 
+// CODEWARS TASK - JS - Grasshopper - Array Mean
+// https://www.codewars.com/kata/55d277882e139d0b6000005d/javascript
+// Find Mean
+// Find the mean (average) of a list of numbers in an array.
+
+// Information
+// To find the mean(average) of a set of numbers add all of the numbers together
+// and divide by the number of values in the list.
+
+// START OF SOLUTION
+const findAverage = function (nums) {
+  const initialValue = 0;
+  const sumInitial = nums.reduce((acc, value) => acc + value, initialValue);
+  console.log(sumInitial / nums.length);
+};
+
+findAverage([1]);          // 1)
+findAverage([1, 3, 5, 7]); // 4)
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Welcome to the City
 // https://www.codewars.com/kata/5302d846be2a9189af0001e4/train/javascript
 // Create a method sayHello / say_hello / SayHello that takes as input a name, city,
@@ -19,17 +44,17 @@ function template() {
 // the length of the name array in test cases will vary.
 
 // START OF SOLUTION
-function sayHello(name, city, state) {
-  console.log(`Hello, ${name.join(' ')}! Welcome to ${city}, ${state}!`);
-};
+// function sayHello(name, city, state) {
+//   console.log(`Hello, ${name.join(' ')}! Welcome to ${city}, ${state}!`);
+// };
 
-sayHello(['John', 'Smith'], 'Phoenix', 'Arizona');
-// 'Hello, John Smith! Welcome to Phoenix, Arizona!')
-sayHello(['Franklin', 'Delano', 'Roosevelt'], 'Chicago', 'Illinois');
-// 'Hello, Franklin Delano Roosevelt! Welcome to Chicago, Illinois!')
-sayHello(['Wallace', 'Russel', 'Osbourne'], 'Albany', 'New York');
-// 'Hello, Wallace Russel Osbourne! Welcome to Albany, New York!')
-// END OF SOLUTION
+// sayHello(['John', 'Smith'], 'Phoenix', 'Arizona');
+// // 'Hello, John Smith! Welcome to Phoenix, Arizona!')
+// sayHello(['Franklin', 'Delano', 'Roosevelt'], 'Chicago', 'Illinois');
+// // 'Hello, Franklin Delano Roosevelt! Welcome to Chicago, Illinois!')
+// sayHello(['Wallace', 'Russel', 'Osbourne'], 'Albany', 'New York');
+// // 'Hello, Wallace Russel Osbourne! Welcome to Albany, New York!')
+// // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
 
