@@ -11,6 +11,29 @@ function template() {
 };
 
 
+// CODEWARS TASK - JS - Surface Area and Volume of a Box
+// https://www.codewars.com/kata/565f5825379664a26b00007c/train/javascript
+// Write a function that returns the total surface area and volume of a box as an array: [area, volume]
+
+// START OF SOLUTION
+function getSize(width, height, depth) {
+  const surfaceArea = 2 * ((width * height) + (width * depth) + (height * depth));
+  const volume = width * height * depth;
+  
+  console.log([surfaceArea, volume]);
+};
+
+getSize(4, 2, 6);    // [88, 48]);   
+getSize(10, 10, 10); // [600, 1000]);
+getSize(4, 2, 6)[0]; // 88);
+getSize(4, 2, 6)[1]; // 48);
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Grasshopper - Array Mean
 // https://www.codewars.com/kata/55d277882e139d0b6000005d/javascript
 // Find Mean
@@ -21,14 +44,14 @@ function template() {
 // and divide by the number of values in the list.
 
 // START OF SOLUTION
-const findAverage = function (nums) {
-  const initialValue = 0;
-  const sumInitial = nums.reduce((acc, value) => acc + value, initialValue);
-  console.log(sumInitial / nums.length);
-};
+// const findAverage = function (nums) {
+//   const initialValue = 0;
+//   const sumInitial = nums.reduce((acc, value) => acc + value, initialValue);
+//   console.log(sumInitial / nums.length);
+// };
 
-findAverage([1]);          // 1)
-findAverage([1, 3, 5, 7]); // 4)
+// findAverage([1]);          // 1)
+// findAverage([1, 3, 5, 7]); // 4)
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
