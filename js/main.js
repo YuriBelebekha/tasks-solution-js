@@ -11,18 +11,39 @@ function template() {
 };
 
 
+// CODEWARS TASK - JS - Printing Array elements with Comma delimiters
+// https://www.codewars.com/kata/56e2f59fb2ed128081001328/train/javascript
+// Input: Array of elements
+// ["h","o","l","a"]
+
+// Output: String with comma delimited elements of the array in th same order.
+// "h,o,l,a"
+
+// START OF SOLUTION
+function printArray(array){
+  console.log(array.toString())
+};
+
+printArray([2, 4, 5, 2]);      // "2,4,5,2"
+printArray(["h","o","l","a"]); // "h,o,l,a"
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
 
 // CODEWARS TASK - JS - Sum of angles
 // https://www.codewars.com/kata/5a03b3f6a1c9040084001765/train/javascript
 // Find the total sum of internal angles (in degrees) in an n-sided simple polygon. N will be greater than 2.
 
 // START OF SOLUTION
-function angle(n) {
-  console.log((n - 2) * 180);
-};
+// function angle(n) {
+//   console.log((n - 2) * 180);
+// };
 
-angle(3); // 180);
-angle(4); // 360);
+// angle(3); // 180);
+// angle(4); // 360);
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
