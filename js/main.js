@@ -11,22 +11,41 @@ function template() {
 };
 
 
+
+// CODEWARS TASK - JS - Sum of angles
+// https://www.codewars.com/kata/5a03b3f6a1c9040084001765/train/javascript
+// Find the total sum of internal angles (in degrees) in an n-sided simple polygon. N will be greater than 2.
+
+// START OF SOLUTION
+function angle(n) {
+  console.log((n - 2) * 180);
+};
+
+angle(3); // 180);
+angle(4); // 360);
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
 // CODEWARS TASK - JS - Surface Area and Volume of a Box
 // https://www.codewars.com/kata/565f5825379664a26b00007c/train/javascript
 // Write a function that returns the total surface area and volume of a box as an array: [area, volume]
 
 // START OF SOLUTION
-function getSize(width, height, depth) {
-  const surfaceArea = 2 * ((width * height) + (width * depth) + (height * depth));
-  const volume = width * height * depth;
+// function getSize(width, height, depth) {
+//   const surfaceArea = 2 * ((width * height) + (width * depth) + (height * depth));
+//   const volume = width * height * depth;
   
-  console.log([surfaceArea, volume]);
-};
+//   console.log([surfaceArea, volume]);
+// };
 
-getSize(4, 2, 6);    // [88, 48]);   
-getSize(10, 10, 10); // [600, 1000]);
-getSize(4, 2, 6)[0]; // 88);
-getSize(4, 2, 6)[1]; // 48);
+// getSize(4, 2, 6);    // [88, 48]);   
+// getSize(10, 10, 10); // [600, 1000]);
+// getSize(4, 2, 6)[0]; // 88);
+// getSize(4, 2, 6)[1]; // 48);
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
