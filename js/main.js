@@ -10,6 +10,29 @@ function template() {
 //////////////////////////////////////////////////////////////////////
 };
 
+// CODEWARS TASK - JS - Exclamation marks series #1: Remove an exclamation mark from the end of string
+// https://www.codewars.com/kata/57fae964d80daa229d000126/train/javascript
+// Remove an exclamation mark from the end of a string.For a beginner kata, you can
+// assume that the input data is always a string, no need to verify it.
+
+// START OF SOLUTION
+function remove(string) {  
+  const result = string.slice(-1) === "!" ? string.slice(0, -1) : string;
+  console.log(result)
+}
+
+remove("Hi!");      //, "Hi");
+remove("Hi!!!");    //, "Hi!!");
+remove("!Hi");      //, "!Hi");
+remove("!Hi!");     //, "!Hi");
+remove("Hi! Hi!");  //, "Hi! Hi");
+remove("Hi");       //, "Hi");
+// END OF SOLUTION
+
+//////////////////////////////////////////////////////////////////////
+
+
+
 
 // CODEWARS TASK - JS - What's the real floor?
 // https://www.codewars.com/kata/574b3b1599d8f897470018f6/train/javascript
@@ -25,20 +48,20 @@ function template() {
 // Basements (negatives) stay the same as the universal level.
 
 // START OF SOLUTION
-function getRealFloor(n) {
-  const result =
-    n <= 0
-      ? n
-      : n >= 13
-        ? n - 2
-        : n - 1;
-  console.log(result);
-};
+// function getRealFloor(n) {
+//   const result =
+//     n <= 0
+//       ? n
+//       : n >= 13
+//         ? n - 2
+//         : n - 1;
+//   console.log(result);
+// };
 
-getRealFloor( 1);  //  0
-getRealFloor( 5);  //  4
-getRealFloor(15);  // 13
-getRealFloor(-2);  // -2
+// getRealFloor( 1);  //  0
+// getRealFloor( 5);  //  4
+// getRealFloor(15);  // 13
+// getRealFloor(-2);  // -2
 // END OF SOLUTION
 
 //////////////////////////////////////////////////////////////////////
